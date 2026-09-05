@@ -328,13 +328,22 @@ Privacidade precisa ser atualizada — está sinalizado no texto dela.
 
 ## 7. Pendências que dependem do Enrico
 
+### Sobre o merge com o repositório remoto
+
+O `git push` foi recusado porque o remoto tinha 6 commits que não estavam aqui:
+uma reorganização sua numa pasta `index/` (site antigo achatado), um
+`index.zip` de 5 MB e — a boa notícia — **o PDF do cardápio versionado**. Fiz o
+merge preservando tudo: nada seu foi apagado. O PDF agora é servido em
+`/index/Cardápio Oficial DolceVitaDiSandi.pdf` e no atalho `/cardapio.pdf`.
+
 ### Bloqueiam o deploy
 
-1. **Salvar o PDF do cardápio antes de esvaziar o `public_html`.** O arquivo
-   `Cardápio Oficial DolceVitaDiSandi.pdf` existe só no servidor e **não está no
-   repositório** — com o deploy via Git ele some. Baixe, coloque na raiz do
-   projeto e versione. Passo a passo em `docs/DEPLOY-HOSTINGER.md`.
-2. **Backup completo do `public_html`** antes de qualquer limpeza.
+1. **Backup completo do `public_html`** antes de qualquer limpeza. Confira se
+   sobrou no servidor algum arquivo que não esteja no repositório.
+2. **Decidir sobre `index.zip` e a pasta `index/`.** O zip de 5 MB infla o
+   repositório e vai junto em todo deploy — sugiro remover. A pasta `index/`
+   pode sair depois que o site novo estiver validado, mas **o PDF precisa ser
+   movido antes** (e os links atualizados).
 
 ### Precisam da sua decisão ou da sua revisão
 

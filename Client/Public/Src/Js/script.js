@@ -114,9 +114,17 @@
        --------------------------------------------------------------------- */
     var reveláveis = document.querySelectorAll('.revelar');
 
-    if (!podeAnimar() || !('IntersectionObserver' in window)) {
+    function revelarTudo() {
         reveláveis.forEach(function (el) { el.classList.add('visivel'); });
+    }
+
+    if (!podeAnimar() || !('IntersectionObserver' in window)) {
+        revelarTudo();
     } else {
+        // Só a partir daqui é seguro esconder: o observador existe e vai revelar.
+        document.documentElement.classList.add('com-reveal');
+        // Rede de segurança: se em 4s algo tiver ficado para trás, mostra tudo.
+        window.setTimeout(revelarTudo, 4000);
         var observador = new IntersectionObserver(function (entradas, obs) {
             entradas.forEach(function (entrada, i) {
                 if (!entrada.isIntersecting) return;

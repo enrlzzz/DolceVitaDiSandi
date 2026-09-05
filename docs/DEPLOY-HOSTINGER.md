@@ -26,35 +26,28 @@ pastas.
 
 ---
 
-## ⚠️ Antes de começar: salve o PDF do cardápio
+## ⚠️ Duas coisas sobre a pasta `index/`
 
-O arquivo **`Cardápio Oficial DolceVitaDiSandi.pdf`** está hoje só no servidor,
-**não está no repositório**. Quando o deploy via Git começar, o conteúdo de
-`public_html` passa a ser um espelho do GitHub — e tudo que não estiver no
-repositório **some**.
+Ao integrar o repositório remoto, apareceu uma reorganização que você já tinha
+feito: uma pasta `index/` com o site antigo achatado (HTML, CSS, JS e imagens
+todos juntos) **e o `Cardápio Oficial DolceVitaDiSandi.pdf` versionado**. Isso
+resolve a pendência mais crítica que eu ia te passar — o PDF não vai se perder
+no deploy. Ele agora é servido em duas URLs:
 
-Faça agora, nesta ordem:
+- `dolcevitadisandi.com.br/index/Cardápio Oficial DolceVitaDiSandi.pdf`
+- `dolcevitadisandi.com.br/cardapio.pdf` (atalho criado no `.htaccess`, mais
+  fácil de ditar por telefone)
 
-1. Abra <https://dolcevitadisandi.com.br/Cardápio%20Oficial%20DolceVitaDiSandi.pdf>
-   e salve o arquivo no computador.
-2. Copie o PDF para a **raiz deste projeto** (a mesma pasta onde está o
-   `README.md`).
-3. Rode:
+**Não apaguei nada seu.** A pasta `index/` continua no repositório, intacta,
+servindo como backup do site antigo e como origem do PDF e das fotos originais.
 
-   ```bash
-   git add "Cardápio Oficial DolceVitaDiSandi.pdf"
-   git commit -m "chore: versiona o PDF do cardapio no repositorio"
-   git push
-   ```
+Duas decisões que ficam com você, quando quiser:
 
-Enquanto isso não for feito, o link "Baixar cardápio em PDF" vai quebrar depois
-do primeiro deploy.
-
-**Faça o mesmo com qualquer outro arquivo que exista no servidor e não no
-repositório** (fotos soltas, arquivos de verificação do Google, etc.). Antes de
-esvaziar a pasta, baixe um backup completo:
-hPanel → **Arquivos → Gerenciador de arquivos** → selecione tudo dentro de
-`public_html` → **Compactar** → baixe o `.zip`.
+1. **`index.zip` (5 MB) na raiz do repositório.** É um zip do site antigo. Não
+   apaguei porque é seu, mas ele infla o repositório e vai junto em todo deploy.
+   Sugiro remover: `git rm index.zip && git commit -m "chore: remove zip do site antigo"`.
+2. **A pasta `index/`** pode ser removida depois que o site novo estiver no ar e
+   validado — **exceto o PDF**, que precisa ser movido para outro lugar antes.
 
 ---
 
@@ -65,7 +58,9 @@ hPanel → **Arquivos → Gerenciador de arquivos** → selecione tudo dentro de
 1. hPanel → **Arquivos → Gerenciador de arquivos**.
 2. Entre em `public_html`.
 3. Selecione tudo (inclusive arquivos ocultos como `.htaccess`) → **Compactar**
-   → baixe o `.zip` para o computador. Esse é o seu plano B.
+   → baixe o `.zip` para o computador. Esse é o seu plano B. Confira se sobrou
+   no servidor algum arquivo que não esteja no repositório (arquivo de
+   verificação do Google, fotos soltas) — se houver, versione antes.
 4. Agora apague **o conteúdo** de `public_html` — a pasta continua existindo,
    só fica vazia. O Git se recusa a clonar numa pasta que já tem arquivos.
 
@@ -119,7 +114,8 @@ Depois do primeiro deploy, abra e teste:
 - [ ] `https://dolcevitadisandi.com.br/` — a home abre direto, sem lista de pastas
 - [ ] O cadeado de HTTPS aparece e `http://` redireciona para `https://`
 - [ ] `https://dolcevitadisandi.com.br/cardapio` — URL limpa funciona
-- [ ] Link "Baixar cardápio em PDF" abre o PDF (só depois de versionar o PDF)
+- [ ] Link "Baixar cardápio em PDF" abre o PDF
+- [ ] `dolcevitadisandi.com.br/cardapio.pdf` também abre o PDF
 - [ ] Rodapé → as duas políticas abrem
 - [ ] Botão do WhatsApp abre a conversa com a mensagem pronta
 - [ ] Abra no celular e confira o menu hambúrguer

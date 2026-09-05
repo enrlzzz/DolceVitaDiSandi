@@ -28,6 +28,8 @@
 
     # URLs limpas -> arquivos reais
     RewriteRule ^cardapio/?$              Client/Public/Src/Pages/cardapio.html [L]
+    # URL curta e facil de ditar para o PDF oficial
+    RewriteRule ^cardapio\.pdf$           index/Cardápio\ Oficial\ DolceVitaDiSandi.pdf [L]
     RewriteRule ^politica-de-privacidade/?$ Client/Public/Src/Pages/politica-de-privacidade.html [L]
     RewriteRule ^politica-de-reembolso/?$   Client/Public/Src/Pages/politica-de-reembolso.html [L]
 
@@ -101,4 +103,5 @@ Options -Indexes
 
 <IfModule mod_rewrite.c>
     RewriteRule ^(raw-photos|tools|docs)/ - [F,L]
+    # index/ NAO entra na lista: guarda o PDF do cardapio e as fotos originais
 </IfModule>

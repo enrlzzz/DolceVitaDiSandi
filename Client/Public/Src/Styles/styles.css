@@ -1663,20 +1663,17 @@ textarea.form-input {
 /* -------------------------------------------------------------------------
    14. Animação de entrada (progressiva, sem bibliotecas)
    ------------------------------------------------------------------------- */
-.revelar {
+/* O elemento só começa invisível se o script.js estiver de fato rodando
+   (ele adiciona .com-reveal em <html>). Se o JS falhar em carregar, nada some:
+   a página inteira continua legível e vendável. */
+.com-reveal .revelar {
     opacity: 0;
     transform: translateY(26px);
     transition: opacity .7s cubic-bezier(.22, 1, .36, 1),
         transform .7s cubic-bezier(.22, 1, .36, 1);
 }
 
-.revelar.visivel {
-    opacity: 1;
-    transform: none;
-}
-
-/* Se o JS não rodar, nada fica invisível */
-.sem-js .revelar {
+.com-reveal .revelar.visivel {
     opacity: 1;
     transform: none;
 }
@@ -1859,7 +1856,7 @@ textarea.form-input {
         transform: none !important;
     }
 
-    .revelar {
+    .com-reveal .revelar {
         opacity: 1;
         transform: none;
     }

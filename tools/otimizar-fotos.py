@@ -215,10 +215,13 @@ def main():
 
     if args.incluir_atuais:
         print("Reotimizando os assets atuais do site ...")
-        pasta_assets = os.path.join(RAIZ, "Client", "Public", "Src", "Assets")
+        # Os originais podem estar na pasta antiga ou em index/ (layout do deploy)
+        pastas = [os.path.join(RAIZ, "Client", "Public", "Src", "Assets"),
+                  os.path.join(RAIZ, "index")]
         for origem, novo in sorted(ATUAIS.items()):
-            caminho = os.path.join(pasta_assets, origem)
-            if not os.path.exists(caminho):
+            caminho = next((os.path.join(d, origem) for d in pastas
+                            if os.path.exists(os.path.join(d, origem))), None)
+            if caminho is None:
                 continue
             ext = os.path.splitext(origem)[1]
             tmp = os.path.join(SAIDA, novo + ext)
