@@ -28,6 +28,7 @@
 
     # URLs limpas -> arquivos reais
     RewriteRule ^cardapio/?$              Client/Public/Src/Pages/cardapio.html [L]
+    RewriteRule ^galeria/?$               Client/Public/Src/Pages/galeria.html [L]
     # URL curta e facil de ditar para o PDF oficial
     RewriteRule ^cardapio\.pdf$           index/Cardápio\ Oficial\ DolceVitaDiSandi.pdf [L]
     RewriteRule ^politica-de-privacidade/?$ Client/Public/Src/Pages/politica-de-privacidade.html [L]

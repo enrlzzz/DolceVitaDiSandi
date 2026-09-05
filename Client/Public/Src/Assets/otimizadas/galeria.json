@@ -1,0 +1,1945 @@
+{
+ "total": 194,
+ "fotos": [
+  {
+   "id": "doce-001",
+   "origem": "20230713_141256.jpg",
+   "largura": 3468,
+   "altura": 4624,
+   "formato": "retrato",
+   "mini": "/Client/Public/Src/Assets/otimizadas/galeria/doce-001-m.webp",
+   "miniJpg": "/Client/Public/Src/Assets/otimizadas/galeria/doce-001-m.jpg",
+   "grande": "/Client/Public/Src/Assets/otimizadas/galeria/doce-001-g.webp"
+  },
+  {
+   "id": "doce-002",
+   "origem": "20230713_141304.jpg",
+   "largura": 3468,
+   "altura": 4624,
+   "formato": "retrato",
+   "mini": "/Client/Public/Src/Assets/otimizadas/galeria/doce-002-m.webp",
+   "miniJpg": "/Client/Public/Src/Assets/otimizadas/galeria/doce-002-m.jpg",
+   "grande": "/Client/Public/Src/Assets/otimizadas/galeria/doce-002-g.webp"
+  },
+  {
+   "id": "doce-003",
+   "origem": "20230713_141335(1).jpg",
+   "largura": 3468,
+   "altura": 4624,
+   "formato": "retrato",
+   "mini": "/Client/Public/Src/Assets/otimizadas/galeria/doce-003-m.webp",
+   "miniJpg": "/Client/Public/Src/Assets/otimizadas/galeria/doce-003-m.jpg",
+   "grande": "/Client/Public/Src/Assets/otimizadas/galeria/doce-003-g.webp"
+  },
+  {
+   "id": "doce-004",
+   "origem": "20230713_141456.jpg",
+   "largura": 3468,
+   "altura": 4624,
+   "formato": "retrato",
+   "mini": "/Client/Public/Src/Assets/otimizadas/galeria/doce-004-m.webp",
+   "miniJpg": "/Client/Public/Src/Assets/otimizadas/galeria/doce-004-m.jpg",
+   "grande": "/Client/Public/Src/Assets/otimizadas/galeria/doce-004-g.webp"
+  },
+  {
+   "id": "doce-005",
+   "origem": "20230713_141502.jpg",
+   "largura": 3468,
+   "altura": 4624,
+   "formato": "retrato",
+   "mini": "/Client/Public/Src/Assets/otimizadas/galeria/doce-005-m.webp",
+   "miniJpg": "/Client/Public/Src/Assets/otimizadas/galeria/doce-005-m.jpg",
+   "grande": "/Client/Public/Src/Assets/otimizadas/galeria/doce-005-g.webp"
+  },
+  {
+   "id": "doce-006",
+   "origem": "20250622_085122.jpg",
+   "largura": 3468,
+   "altura": 4624,
+   "formato": "retrato",
+   "mini": "/Client/Public/Src/Assets/otimizadas/galeria/doce-006-m.webp",
+   "miniJpg": "/Client/Public/Src/Assets/otimizadas/galeria/doce-006-m.jpg",
+   "grande": "/Client/Public/Src/Assets/otimizadas/galeria/doce-006-g.webp"
+  },
+  {
+   "id": "doce-007",
+   "origem": "20250622_085155.jpg",
+   "largura": 4624,
+   "altura": 3468,
+   "formato": "paisagem",
+   "mini": "/Client/Public/Src/Assets/otimizadas/galeria/doce-007-m.webp",
+   "miniJpg": "/Client/Public/Src/Assets/otimizadas/galeria/doce-007-m.jpg",
+   "grande": "/Client/Public/Src/Assets/otimizadas/galeria/doce-007-g.webp"
+  },
+  {
+   "id": "doce-008",
+   "origem": "20250622_085159.jpg",
+   "largura": 4624,
+   "altura": 3468,
+   "formato": "paisagem",
+   "mini": "/Client/Public/Src/Assets/otimizadas/galeria/doce-008-m.webp",
+   "miniJpg": "/Client/Public/Src/Assets/otimizadas/galeria/doce-008-m.jpg",
+   "grande": "/Client/Public/Src/Assets/otimizadas/galeria/doce-008-g.webp"
+  },
+  {
+   "id": "doce-009",
+   "origem": "20250622_092147.jpg",
+   "largura": 3468,
+   "altura": 4624,
+   "formato": "retrato",
+   "mini": "/Client/Public/Src/Assets/otimizadas/galeria/doce-009-m.webp",
+   "miniJpg": "/Client/Public/Src/Assets/otimizadas/galeria/doce-009-m.jpg",
+   "grande": "/Client/Public/Src/Assets/otimizadas/galeria/doce-009-g.webp"
+  },
+  {
+   "id": "doce-010",
+   "origem": "20250622_092158.jpg",
+   "largura": 3468,
+   "altura": 4624,
+   "formato": "retrato",
+   "mini": "/Client/Public/Src/Assets/otimizadas/galeria/doce-010-m.webp",
+   "miniJpg": "/Client/Public/Src/Assets/otimizadas/galeria/doce-010-m.jpg",
+   "grande": "/Client/Public/Src/Assets/otimizadas/galeria/doce-010-g.webp"
+  },
+  {
+   "id": "doce-011",
+   "origem": "20250622_103255.jpg",
+   "largura": 3468,
+   "altura": 4624,
+   "formato": "retrato",
+   "mini": "/Client/Public/Src/Assets/otimizadas/galeria/doce-011-m.webp",
+   "miniJpg": "/Client/Public/Src/Assets/otimizadas/galeria/doce-011-m.jpg",
+   "grande": "/Client/Public/Src/Assets/otimizadas/galeria/doce-011-g.webp"
+  },
+  {
+   "id": "doce-012",
+   "origem": "20250622_103302.jpg",
+   "largura": 3468,
+   "altura": 4624,
+   "formato": "retrato",
+   "mini": "/Client/Public/Src/Assets/otimizadas/galeria/doce-012-m.webp",
+   "miniJpg": "/Client/Public/Src/Assets/otimizadas/galeria/doce-012-m.jpg",
+   "grande": "/Client/Public/Src/Assets/otimizadas/galeria/doce-012-g.webp"
+  },
+  {
+   "id": "doce-013",
+   "origem": "20250622_103307.jpg",
+   "largura": 3468,
+   "altura": 4624,
+   "formato": "retrato",
+   "mini": "/Client/Public/Src/Assets/otimizadas/galeria/doce-013-m.webp",
+   "miniJpg": "/Client/Public/Src/Assets/otimizadas/galeria/doce-013-m.jpg",
+   "grande": "/Client/Public/Src/Assets/otimizadas/galeria/doce-013-g.webp"
+  },
+  {
+   "id": "doce-014",
+   "origem": "20250622_103309.jpg",
+   "largura": 3468,
+   "altura": 4624,
+   "formato": "retrato",
+   "mini": "/Client/Public/Src/Assets/otimizadas/galeria/doce-014-m.webp",
+   "miniJpg": "/Client/Public/Src/Assets/otimizadas/galeria/doce-014-m.jpg",
+   "grande": "/Client/Public/Src/Assets/otimizadas/galeria/doce-014-g.webp"
+  },
+  {
+   "id": "doce-015",
+   "origem": "20250622_103312.jpg",
+   "largura": 3468,
+   "altura": 4624,
+   "formato": "retrato",
+   "mini": "/Client/Public/Src/Assets/otimizadas/galeria/doce-015-m.webp",
+   "miniJpg": "/Client/Public/Src/Assets/otimizadas/galeria/doce-015-m.jpg",
+   "grande": "/Client/Public/Src/Assets/otimizadas/galeria/doce-015-g.webp"
+  },
+  {
+   "id": "doce-016",
+   "origem": "20250622_182221.jpg",
+   "largura": 4624,
+   "altura": 3468,
+   "formato": "paisagem",
+   "mini": "/Client/Public/Src/Assets/otimizadas/galeria/doce-016-m.webp",
+   "miniJpg": "/Client/Public/Src/Assets/otimizadas/galeria/doce-016-m.jpg",
+   "grande": "/Client/Public/Src/Assets/otimizadas/galeria/doce-016-g.webp"
+  },
+  {
+   "id": "doce-017",
+   "origem": "20250622_182224.jpg",
+   "largura": 3468,
+   "altura": 4624,
+   "formato": "retrato",
+   "mini": "/Client/Public/Src/Assets/otimizadas/galeria/doce-017-m.webp",
+   "miniJpg": "/Client/Public/Src/Assets/otimizadas/galeria/doce-017-m.jpg",
+   "grande": "/Client/Public/Src/Assets/otimizadas/galeria/doce-017-g.webp"
+  },
+  {
+   "id": "doce-018",
+   "origem": "20250708_194339.jpg",
+   "largura": 3468,
+   "altura": 4624,
+   "formato": "retrato",
+   "mini": "/Client/Public/Src/Assets/otimizadas/galeria/doce-018-m.webp",
+   "miniJpg": "/Client/Public/Src/Assets/otimizadas/galeria/doce-018-m.jpg",
+   "grande": "/Client/Public/Src/Assets/otimizadas/galeria/doce-018-g.webp"
+  },
+  {
+   "id": "doce-019",
+   "origem": "20250710_180736.jpg",
+   "largura": 3468,
+   "altura": 4624,
+   "formato": "retrato",
+   "mini": "/Client/Public/Src/Assets/otimizadas/galeria/doce-019-m.webp",
+   "miniJpg": "/Client/Public/Src/Assets/otimizadas/galeria/doce-019-m.jpg",
+   "grande": "/Client/Public/Src/Assets/otimizadas/galeria/doce-019-g.webp"
+  },
+  {
+   "id": "doce-020",
+   "origem": "20250712_133231.jpg",
+   "largura": 3468,
+   "altura": 4624,
+   "formato": "retrato",
+   "mini": "/Client/Public/Src/Assets/otimizadas/galeria/doce-020-m.webp",
+   "miniJpg": "/Client/Public/Src/Assets/otimizadas/galeria/doce-020-m.jpg",
+   "grande": "/Client/Public/Src/Assets/otimizadas/galeria/doce-020-g.webp"
+  },
+  {
+   "id": "doce-021",
+   "origem": "20250712_133238.jpg",
+   "largura": 4624,
+   "altura": 3468,
+   "formato": "paisagem",
+   "mini": "/Client/Public/Src/Assets/otimizadas/galeria/doce-021-m.webp",
+   "miniJpg": "/Client/Public/Src/Assets/otimizadas/galeria/doce-021-m.jpg",
+   "grande": "/Client/Public/Src/Assets/otimizadas/galeria/doce-021-g.webp"
+  },
+  {
+   "id": "doce-022",
+   "origem": "20250712_133243(1).jpg",
+   "largura": 3072,
+   "altura": 4096,
+   "formato": "retrato",
+   "mini": "/Client/Public/Src/Assets/otimizadas/galeria/doce-022-m.webp",
+   "miniJpg": "/Client/Public/Src/Assets/otimizadas/galeria/doce-022-m.jpg",
+   "grande": "/Client/Public/Src/Assets/otimizadas/galeria/doce-022-g.webp"
+  },
+  {
+   "id": "doce-023",
+   "origem": "20250712_133252.jpg",
+   "largura": 3072,
+   "altura": 4096,
+   "formato": "retrato",
+   "mini": "/Client/Public/Src/Assets/otimizadas/galeria/doce-023-m.webp",
+   "miniJpg": "/Client/Public/Src/Assets/otimizadas/galeria/doce-023-m.jpg",
+   "grande": "/Client/Public/Src/Assets/otimizadas/galeria/doce-023-g.webp"
+  },
+  {
+   "id": "doce-024",
+   "origem": "20250712_133256.jpg",
+   "largura": 3468,
+   "altura": 4624,
+   "formato": "retrato",
+   "mini": "/Client/Public/Src/Assets/otimizadas/galeria/doce-024-m.webp",
+   "miniJpg": "/Client/Public/Src/Assets/otimizadas/galeria/doce-024-m.jpg",
+   "grande": "/Client/Public/Src/Assets/otimizadas/galeria/doce-024-g.webp"
+  },
+  {
+   "id": "doce-025",
+   "origem": "20250712_133302.jpg",
+   "largura": 3468,
+   "altura": 4624,
+   "formato": "retrato",
+   "mini": "/Client/Public/Src/Assets/otimizadas/galeria/doce-025-m.webp",
+   "miniJpg": "/Client/Public/Src/Assets/otimizadas/galeria/doce-025-m.jpg",
+   "grande": "/Client/Public/Src/Assets/otimizadas/galeria/doce-025-g.webp"
+  },
+  {
+   "id": "doce-026",
+   "origem": "20250712_133306(1).jpg",
+   "largura": 3072,
+   "altura": 4096,
+   "formato": "retrato",
+   "mini": "/Client/Public/Src/Assets/otimizadas/galeria/doce-026-m.webp",
+   "miniJpg": "/Client/Public/Src/Assets/otimizadas/galeria/doce-026-m.jpg",
+   "grande": "/Client/Public/Src/Assets/otimizadas/galeria/doce-026-g.webp"
+  },
+  {
+   "id": "doce-027",
+   "origem": "20250712_133311.jpg",
+   "largura": 3072,
+   "altura": 4096,
+   "formato": "retrato",
+   "mini": "/Client/Public/Src/Assets/otimizadas/galeria/doce-027-m.webp",
+   "miniJpg": "/Client/Public/Src/Assets/otimizadas/galeria/doce-027-m.jpg",
+   "grande": "/Client/Public/Src/Assets/otimizadas/galeria/doce-027-g.webp"
+  },
+  {
+   "id": "doce-028",
+   "origem": "20250712_133316.jpg",
+   "largura": 3468,
+   "altura": 4624,
+   "formato": "retrato",
+   "mini": "/Client/Public/Src/Assets/otimizadas/galeria/doce-028-m.webp",
+   "miniJpg": "/Client/Public/Src/Assets/otimizadas/galeria/doce-028-m.jpg",
+   "grande": "/Client/Public/Src/Assets/otimizadas/galeria/doce-028-g.webp"
+  },
+  {
+   "id": "doce-029",
+   "origem": "20250715_183101.jpg",
+   "largura": 4624,
+   "altura": 3468,
+   "formato": "paisagem",
+   "mini": "/Client/Public/Src/Assets/otimizadas/galeria/doce-029-m.webp",
+   "miniJpg": "/Client/Public/Src/Assets/otimizadas/galeria/doce-029-m.jpg",
+   "grande": "/Client/Public/Src/Assets/otimizadas/galeria/doce-029-g.webp"
+  },
+  {
+   "id": "doce-030",
+   "origem": "20250715_183216.jpg",
+   "largura": 4624,
+   "altura": 3468,
+   "formato": "paisagem",
+   "mini": "/Client/Public/Src/Assets/otimizadas/galeria/doce-030-m.webp",
+   "miniJpg": "/Client/Public/Src/Assets/otimizadas/galeria/doce-030-m.jpg",
+   "grande": "/Client/Public/Src/Assets/otimizadas/galeria/doce-030-g.webp"
+  },
+  {
+   "id": "doce-031",
+   "origem": "20250715_183222.jpg",
+   "largura": 3468,
+   "altura": 4624,
+   "formato": "retrato",
+   "mini": "/Client/Public/Src/Assets/otimizadas/galeria/doce-031-m.webp",
+   "miniJpg": "/Client/Public/Src/Assets/otimizadas/galeria/doce-031-m.jpg",
+   "grande": "/Client/Public/Src/Assets/otimizadas/galeria/doce-031-g.webp"
+  },
+  {
+   "id": "doce-032",
+   "origem": "20250731_185353.jpg",
+   "largura": 4624,
+   "altura": 3468,
+   "formato": "paisagem",
+   "mini": "/Client/Public/Src/Assets/otimizadas/galeria/doce-032-m.webp",
+   "miniJpg": "/Client/Public/Src/Assets/otimizadas/galeria/doce-032-m.jpg",
+   "grande": "/Client/Public/Src/Assets/otimizadas/galeria/doce-032-g.webp"
+  },
+  {
+   "id": "doce-033",
+   "origem": "20250731_185358.jpg",
+   "largura": 3468,
+   "altura": 4624,
+   "formato": "retrato",
+   "mini": "/Client/Public/Src/Assets/otimizadas/galeria/doce-033-m.webp",
+   "miniJpg": "/Client/Public/Src/Assets/otimizadas/galeria/doce-033-m.jpg",
+   "grande": "/Client/Public/Src/Assets/otimizadas/galeria/doce-033-g.webp"
+  },
+  {
+   "id": "doce-034",
+   "origem": "20250731_185753.jpg",
+   "largura": 3468,
+   "altura": 4624,
+   "formato": "retrato",
+   "mini": "/Client/Public/Src/Assets/otimizadas/galeria/doce-034-m.webp",
+   "miniJpg": "/Client/Public/Src/Assets/otimizadas/galeria/doce-034-m.jpg",
+   "grande": "/Client/Public/Src/Assets/otimizadas/galeria/doce-034-g.webp"
+  },
+  {
+   "id": "doce-035",
+   "origem": "20250804_200533.jpg",
+   "largura": 3468,
+   "altura": 4624,
+   "formato": "retrato",
+   "mini": "/Client/Public/Src/Assets/otimizadas/galeria/doce-035-m.webp",
+   "miniJpg": "/Client/Public/Src/Assets/otimizadas/galeria/doce-035-m.jpg",
+   "grande": "/Client/Public/Src/Assets/otimizadas/galeria/doce-035-g.webp"
+  },
+  {
+   "id": "doce-036",
+   "origem": "20250804_200550.jpg",
+   "largura": 3072,
+   "altura": 4096,
+   "formato": "retrato",
+   "mini": "/Client/Public/Src/Assets/otimizadas/galeria/doce-036-m.webp",
+   "miniJpg": "/Client/Public/Src/Assets/otimizadas/galeria/doce-036-m.jpg",
+   "grande": "/Client/Public/Src/Assets/otimizadas/galeria/doce-036-g.webp"
+  },
+  {
+   "id": "doce-037",
+   "origem": "20250804_200554.jpg",
+   "largura": 3072,
+   "altura": 4096,
+   "formato": "retrato",
+   "mini": "/Client/Public/Src/Assets/otimizadas/galeria/doce-037-m.webp",
+   "miniJpg": "/Client/Public/Src/Assets/otimizadas/galeria/doce-037-m.jpg",
+   "grande": "/Client/Public/Src/Assets/otimizadas/galeria/doce-037-g.webp"
+  },
+  {
+   "id": "doce-038",
+   "origem": "20250806_193110.jpg",
+   "largura": 3468,
+   "altura": 4624,
+   "formato": "retrato",
+   "mini": "/Client/Public/Src/Assets/otimizadas/galeria/doce-038-m.webp",
+   "miniJpg": "/Client/Public/Src/Assets/otimizadas/galeria/doce-038-m.jpg",
+   "grande": "/Client/Public/Src/Assets/otimizadas/galeria/doce-038-g.webp"
+  },
+  {
+   "id": "doce-039",
+   "origem": "20250806_193117.jpg",
+   "largura": 3468,
+   "altura": 4624,
+   "formato": "retrato",
+   "mini": "/Client/Public/Src/Assets/otimizadas/galeria/doce-039-m.webp",
+   "miniJpg": "/Client/Public/Src/Assets/otimizadas/galeria/doce-039-m.jpg",
+   "grande": "/Client/Public/Src/Assets/otimizadas/galeria/doce-039-g.webp"
+  },
+  {
+   "id": "doce-040",
+   "origem": "20250806_193121.jpg",
+   "largura": 3468,
+   "altura": 4624,
+   "formato": "retrato",
+   "mini": "/Client/Public/Src/Assets/otimizadas/galeria/doce-040-m.webp",
+   "miniJpg": "/Client/Public/Src/Assets/otimizadas/galeria/doce-040-m.jpg",
+   "grande": "/Client/Public/Src/Assets/otimizadas/galeria/doce-040-g.webp"
+  },
+  {
+   "id": "doce-041",
+   "origem": "20250806_193125.jpg",
+   "largura": 3468,
+   "altura": 4624,
+   "formato": "retrato",
+   "mini": "/Client/Public/Src/Assets/otimizadas/galeria/doce-041-m.webp",
+   "miniJpg": "/Client/Public/Src/Assets/otimizadas/galeria/doce-041-m.jpg",
+   "grande": "/Client/Public/Src/Assets/otimizadas/galeria/doce-041-g.webp"
+  },
+  {
+   "id": "doce-042",
+   "origem": "20250810_122542.jpg",
+   "largura": 3468,
+   "altura": 4624,
+   "formato": "retrato",
+   "mini": "/Client/Public/Src/Assets/otimizadas/galeria/doce-042-m.webp",
+   "miniJpg": "/Client/Public/Src/Assets/otimizadas/galeria/doce-042-m.jpg",
+   "grande": "/Client/Public/Src/Assets/otimizadas/galeria/doce-042-g.webp"
+  },
+  {
+   "id": "doce-043",
+   "origem": "20250810_122546.jpg",
+   "largura": 3468,
+   "altura": 4624,
+   "formato": "retrato",
+   "mini": "/Client/Public/Src/Assets/otimizadas/galeria/doce-043-m.webp",
+   "miniJpg": "/Client/Public/Src/Assets/otimizadas/galeria/doce-043-m.jpg",
+   "grande": "/Client/Public/Src/Assets/otimizadas/galeria/doce-043-g.webp"
+  },
+  {
+   "id": "doce-044",
+   "origem": "20250810_122559.jpg",
+   "largura": 3468,
+   "altura": 4624,
+   "formato": "retrato",
+   "mini": "/Client/Public/Src/Assets/otimizadas/galeria/doce-044-m.webp",
+   "miniJpg": "/Client/Public/Src/Assets/otimizadas/galeria/doce-044-m.jpg",
+   "grande": "/Client/Public/Src/Assets/otimizadas/galeria/doce-044-g.webp"
+  },
+  {
+   "id": "doce-045",
+   "origem": "20250810_122607.jpg",
+   "largura": 3468,
+   "altura": 4624,
+   "formato": "retrato",
+   "mini": "/Client/Public/Src/Assets/otimizadas/galeria/doce-045-m.webp",
+   "miniJpg": "/Client/Public/Src/Assets/otimizadas/galeria/doce-045-m.jpg",
+   "grande": "/Client/Public/Src/Assets/otimizadas/galeria/doce-045-g.webp"
+  },
+  {
+   "id": "doce-046",
+   "origem": "20250810_122612.jpg",
+   "largura": 3468,
+   "altura": 4624,
+   "formato": "retrato",
+   "mini": "/Client/Public/Src/Assets/otimizadas/galeria/doce-046-m.webp",
+   "miniJpg": "/Client/Public/Src/Assets/otimizadas/galeria/doce-046-m.jpg",
+   "grande": "/Client/Public/Src/Assets/otimizadas/galeria/doce-046-g.webp"
+  },
+  {
+   "id": "doce-047",
+   "origem": "20250810_122619.jpg",
+   "largura": 3468,
+   "altura": 4624,
+   "formato": "retrato",
+   "mini": "/Client/Public/Src/Assets/otimizadas/galeria/doce-047-m.webp",
+   "miniJpg": "/Client/Public/Src/Assets/otimizadas/galeria/doce-047-m.jpg",
+   "grande": "/Client/Public/Src/Assets/otimizadas/galeria/doce-047-g.webp"
+  },
+  {
+   "id": "doce-048",
+   "origem": "20250810_122622.jpg",
+   "largura": 3468,
+   "altura": 4624,
+   "formato": "retrato",
+   "mini": "/Client/Public/Src/Assets/otimizadas/galeria/doce-048-m.webp",
+   "miniJpg": "/Client/Public/Src/Assets/otimizadas/galeria/doce-048-m.jpg",
+   "grande": "/Client/Public/Src/Assets/otimizadas/galeria/doce-048-g.webp"
+  },
+  {
+   "id": "doce-049",
+   "origem": "20250810_122707.jpg",
+   "largura": 3468,
+   "altura": 4624,
+   "formato": "retrato",
+   "mini": "/Client/Public/Src/Assets/otimizadas/galeria/doce-049-m.webp",
+   "miniJpg": "/Client/Public/Src/Assets/otimizadas/galeria/doce-049-m.jpg",
+   "grande": "/Client/Public/Src/Assets/otimizadas/galeria/doce-049-g.webp"
+  },
+  {
+   "id": "doce-050",
+   "origem": "20250810_122711.jpg",
+   "largura": 3468,
+   "altura": 4624,
+   "formato": "retrato",
+   "mini": "/Client/Public/Src/Assets/otimizadas/galeria/doce-050-m.webp",
+   "miniJpg": "/Client/Public/Src/Assets/otimizadas/galeria/doce-050-m.jpg",
+   "grande": "/Client/Public/Src/Assets/otimizadas/galeria/doce-050-g.webp"
+  },
+  {
+   "id": "doce-051",
+   "origem": "20250810_123035.jpg",
+   "largura": 3468,
+   "altura": 4624,
+   "formato": "retrato",
+   "mini": "/Client/Public/Src/Assets/otimizadas/galeria/doce-051-m.webp",
+   "miniJpg": "/Client/Public/Src/Assets/otimizadas/galeria/doce-051-m.jpg",
+   "grande": "/Client/Public/Src/Assets/otimizadas/galeria/doce-051-g.webp"
+  },
+  {
+   "id": "doce-052",
+   "origem": "20250810_123040.jpg",
+   "largura": 3072,
+   "altura": 4096,
+   "formato": "retrato",
+   "mini": "/Client/Public/Src/Assets/otimizadas/galeria/doce-052-m.webp",
+   "miniJpg": "/Client/Public/Src/Assets/otimizadas/galeria/doce-052-m.jpg",
+   "grande": "/Client/Public/Src/Assets/otimizadas/galeria/doce-052-g.webp"
+  },
+  {
+   "id": "doce-053",
+   "origem": "20250810_123044.jpg",
+   "largura": 3468,
+   "altura": 4624,
+   "formato": "retrato",
+   "mini": "/Client/Public/Src/Assets/otimizadas/galeria/doce-053-m.webp",
+   "miniJpg": "/Client/Public/Src/Assets/otimizadas/galeria/doce-053-m.jpg",
+   "grande": "/Client/Public/Src/Assets/otimizadas/galeria/doce-053-g.webp"
+  },
+  {
+   "id": "doce-054",
+   "origem": "20250812_114355.jpg",
+   "largura": 3468,
+   "altura": 4624,
+   "formato": "retrato",
+   "mini": "/Client/Public/Src/Assets/otimizadas/galeria/doce-054-m.webp",
+   "miniJpg": "/Client/Public/Src/Assets/otimizadas/galeria/doce-054-m.jpg",
+   "grande": "/Client/Public/Src/Assets/otimizadas/galeria/doce-054-g.webp"
+  },
+  {
+   "id": "doce-055",
+   "origem": "20250812_114401.jpg",
+   "largura": 3468,
+   "altura": 4624,
+   "formato": "retrato",
+   "mini": "/Client/Public/Src/Assets/otimizadas/galeria/doce-055-m.webp",
+   "miniJpg": "/Client/Public/Src/Assets/otimizadas/galeria/doce-055-m.jpg",
+   "grande": "/Client/Public/Src/Assets/otimizadas/galeria/doce-055-g.webp"
+  },
+  {
+   "id": "doce-056",
+   "origem": "20250812_114412.jpg",
+   "largura": 3468,
+   "altura": 4624,
+   "formato": "retrato",
+   "mini": "/Client/Public/Src/Assets/otimizadas/galeria/doce-056-m.webp",
+   "miniJpg": "/Client/Public/Src/Assets/otimizadas/galeria/doce-056-m.jpg",
+   "grande": "/Client/Public/Src/Assets/otimizadas/galeria/doce-056-g.webp"
+  },
+  {
+   "id": "doce-057",
+   "origem": "20250812_114427.jpg",
+   "largura": 3468,
+   "altura": 4624,
+   "formato": "retrato",
+   "mini": "/Client/Public/Src/Assets/otimizadas/galeria/doce-057-m.webp",
+   "miniJpg": "/Client/Public/Src/Assets/otimizadas/galeria/doce-057-m.jpg",
+   "grande": "/Client/Public/Src/Assets/otimizadas/galeria/doce-057-g.webp"
+  },
+  {
+   "id": "doce-058",
+   "origem": "20250815_130640.jpg",
+   "largura": 3468,
+   "altura": 4624,
+   "formato": "retrato",
+   "mini": "/Client/Public/Src/Assets/otimizadas/galeria/doce-058-m.webp",
+   "miniJpg": "/Client/Public/Src/Assets/otimizadas/galeria/doce-058-m.jpg",
+   "grande": "/Client/Public/Src/Assets/otimizadas/galeria/doce-058-g.webp"
+  },
+  {
+   "id": "doce-059",
+   "origem": "20250815_130645.jpg",
+   "largura": 4624,
+   "altura": 3468,
+   "formato": "paisagem",
+   "mini": "/Client/Public/Src/Assets/otimizadas/galeria/doce-059-m.webp",
+   "miniJpg": "/Client/Public/Src/Assets/otimizadas/galeria/doce-059-m.jpg",
+   "grande": "/Client/Public/Src/Assets/otimizadas/galeria/doce-059-g.webp"
+  },
+  {
+   "id": "doce-060",
+   "origem": "20250815_130652.jpg",
+   "largura": 3468,
+   "altura": 4624,
+   "formato": "retrato",
+   "mini": "/Client/Public/Src/Assets/otimizadas/galeria/doce-060-m.webp",
+   "miniJpg": "/Client/Public/Src/Assets/otimizadas/galeria/doce-060-m.jpg",
+   "grande": "/Client/Public/Src/Assets/otimizadas/galeria/doce-060-g.webp"
+  },
+  {
+   "id": "doce-061",
+   "origem": "20250815_130656.jpg",
+   "largura": 3468,
+   "altura": 4624,
+   "formato": "retrato",
+   "mini": "/Client/Public/Src/Assets/otimizadas/galeria/doce-061-m.webp",
+   "miniJpg": "/Client/Public/Src/Assets/otimizadas/galeria/doce-061-m.jpg",
+   "grande": "/Client/Public/Src/Assets/otimizadas/galeria/doce-061-g.webp"
+  },
+  {
+   "id": "doce-062",
+   "origem": "20250815_130658.jpg",
+   "largura": 3468,
+   "altura": 4624,
+   "formato": "retrato",
+   "mini": "/Client/Public/Src/Assets/otimizadas/galeria/doce-062-m.webp",
+   "miniJpg": "/Client/Public/Src/Assets/otimizadas/galeria/doce-062-m.jpg",
+   "grande": "/Client/Public/Src/Assets/otimizadas/galeria/doce-062-g.webp"
+  },
+  {
+   "id": "doce-063",
+   "origem": "20250815_130704.jpg",
+   "largura": 3468,
+   "altura": 4624,
+   "formato": "retrato",
+   "mini": "/Client/Public/Src/Assets/otimizadas/galeria/doce-063-m.webp",
+   "miniJpg": "/Client/Public/Src/Assets/otimizadas/galeria/doce-063-m.jpg",
+   "grande": "/Client/Public/Src/Assets/otimizadas/galeria/doce-063-g.webp"
+  },
+  {
+   "id": "doce-064",
+   "origem": "20250815_131009.jpg",
+   "largura": 3468,
+   "altura": 4624,
+   "formato": "retrato",
+   "mini": "/Client/Public/Src/Assets/otimizadas/galeria/doce-064-m.webp",
+   "miniJpg": "/Client/Public/Src/Assets/otimizadas/galeria/doce-064-m.jpg",
+   "grande": "/Client/Public/Src/Assets/otimizadas/galeria/doce-064-g.webp"
+  },
+  {
+   "id": "doce-065",
+   "origem": "20250815_131023.jpg",
+   "largura": 3468,
+   "altura": 4624,
+   "formato": "retrato",
+   "mini": "/Client/Public/Src/Assets/otimizadas/galeria/doce-065-m.webp",
+   "miniJpg": "/Client/Public/Src/Assets/otimizadas/galeria/doce-065-m.jpg",
+   "grande": "/Client/Public/Src/Assets/otimizadas/galeria/doce-065-g.webp"
+  },
+  {
+   "id": "doce-066",
+   "origem": "20250815_131030.jpg",
+   "largura": 3468,
+   "altura": 4624,
+   "formato": "retrato",
+   "mini": "/Client/Public/Src/Assets/otimizadas/galeria/doce-066-m.webp",
+   "miniJpg": "/Client/Public/Src/Assets/otimizadas/galeria/doce-066-m.jpg",
+   "grande": "/Client/Public/Src/Assets/otimizadas/galeria/doce-066-g.webp"
+  },
+  {
+   "id": "doce-067",
+   "origem": "20250815_131033.jpg",
+   "largura": 3468,
+   "altura": 4624,
+   "formato": "retrato",
+   "mini": "/Client/Public/Src/Assets/otimizadas/galeria/doce-067-m.webp",
+   "miniJpg": "/Client/Public/Src/Assets/otimizadas/galeria/doce-067-m.jpg",
+   "grande": "/Client/Public/Src/Assets/otimizadas/galeria/doce-067-g.webp"
+  },
+  {
+   "id": "doce-068",
+   "origem": "20250815_131035.jpg",
+   "largura": 3468,
+   "altura": 4624,
+   "formato": "retrato",
+   "mini": "/Client/Public/Src/Assets/otimizadas/galeria/doce-068-m.webp",
+   "miniJpg": "/Client/Public/Src/Assets/otimizadas/galeria/doce-068-m.jpg",
+   "grande": "/Client/Public/Src/Assets/otimizadas/galeria/doce-068-g.webp"
+  },
+  {
+   "id": "doce-069",
+   "origem": "20250815_131040.jpg",
+   "largura": 4624,
+   "altura": 3468,
+   "formato": "paisagem",
+   "mini": "/Client/Public/Src/Assets/otimizadas/galeria/doce-069-m.webp",
+   "miniJpg": "/Client/Public/Src/Assets/otimizadas/galeria/doce-069-m.jpg",
+   "grande": "/Client/Public/Src/Assets/otimizadas/galeria/doce-069-g.webp"
+  },
+  {
+   "id": "doce-070",
+   "origem": "20250815_131255.jpg",
+   "largura": 3468,
+   "altura": 4624,
+   "formato": "retrato",
+   "mini": "/Client/Public/Src/Assets/otimizadas/galeria/doce-070-m.webp",
+   "miniJpg": "/Client/Public/Src/Assets/otimizadas/galeria/doce-070-m.jpg",
+   "grande": "/Client/Public/Src/Assets/otimizadas/galeria/doce-070-g.webp"
+  },
+  {
+   "id": "doce-071",
+   "origem": "20250815_131347.jpg",
+   "largura": 4624,
+   "altura": 3468,
+   "formato": "paisagem",
+   "mini": "/Client/Public/Src/Assets/otimizadas/galeria/doce-071-m.webp",
+   "miniJpg": "/Client/Public/Src/Assets/otimizadas/galeria/doce-071-m.jpg",
+   "grande": "/Client/Public/Src/Assets/otimizadas/galeria/doce-071-g.webp"
+  },
+  {
+   "id": "doce-072",
+   "origem": "20250815_131355.jpg",
+   "largura": 4624,
+   "altura": 3468,
+   "formato": "paisagem",
+   "mini": "/Client/Public/Src/Assets/otimizadas/galeria/doce-072-m.webp",
+   "miniJpg": "/Client/Public/Src/Assets/otimizadas/galeria/doce-072-m.jpg",
+   "grande": "/Client/Public/Src/Assets/otimizadas/galeria/doce-072-g.webp"
+  },
+  {
+   "id": "doce-073",
+   "origem": "20250831_085035.jpg",
+   "largura": 3072,
+   "altura": 4096,
+   "formato": "retrato",
+   "mini": "/Client/Public/Src/Assets/otimizadas/galeria/doce-073-m.webp",
+   "miniJpg": "/Client/Public/Src/Assets/otimizadas/galeria/doce-073-m.jpg",
+   "grande": "/Client/Public/Src/Assets/otimizadas/galeria/doce-073-g.webp"
+  },
+  {
+   "id": "doce-074",
+   "origem": "20250831_085051.jpg",
+   "largura": 3072,
+   "altura": 4096,
+   "formato": "retrato",
+   "mini": "/Client/Public/Src/Assets/otimizadas/galeria/doce-074-m.webp",
+   "miniJpg": "/Client/Public/Src/Assets/otimizadas/galeria/doce-074-m.jpg",
+   "grande": "/Client/Public/Src/Assets/otimizadas/galeria/doce-074-g.webp"
+  },
+  {
+   "id": "doce-075",
+   "origem": "20250831_085103.jpg",
+   "largura": 3072,
+   "altura": 4096,
+   "formato": "retrato",
+   "mini": "/Client/Public/Src/Assets/otimizadas/galeria/doce-075-m.webp",
+   "miniJpg": "/Client/Public/Src/Assets/otimizadas/galeria/doce-075-m.jpg",
+   "grande": "/Client/Public/Src/Assets/otimizadas/galeria/doce-075-g.webp"
+  },
+  {
+   "id": "doce-076",
+   "origem": "20250831_145719.jpg",
+   "largura": 3468,
+   "altura": 4624,
+   "formato": "retrato",
+   "mini": "/Client/Public/Src/Assets/otimizadas/galeria/doce-076-m.webp",
+   "miniJpg": "/Client/Public/Src/Assets/otimizadas/galeria/doce-076-m.jpg",
+   "grande": "/Client/Public/Src/Assets/otimizadas/galeria/doce-076-g.webp"
+  },
+  {
+   "id": "doce-077",
+   "origem": "20250831_145756.jpg",
+   "largura": 3468,
+   "altura": 4624,
+   "formato": "retrato",
+   "mini": "/Client/Public/Src/Assets/otimizadas/galeria/doce-077-m.webp",
+   "miniJpg": "/Client/Public/Src/Assets/otimizadas/galeria/doce-077-m.jpg",
+   "grande": "/Client/Public/Src/Assets/otimizadas/galeria/doce-077-g.webp"
+  },
+  {
+   "id": "doce-078",
+   "origem": "20250831_145827.jpg",
+   "largura": 3468,
+   "altura": 4624,
+   "formato": "retrato",
+   "mini": "/Client/Public/Src/Assets/otimizadas/galeria/doce-078-m.webp",
+   "miniJpg": "/Client/Public/Src/Assets/otimizadas/galeria/doce-078-m.jpg",
+   "grande": "/Client/Public/Src/Assets/otimizadas/galeria/doce-078-g.webp"
+  },
+  {
+   "id": "doce-079",
+   "origem": "20250831_145836.jpg",
+   "largura": 3468,
+   "altura": 4624,
+   "formato": "retrato",
+   "mini": "/Client/Public/Src/Assets/otimizadas/galeria/doce-079-m.webp",
+   "miniJpg": "/Client/Public/Src/Assets/otimizadas/galeria/doce-079-m.jpg",
+   "grande": "/Client/Public/Src/Assets/otimizadas/galeria/doce-079-g.webp"
+  },
+  {
+   "id": "doce-080",
+   "origem": "20250831_145846.jpg",
+   "largura": 3468,
+   "altura": 4624,
+   "formato": "retrato",
+   "mini": "/Client/Public/Src/Assets/otimizadas/galeria/doce-080-m.webp",
+   "miniJpg": "/Client/Public/Src/Assets/otimizadas/galeria/doce-080-m.jpg",
+   "grande": "/Client/Public/Src/Assets/otimizadas/galeria/doce-080-g.webp"
+  },
+  {
+   "id": "doce-081",
+   "origem": "20250831_151047.jpg",
+   "largura": 3468,
+   "altura": 4624,
+   "formato": "retrato",
+   "mini": "/Client/Public/Src/Assets/otimizadas/galeria/doce-081-m.webp",
+   "miniJpg": "/Client/Public/Src/Assets/otimizadas/galeria/doce-081-m.jpg",
+   "grande": "/Client/Public/Src/Assets/otimizadas/galeria/doce-081-g.webp"
+  },
+  {
+   "id": "doce-082",
+   "origem": "20250831_151051.jpg",
+   "largura": 3468,
+   "altura": 4624,
+   "formato": "retrato",
+   "mini": "/Client/Public/Src/Assets/otimizadas/galeria/doce-082-m.webp",
+   "miniJpg": "/Client/Public/Src/Assets/otimizadas/galeria/doce-082-m.jpg",
+   "grande": "/Client/Public/Src/Assets/otimizadas/galeria/doce-082-g.webp"
+  },
+  {
+   "id": "doce-083",
+   "origem": "20250831_151121.jpg",
+   "largura": 3468,
+   "altura": 4624,
+   "formato": "retrato",
+   "mini": "/Client/Public/Src/Assets/otimizadas/galeria/doce-083-m.webp",
+   "miniJpg": "/Client/Public/Src/Assets/otimizadas/galeria/doce-083-m.jpg",
+   "grande": "/Client/Public/Src/Assets/otimizadas/galeria/doce-083-g.webp"
+  },
+  {
+   "id": "doce-084",
+   "origem": "20250831_151131.jpg",
+   "largura": 3468,
+   "altura": 4624,
+   "formato": "retrato",
+   "mini": "/Client/Public/Src/Assets/otimizadas/galeria/doce-084-m.webp",
+   "miniJpg": "/Client/Public/Src/Assets/otimizadas/galeria/doce-084-m.jpg",
+   "grande": "/Client/Public/Src/Assets/otimizadas/galeria/doce-084-g.webp"
+  },
+  {
+   "id": "doce-085",
+   "origem": "20250831_151751.jpg",
+   "largura": 3468,
+   "altura": 4624,
+   "formato": "retrato",
+   "mini": "/Client/Public/Src/Assets/otimizadas/galeria/doce-085-m.webp",
+   "miniJpg": "/Client/Public/Src/Assets/otimizadas/galeria/doce-085-m.jpg",
+   "grande": "/Client/Public/Src/Assets/otimizadas/galeria/doce-085-g.webp"
+  },
+  {
+   "id": "doce-086",
+   "origem": "20250831_151808.jpg",
+   "largura": 3468,
+   "altura": 4624,
+   "formato": "retrato",
+   "mini": "/Client/Public/Src/Assets/otimizadas/galeria/doce-086-m.webp",
+   "miniJpg": "/Client/Public/Src/Assets/otimizadas/galeria/doce-086-m.jpg",
+   "grande": "/Client/Public/Src/Assets/otimizadas/galeria/doce-086-g.webp"
+  },
+  {
+   "id": "doce-087",
+   "origem": "20250906_121827.jpg",
+   "largura": 3468,
+   "altura": 4624,
+   "formato": "retrato",
+   "mini": "/Client/Public/Src/Assets/otimizadas/galeria/doce-087-m.webp",
+   "miniJpg": "/Client/Public/Src/Assets/otimizadas/galeria/doce-087-m.jpg",
+   "grande": "/Client/Public/Src/Assets/otimizadas/galeria/doce-087-g.webp"
+  },
+  {
+   "id": "doce-088",
+   "origem": "20250906_121835.jpg",
+   "largura": 3468,
+   "altura": 4624,
+   "formato": "retrato",
+   "mini": "/Client/Public/Src/Assets/otimizadas/galeria/doce-088-m.webp",
+   "miniJpg": "/Client/Public/Src/Assets/otimizadas/galeria/doce-088-m.jpg",
+   "grande": "/Client/Public/Src/Assets/otimizadas/galeria/doce-088-g.webp"
+  },
+  {
+   "id": "doce-089",
+   "origem": "20250906_121840.jpg",
+   "largura": 3468,
+   "altura": 4624,
+   "formato": "retrato",
+   "mini": "/Client/Public/Src/Assets/otimizadas/galeria/doce-089-m.webp",
+   "miniJpg": "/Client/Public/Src/Assets/otimizadas/galeria/doce-089-m.jpg",
+   "grande": "/Client/Public/Src/Assets/otimizadas/galeria/doce-089-g.webp"
+  },
+  {
+   "id": "doce-090",
+   "origem": "20250906_121847.jpg",
+   "largura": 3468,
+   "altura": 4624,
+   "formato": "retrato",
+   "mini": "/Client/Public/Src/Assets/otimizadas/galeria/doce-090-m.webp",
+   "miniJpg": "/Client/Public/Src/Assets/otimizadas/galeria/doce-090-m.jpg",
+   "grande": "/Client/Public/Src/Assets/otimizadas/galeria/doce-090-g.webp"
+  },
+  {
+   "id": "doce-091",
+   "origem": "20250906_121851.jpg",
+   "largura": 3468,
+   "altura": 4624,
+   "formato": "retrato",
+   "mini": "/Client/Public/Src/Assets/otimizadas/galeria/doce-091-m.webp",
+   "miniJpg": "/Client/Public/Src/Assets/otimizadas/galeria/doce-091-m.jpg",
+   "grande": "/Client/Public/Src/Assets/otimizadas/galeria/doce-091-g.webp"
+  },
+  {
+   "id": "doce-092",
+   "origem": "20250906_121858.jpg",
+   "largura": 3468,
+   "altura": 4624,
+   "formato": "retrato",
+   "mini": "/Client/Public/Src/Assets/otimizadas/galeria/doce-092-m.webp",
+   "miniJpg": "/Client/Public/Src/Assets/otimizadas/galeria/doce-092-m.jpg",
+   "grande": "/Client/Public/Src/Assets/otimizadas/galeria/doce-092-g.webp"
+  },
+  {
+   "id": "doce-093",
+   "origem": "20250906_121920.jpg",
+   "largura": 3468,
+   "altura": 4624,
+   "formato": "retrato",
+   "mini": "/Client/Public/Src/Assets/otimizadas/galeria/doce-093-m.webp",
+   "miniJpg": "/Client/Public/Src/Assets/otimizadas/galeria/doce-093-m.jpg",
+   "grande": "/Client/Public/Src/Assets/otimizadas/galeria/doce-093-g.webp"
+  },
+  {
+   "id": "doce-094",
+   "origem": "20250906_122152.jpg",
+   "largura": 3468,
+   "altura": 4624,
+   "formato": "retrato",
+   "mini": "/Client/Public/Src/Assets/otimizadas/galeria/doce-094-m.webp",
+   "miniJpg": "/Client/Public/Src/Assets/otimizadas/galeria/doce-094-m.jpg",
+   "grande": "/Client/Public/Src/Assets/otimizadas/galeria/doce-094-g.webp"
+  },
+  {
+   "id": "doce-095",
+   "origem": "20250906_122159.jpg",
+   "largura": 3468,
+   "altura": 4624,
+   "formato": "retrato",
+   "mini": "/Client/Public/Src/Assets/otimizadas/galeria/doce-095-m.webp",
+   "miniJpg": "/Client/Public/Src/Assets/otimizadas/galeria/doce-095-m.jpg",
+   "grande": "/Client/Public/Src/Assets/otimizadas/galeria/doce-095-g.webp"
+  },
+  {
+   "id": "doce-096",
+   "origem": "20250906_122218.jpg",
+   "largura": 3468,
+   "altura": 4624,
+   "formato": "retrato",
+   "mini": "/Client/Public/Src/Assets/otimizadas/galeria/doce-096-m.webp",
+   "miniJpg": "/Client/Public/Src/Assets/otimizadas/galeria/doce-096-m.jpg",
+   "grande": "/Client/Public/Src/Assets/otimizadas/galeria/doce-096-g.webp"
+  },
+  {
+   "id": "doce-097",
+   "origem": "20250906_122226.jpg",
+   "largura": 3468,
+   "altura": 4624,
+   "formato": "retrato",
+   "mini": "/Client/Public/Src/Assets/otimizadas/galeria/doce-097-m.webp",
+   "miniJpg": "/Client/Public/Src/Assets/otimizadas/galeria/doce-097-m.jpg",
+   "grande": "/Client/Public/Src/Assets/otimizadas/galeria/doce-097-g.webp"
+  },
+  {
+   "id": "doce-098",
+   "origem": "20250906_122232.jpg",
+   "largura": 3468,
+   "altura": 4624,
+   "formato": "retrato",
+   "mini": "/Client/Public/Src/Assets/otimizadas/galeria/doce-098-m.webp",
+   "miniJpg": "/Client/Public/Src/Assets/otimizadas/galeria/doce-098-m.jpg",
+   "grande": "/Client/Public/Src/Assets/otimizadas/galeria/doce-098-g.webp"
+  },
+  {
+   "id": "doce-099",
+   "origem": "20250906_122235.jpg",
+   "largura": 3468,
+   "altura": 4624,
+   "formato": "retrato",
+   "mini": "/Client/Public/Src/Assets/otimizadas/galeria/doce-099-m.webp",
+   "miniJpg": "/Client/Public/Src/Assets/otimizadas/galeria/doce-099-m.jpg",
+   "grande": "/Client/Public/Src/Assets/otimizadas/galeria/doce-099-g.webp"
+  },
+  {
+   "id": "doce-100",
+   "origem": "20250906_122240.jpg",
+   "largura": 3468,
+   "altura": 4624,
+   "formato": "retrato",
+   "mini": "/Client/Public/Src/Assets/otimizadas/galeria/doce-100-m.webp",
+   "miniJpg": "/Client/Public/Src/Assets/otimizadas/galeria/doce-100-m.jpg",
+   "grande": "/Client/Public/Src/Assets/otimizadas/galeria/doce-100-g.webp"
+  },
+  {
+   "id": "doce-101",
+   "origem": "20250906_122247.jpg",
+   "largura": 3468,
+   "altura": 4624,
+   "formato": "retrato",
+   "mini": "/Client/Public/Src/Assets/otimizadas/galeria/doce-101-m.webp",
+   "miniJpg": "/Client/Public/Src/Assets/otimizadas/galeria/doce-101-m.jpg",
+   "grande": "/Client/Public/Src/Assets/otimizadas/galeria/doce-101-g.webp"
+  },
+  {
+   "id": "doce-102",
+   "origem": "20250906_122251.jpg",
+   "largura": 3468,
+   "altura": 4624,
+   "formato": "retrato",
+   "mini": "/Client/Public/Src/Assets/otimizadas/galeria/doce-102-m.webp",
+   "miniJpg": "/Client/Public/Src/Assets/otimizadas/galeria/doce-102-m.jpg",
+   "grande": "/Client/Public/Src/Assets/otimizadas/galeria/doce-102-g.webp"
+  },
+  {
+   "id": "doce-103",
+   "origem": "20250906_122303.jpg",
+   "largura": 3468,
+   "altura": 4624,
+   "formato": "retrato",
+   "mini": "/Client/Public/Src/Assets/otimizadas/galeria/doce-103-m.webp",
+   "miniJpg": "/Client/Public/Src/Assets/otimizadas/galeria/doce-103-m.jpg",
+   "grande": "/Client/Public/Src/Assets/otimizadas/galeria/doce-103-g.webp"
+  },
+  {
+   "id": "doce-104",
+   "origem": "20250906_122307.jpg",
+   "largura": 3468,
+   "altura": 4624,
+   "formato": "retrato",
+   "mini": "/Client/Public/Src/Assets/otimizadas/galeria/doce-104-m.webp",
+   "miniJpg": "/Client/Public/Src/Assets/otimizadas/galeria/doce-104-m.jpg",
+   "grande": "/Client/Public/Src/Assets/otimizadas/galeria/doce-104-g.webp"
+  },
+  {
+   "id": "doce-105",
+   "origem": "20250906_122311.jpg",
+   "largura": 3468,
+   "altura": 4624,
+   "formato": "retrato",
+   "mini": "/Client/Public/Src/Assets/otimizadas/galeria/doce-105-m.webp",
+   "miniJpg": "/Client/Public/Src/Assets/otimizadas/galeria/doce-105-m.jpg",
+   "grande": "/Client/Public/Src/Assets/otimizadas/galeria/doce-105-g.webp"
+  },
+  {
+   "id": "doce-106",
+   "origem": "20250906_122314.jpg",
+   "largura": 3468,
+   "altura": 4624,
+   "formato": "retrato",
+   "mini": "/Client/Public/Src/Assets/otimizadas/galeria/doce-106-m.webp",
+   "miniJpg": "/Client/Public/Src/Assets/otimizadas/galeria/doce-106-m.jpg",
+   "grande": "/Client/Public/Src/Assets/otimizadas/galeria/doce-106-g.webp"
+  },
+  {
+   "id": "doce-107",
+   "origem": "20250906_122430.jpg",
+   "largura": 3468,
+   "altura": 4624,
+   "formato": "retrato",
+   "mini": "/Client/Public/Src/Assets/otimizadas/galeria/doce-107-m.webp",
+   "miniJpg": "/Client/Public/Src/Assets/otimizadas/galeria/doce-107-m.jpg",
+   "grande": "/Client/Public/Src/Assets/otimizadas/galeria/doce-107-g.webp"
+  },
+  {
+   "id": "doce-108",
+   "origem": "20250906_122437.jpg",
+   "largura": 3468,
+   "altura": 4624,
+   "formato": "retrato",
+   "mini": "/Client/Public/Src/Assets/otimizadas/galeria/doce-108-m.webp",
+   "miniJpg": "/Client/Public/Src/Assets/otimizadas/galeria/doce-108-m.jpg",
+   "grande": "/Client/Public/Src/Assets/otimizadas/galeria/doce-108-g.webp"
+  },
+  {
+   "id": "doce-109",
+   "origem": "20250906_122440.jpg",
+   "largura": 3468,
+   "altura": 4624,
+   "formato": "retrato",
+   "mini": "/Client/Public/Src/Assets/otimizadas/galeria/doce-109-m.webp",
+   "miniJpg": "/Client/Public/Src/Assets/otimizadas/galeria/doce-109-m.jpg",
+   "grande": "/Client/Public/Src/Assets/otimizadas/galeria/doce-109-g.webp"
+  },
+  {
+   "id": "doce-110",
+   "origem": "20250906_122446.jpg",
+   "largura": 3468,
+   "altura": 4624,
+   "formato": "retrato",
+   "mini": "/Client/Public/Src/Assets/otimizadas/galeria/doce-110-m.webp",
+   "miniJpg": "/Client/Public/Src/Assets/otimizadas/galeria/doce-110-m.jpg",
+   "grande": "/Client/Public/Src/Assets/otimizadas/galeria/doce-110-g.webp"
+  },
+  {
+   "id": "doce-111",
+   "origem": "20250906_122450.jpg",
+   "largura": 3468,
+   "altura": 4624,
+   "formato": "retrato",
+   "mini": "/Client/Public/Src/Assets/otimizadas/galeria/doce-111-m.webp",
+   "miniJpg": "/Client/Public/Src/Assets/otimizadas/galeria/doce-111-m.jpg",
+   "grande": "/Client/Public/Src/Assets/otimizadas/galeria/doce-111-g.webp"
+  },
+  {
+   "id": "doce-112",
+   "origem": "20250906_122529.jpg",
+   "largura": 3468,
+   "altura": 4624,
+   "formato": "retrato",
+   "mini": "/Client/Public/Src/Assets/otimizadas/galeria/doce-112-m.webp",
+   "miniJpg": "/Client/Public/Src/Assets/otimizadas/galeria/doce-112-m.jpg",
+   "grande": "/Client/Public/Src/Assets/otimizadas/galeria/doce-112-g.webp"
+  },
+  {
+   "id": "doce-113",
+   "origem": "20250906_122533.jpg",
+   "largura": 3468,
+   "altura": 4624,
+   "formato": "retrato",
+   "mini": "/Client/Public/Src/Assets/otimizadas/galeria/doce-113-m.webp",
+   "miniJpg": "/Client/Public/Src/Assets/otimizadas/galeria/doce-113-m.jpg",
+   "grande": "/Client/Public/Src/Assets/otimizadas/galeria/doce-113-g.webp"
+  },
+  {
+   "id": "doce-114",
+   "origem": "20250906_122537.jpg",
+   "largura": 3468,
+   "altura": 4624,
+   "formato": "retrato",
+   "mini": "/Client/Public/Src/Assets/otimizadas/galeria/doce-114-m.webp",
+   "miniJpg": "/Client/Public/Src/Assets/otimizadas/galeria/doce-114-m.jpg",
+   "grande": "/Client/Public/Src/Assets/otimizadas/galeria/doce-114-g.webp"
+  },
+  {
+   "id": "doce-115",
+   "origem": "20250906_122544.jpg",
+   "largura": 3468,
+   "altura": 4624,
+   "formato": "retrato",
+   "mini": "/Client/Public/Src/Assets/otimizadas/galeria/doce-115-m.webp",
+   "miniJpg": "/Client/Public/Src/Assets/otimizadas/galeria/doce-115-m.jpg",
+   "grande": "/Client/Public/Src/Assets/otimizadas/galeria/doce-115-g.webp"
+  },
+  {
+   "id": "doce-116",
+   "origem": "20250906_122551.jpg",
+   "largura": 3468,
+   "altura": 4624,
+   "formato": "retrato",
+   "mini": "/Client/Public/Src/Assets/otimizadas/galeria/doce-116-m.webp",
+   "miniJpg": "/Client/Public/Src/Assets/otimizadas/galeria/doce-116-m.jpg",
+   "grande": "/Client/Public/Src/Assets/otimizadas/galeria/doce-116-g.webp"
+  },
+  {
+   "id": "doce-117",
+   "origem": "20250906_122556.jpg",
+   "largura": 3468,
+   "altura": 4624,
+   "formato": "retrato",
+   "mini": "/Client/Public/Src/Assets/otimizadas/galeria/doce-117-m.webp",
+   "miniJpg": "/Client/Public/Src/Assets/otimizadas/galeria/doce-117-m.jpg",
+   "grande": "/Client/Public/Src/Assets/otimizadas/galeria/doce-117-g.webp"
+  },
+  {
+   "id": "doce-118",
+   "origem": "20250907_122717.jpg",
+   "largura": 3468,
+   "altura": 4624,
+   "formato": "retrato",
+   "mini": "/Client/Public/Src/Assets/otimizadas/galeria/doce-118-m.webp",
+   "miniJpg": "/Client/Public/Src/Assets/otimizadas/galeria/doce-118-m.jpg",
+   "grande": "/Client/Public/Src/Assets/otimizadas/galeria/doce-118-g.webp"
+  },
+  {
+   "id": "doce-119",
+   "origem": "20250907_122718.jpg",
+   "largura": 3468,
+   "altura": 4624,
+   "formato": "retrato",
+   "mini": "/Client/Public/Src/Assets/otimizadas/galeria/doce-119-m.webp",
+   "miniJpg": "/Client/Public/Src/Assets/otimizadas/galeria/doce-119-m.jpg",
+   "grande": "/Client/Public/Src/Assets/otimizadas/galeria/doce-119-g.webp"
+  },
+  {
+   "id": "doce-120",
+   "origem": "20250907_122723.jpg",
+   "largura": 3468,
+   "altura": 4624,
+   "formato": "retrato",
+   "mini": "/Client/Public/Src/Assets/otimizadas/galeria/doce-120-m.webp",
+   "miniJpg": "/Client/Public/Src/Assets/otimizadas/galeria/doce-120-m.jpg",
+   "grande": "/Client/Public/Src/Assets/otimizadas/galeria/doce-120-g.webp"
+  },
+  {
+   "id": "doce-121",
+   "origem": "20250914_093739.jpg",
+   "largura": 3468,
+   "altura": 4624,
+   "formato": "retrato",
+   "mini": "/Client/Public/Src/Assets/otimizadas/galeria/doce-121-m.webp",
+   "miniJpg": "/Client/Public/Src/Assets/otimizadas/galeria/doce-121-m.jpg",
+   "grande": "/Client/Public/Src/Assets/otimizadas/galeria/doce-121-g.webp"
+  },
+  {
+   "id": "doce-122",
+   "origem": "20250914_093745.jpg",
+   "largura": 3468,
+   "altura": 4624,
+   "formato": "retrato",
+   "mini": "/Client/Public/Src/Assets/otimizadas/galeria/doce-122-m.webp",
+   "miniJpg": "/Client/Public/Src/Assets/otimizadas/galeria/doce-122-m.jpg",
+   "grande": "/Client/Public/Src/Assets/otimizadas/galeria/doce-122-g.webp"
+  },
+  {
+   "id": "doce-123",
+   "origem": "20250914_093814.jpg",
+   "largura": 3468,
+   "altura": 4624,
+   "formato": "retrato",
+   "mini": "/Client/Public/Src/Assets/otimizadas/galeria/doce-123-m.webp",
+   "miniJpg": "/Client/Public/Src/Assets/otimizadas/galeria/doce-123-m.jpg",
+   "grande": "/Client/Public/Src/Assets/otimizadas/galeria/doce-123-g.webp"
+  },
+  {
+   "id": "doce-124",
+   "origem": "20250914_093818.jpg",
+   "largura": 3468,
+   "altura": 4624,
+   "formato": "retrato",
+   "mini": "/Client/Public/Src/Assets/otimizadas/galeria/doce-124-m.webp",
+   "miniJpg": "/Client/Public/Src/Assets/otimizadas/galeria/doce-124-m.jpg",
+   "grande": "/Client/Public/Src/Assets/otimizadas/galeria/doce-124-g.webp"
+  },
+  {
+   "id": "doce-125",
+   "origem": "20250914_093823.jpg",
+   "largura": 3468,
+   "altura": 4624,
+   "formato": "retrato",
+   "mini": "/Client/Public/Src/Assets/otimizadas/galeria/doce-125-m.webp",
+   "miniJpg": "/Client/Public/Src/Assets/otimizadas/galeria/doce-125-m.jpg",
+   "grande": "/Client/Public/Src/Assets/otimizadas/galeria/doce-125-g.webp"
+  },
+  {
+   "id": "doce-126",
+   "origem": "20250914_093827.jpg",
+   "largura": 3468,
+   "altura": 4624,
+   "formato": "retrato",
+   "mini": "/Client/Public/Src/Assets/otimizadas/galeria/doce-126-m.webp",
+   "miniJpg": "/Client/Public/Src/Assets/otimizadas/galeria/doce-126-m.jpg",
+   "grande": "/Client/Public/Src/Assets/otimizadas/galeria/doce-126-g.webp"
+  },
+  {
+   "id": "doce-127",
+   "origem": "20250914_093846.jpg",
+   "largura": 3468,
+   "altura": 4624,
+   "formato": "retrato",
+   "mini": "/Client/Public/Src/Assets/otimizadas/galeria/doce-127-m.webp",
+   "miniJpg": "/Client/Public/Src/Assets/otimizadas/galeria/doce-127-m.jpg",
+   "grande": "/Client/Public/Src/Assets/otimizadas/galeria/doce-127-g.webp"
+  },
+  {
+   "id": "doce-128",
+   "origem": "20250914_094710.jpg",
+   "largura": 4624,
+   "altura": 3468,
+   "formato": "paisagem",
+   "mini": "/Client/Public/Src/Assets/otimizadas/galeria/doce-128-m.webp",
+   "miniJpg": "/Client/Public/Src/Assets/otimizadas/galeria/doce-128-m.jpg",
+   "grande": "/Client/Public/Src/Assets/otimizadas/galeria/doce-128-g.webp"
+  },
+  {
+   "id": "doce-129",
+   "origem": "20250914_094806.jpg",
+   "largura": 3468,
+   "altura": 4624,
+   "formato": "retrato",
+   "mini": "/Client/Public/Src/Assets/otimizadas/galeria/doce-129-m.webp",
+   "miniJpg": "/Client/Public/Src/Assets/otimizadas/galeria/doce-129-m.jpg",
+   "grande": "/Client/Public/Src/Assets/otimizadas/galeria/doce-129-g.webp"
+  },
+  {
+   "id": "doce-130",
+   "origem": "20250914_094822.jpg",
+   "largura": 3468,
+   "altura": 4624,
+   "formato": "retrato",
+   "mini": "/Client/Public/Src/Assets/otimizadas/galeria/doce-130-m.webp",
+   "miniJpg": "/Client/Public/Src/Assets/otimizadas/galeria/doce-130-m.jpg",
+   "grande": "/Client/Public/Src/Assets/otimizadas/galeria/doce-130-g.webp"
+  },
+  {
+   "id": "doce-131",
+   "origem": "20251010_164308.jpg",
+   "largura": 3468,
+   "altura": 4624,
+   "formato": "retrato",
+   "mini": "/Client/Public/Src/Assets/otimizadas/galeria/doce-131-m.webp",
+   "miniJpg": "/Client/Public/Src/Assets/otimizadas/galeria/doce-131-m.jpg",
+   "grande": "/Client/Public/Src/Assets/otimizadas/galeria/doce-131-g.webp"
+  },
+  {
+   "id": "doce-132",
+   "origem": "20251010_164357.jpg",
+   "largura": 3468,
+   "altura": 4624,
+   "formato": "retrato",
+   "mini": "/Client/Public/Src/Assets/otimizadas/galeria/doce-132-m.webp",
+   "miniJpg": "/Client/Public/Src/Assets/otimizadas/galeria/doce-132-m.jpg",
+   "grande": "/Client/Public/Src/Assets/otimizadas/galeria/doce-132-g.webp"
+  },
+  {
+   "id": "doce-133",
+   "origem": "20251010_164402.jpg",
+   "largura": 3468,
+   "altura": 4624,
+   "formato": "retrato",
+   "mini": "/Client/Public/Src/Assets/otimizadas/galeria/doce-133-m.webp",
+   "miniJpg": "/Client/Public/Src/Assets/otimizadas/galeria/doce-133-m.jpg",
+   "grande": "/Client/Public/Src/Assets/otimizadas/galeria/doce-133-g.webp"
+  },
+  {
+   "id": "doce-134",
+   "origem": "20251010_164526.jpg",
+   "largura": 3468,
+   "altura": 4624,
+   "formato": "retrato",
+   "mini": "/Client/Public/Src/Assets/otimizadas/galeria/doce-134-m.webp",
+   "miniJpg": "/Client/Public/Src/Assets/otimizadas/galeria/doce-134-m.jpg",
+   "grande": "/Client/Public/Src/Assets/otimizadas/galeria/doce-134-g.webp"
+  },
+  {
+   "id": "doce-135",
+   "origem": "20251010_210235.jpg",
+   "largura": 3468,
+   "altura": 4624,
+   "formato": "retrato",
+   "mini": "/Client/Public/Src/Assets/otimizadas/galeria/doce-135-m.webp",
+   "miniJpg": "/Client/Public/Src/Assets/otimizadas/galeria/doce-135-m.jpg",
+   "grande": "/Client/Public/Src/Assets/otimizadas/galeria/doce-135-g.webp"
+  },
+  {
+   "id": "doce-136",
+   "origem": "20251010_210249.jpg",
+   "largura": 3468,
+   "altura": 4624,
+   "formato": "retrato",
+   "mini": "/Client/Public/Src/Assets/otimizadas/galeria/doce-136-m.webp",
+   "miniJpg": "/Client/Public/Src/Assets/otimizadas/galeria/doce-136-m.jpg",
+   "grande": "/Client/Public/Src/Assets/otimizadas/galeria/doce-136-g.webp"
+  },
+  {
+   "id": "doce-137",
+   "origem": "20251010_210310.jpg",
+   "largura": 3468,
+   "altura": 4624,
+   "formato": "retrato",
+   "mini": "/Client/Public/Src/Assets/otimizadas/galeria/doce-137-m.webp",
+   "miniJpg": "/Client/Public/Src/Assets/otimizadas/galeria/doce-137-m.jpg",
+   "grande": "/Client/Public/Src/Assets/otimizadas/galeria/doce-137-g.webp"
+  },
+  {
+   "id": "doce-138",
+   "origem": "20251010_210322.jpg",
+   "largura": 3468,
+   "altura": 4624,
+   "formato": "retrato",
+   "mini": "/Client/Public/Src/Assets/otimizadas/galeria/doce-138-m.webp",
+   "miniJpg": "/Client/Public/Src/Assets/otimizadas/galeria/doce-138-m.jpg",
+   "grande": "/Client/Public/Src/Assets/otimizadas/galeria/doce-138-g.webp"
+  },
+  {
+   "id": "doce-139",
+   "origem": "20251012_124854.jpg",
+   "largura": 3468,
+   "altura": 4624,
+   "formato": "retrato",
+   "mini": "/Client/Public/Src/Assets/otimizadas/galeria/doce-139-m.webp",
+   "miniJpg": "/Client/Public/Src/Assets/otimizadas/galeria/doce-139-m.jpg",
+   "grande": "/Client/Public/Src/Assets/otimizadas/galeria/doce-139-g.webp"
+  },
+  {
+   "id": "doce-140",
+   "origem": "20251012_125240.jpg",
+   "largura": 3468,
+   "altura": 4624,
+   "formato": "retrato",
+   "mini": "/Client/Public/Src/Assets/otimizadas/galeria/doce-140-m.webp",
+   "miniJpg": "/Client/Public/Src/Assets/otimizadas/galeria/doce-140-m.jpg",
+   "grande": "/Client/Public/Src/Assets/otimizadas/galeria/doce-140-g.webp"
+  },
+  {
+   "id": "doce-141",
+   "origem": "20251012_125605.jpg",
+   "largura": 3468,
+   "altura": 4624,
+   "formato": "retrato",
+   "mini": "/Client/Public/Src/Assets/otimizadas/galeria/doce-141-m.webp",
+   "miniJpg": "/Client/Public/Src/Assets/otimizadas/galeria/doce-141-m.jpg",
+   "grande": "/Client/Public/Src/Assets/otimizadas/galeria/doce-141-g.webp"
+  },
+  {
+   "id": "doce-142",
+   "origem": "20251012_125621.jpg",
+   "largura": 3468,
+   "altura": 4624,
+   "formato": "retrato",
+   "mini": "/Client/Public/Src/Assets/otimizadas/galeria/doce-142-m.webp",
+   "miniJpg": "/Client/Public/Src/Assets/otimizadas/galeria/doce-142-m.jpg",
+   "grande": "/Client/Public/Src/Assets/otimizadas/galeria/doce-142-g.webp"
+  },
+  {
+   "id": "doce-143",
+   "origem": "20251018_114356.jpg",
+   "largura": 3468,
+   "altura": 4624,
+   "formato": "retrato",
+   "mini": "/Client/Public/Src/Assets/otimizadas/galeria/doce-143-m.webp",
+   "miniJpg": "/Client/Public/Src/Assets/otimizadas/galeria/doce-143-m.jpg",
+   "grande": "/Client/Public/Src/Assets/otimizadas/galeria/doce-143-g.webp"
+  },
+  {
+   "id": "doce-144",
+   "origem": "20251018_114359.jpg",
+   "largura": 3468,
+   "altura": 4624,
+   "formato": "retrato",
+   "mini": "/Client/Public/Src/Assets/otimizadas/galeria/doce-144-m.webp",
+   "miniJpg": "/Client/Public/Src/Assets/otimizadas/galeria/doce-144-m.jpg",
+   "grande": "/Client/Public/Src/Assets/otimizadas/galeria/doce-144-g.webp"
+  },
+  {
+   "id": "doce-145",
+   "origem": "20251018_114403.jpg",
+   "largura": 3468,
+   "altura": 4624,
+   "formato": "retrato",
+   "mini": "/Client/Public/Src/Assets/otimizadas/galeria/doce-145-m.webp",
+   "miniJpg": "/Client/Public/Src/Assets/otimizadas/galeria/doce-145-m.jpg",
+   "grande": "/Client/Public/Src/Assets/otimizadas/galeria/doce-145-g.webp"
+  },
+  {
+   "id": "doce-146",
+   "origem": "20251018_114434.jpg",
+   "largura": 3468,
+   "altura": 4624,
+   "formato": "retrato",
+   "mini": "/Client/Public/Src/Assets/otimizadas/galeria/doce-146-m.webp",
+   "miniJpg": "/Client/Public/Src/Assets/otimizadas/galeria/doce-146-m.jpg",
+   "grande": "/Client/Public/Src/Assets/otimizadas/galeria/doce-146-g.webp"
+  },
+  {
+   "id": "doce-147",
+   "origem": "20251018_114445.jpg",
+   "largura": 3468,
+   "altura": 4624,
+   "formato": "retrato",
+   "mini": "/Client/Public/Src/Assets/otimizadas/galeria/doce-147-m.webp",
+   "miniJpg": "/Client/Public/Src/Assets/otimizadas/galeria/doce-147-m.jpg",
+   "grande": "/Client/Public/Src/Assets/otimizadas/galeria/doce-147-g.webp"
+  },
+  {
+   "id": "doce-148",
+   "origem": "20251018_114449.jpg",
+   "largura": 3468,
+   "altura": 4624,
+   "formato": "retrato",
+   "mini": "/Client/Public/Src/Assets/otimizadas/galeria/doce-148-m.webp",
+   "miniJpg": "/Client/Public/Src/Assets/otimizadas/galeria/doce-148-m.jpg",
+   "grande": "/Client/Public/Src/Assets/otimizadas/galeria/doce-148-g.webp"
+  },
+  {
+   "id": "doce-149",
+   "origem": "20251018_114452.jpg",
+   "largura": 3468,
+   "altura": 4624,
+   "formato": "retrato",
+   "mini": "/Client/Public/Src/Assets/otimizadas/galeria/doce-149-m.webp",
+   "miniJpg": "/Client/Public/Src/Assets/otimizadas/galeria/doce-149-m.jpg",
+   "grande": "/Client/Public/Src/Assets/otimizadas/galeria/doce-149-g.webp"
+  },
+  {
+   "id": "doce-150",
+   "origem": "20251018_114456.jpg",
+   "largura": 3468,
+   "altura": 4624,
+   "formato": "retrato",
+   "mini": "/Client/Public/Src/Assets/otimizadas/galeria/doce-150-m.webp",
+   "miniJpg": "/Client/Public/Src/Assets/otimizadas/galeria/doce-150-m.jpg",
+   "grande": "/Client/Public/Src/Assets/otimizadas/galeria/doce-150-g.webp"
+  },
+  {
+   "id": "doce-151",
+   "origem": "20251018_114500.jpg",
+   "largura": 3468,
+   "altura": 4624,
+   "formato": "retrato",
+   "mini": "/Client/Public/Src/Assets/otimizadas/galeria/doce-151-m.webp",
+   "miniJpg": "/Client/Public/Src/Assets/otimizadas/galeria/doce-151-m.jpg",
+   "grande": "/Client/Public/Src/Assets/otimizadas/galeria/doce-151-g.webp"
+  },
+  {
+   "id": "doce-152",
+   "origem": "20251018_114818.jpg",
+   "largura": 3468,
+   "altura": 4624,
+   "formato": "retrato",
+   "mini": "/Client/Public/Src/Assets/otimizadas/galeria/doce-152-m.webp",
+   "miniJpg": "/Client/Public/Src/Assets/otimizadas/galeria/doce-152-m.jpg",
+   "grande": "/Client/Public/Src/Assets/otimizadas/galeria/doce-152-g.webp"
+  },
+  {
+   "id": "doce-153",
+   "origem": "20251018_114832.jpg",
+   "largura": 3468,
+   "altura": 4624,
+   "formato": "retrato",
+   "mini": "/Client/Public/Src/Assets/otimizadas/galeria/doce-153-m.webp",
+   "miniJpg": "/Client/Public/Src/Assets/otimizadas/galeria/doce-153-m.jpg",
+   "grande": "/Client/Public/Src/Assets/otimizadas/galeria/doce-153-g.webp"
+  },
+  {
+   "id": "doce-154",
+   "origem": "20251018_114838.jpg",
+   "largura": 3468,
+   "altura": 4624,
+   "formato": "retrato",
+   "mini": "/Client/Public/Src/Assets/otimizadas/galeria/doce-154-m.webp",
+   "miniJpg": "/Client/Public/Src/Assets/otimizadas/galeria/doce-154-m.jpg",
+   "grande": "/Client/Public/Src/Assets/otimizadas/galeria/doce-154-g.webp"
+  },
+  {
+   "id": "doce-155",
+   "origem": "20251018_114853(1).jpg",
+   "largura": 3468,
+   "altura": 4624,
+   "formato": "retrato",
+   "mini": "/Client/Public/Src/Assets/otimizadas/galeria/doce-155-m.webp",
+   "miniJpg": "/Client/Public/Src/Assets/otimizadas/galeria/doce-155-m.jpg",
+   "grande": "/Client/Public/Src/Assets/otimizadas/galeria/doce-155-g.webp"
+  },
+  {
+   "id": "doce-156",
+   "origem": "20251030_211818.jpg",
+   "largura": 3468,
+   "altura": 4624,
+   "formato": "retrato",
+   "mini": "/Client/Public/Src/Assets/otimizadas/galeria/doce-156-m.webp",
+   "miniJpg": "/Client/Public/Src/Assets/otimizadas/galeria/doce-156-m.jpg",
+   "grande": "/Client/Public/Src/Assets/otimizadas/galeria/doce-156-g.webp"
+  },
+  {
+   "id": "doce-157",
+   "origem": "IMG-20250614-WA0170.jpg",
+   "largura": 901,
+   "altura": 1600,
+   "formato": "retrato",
+   "mini": "/Client/Public/Src/Assets/otimizadas/galeria/doce-157-m.webp",
+   "miniJpg": "/Client/Public/Src/Assets/otimizadas/galeria/doce-157-m.jpg",
+   "grande": "/Client/Public/Src/Assets/otimizadas/galeria/doce-157-g.webp"
+  },
+  {
+   "id": "doce-158",
+   "origem": "IMG-20250719-WA0043.jpg",
+   "largura": 1200,
+   "altura": 1600,
+   "formato": "retrato",
+   "mini": "/Client/Public/Src/Assets/otimizadas/galeria/doce-158-m.webp",
+   "miniJpg": "/Client/Public/Src/Assets/otimizadas/galeria/doce-158-m.jpg",
+   "grande": "/Client/Public/Src/Assets/otimizadas/galeria/doce-158-g.webp"
+  },
+  {
+   "id": "doce-159",
+   "origem": "IMG-20250719-WA0044.jpg",
+   "largura": 1200,
+   "altura": 1600,
+   "formato": "retrato",
+   "mini": "/Client/Public/Src/Assets/otimizadas/galeria/doce-159-m.webp",
+   "miniJpg": "/Client/Public/Src/Assets/otimizadas/galeria/doce-159-m.jpg",
+   "grande": "/Client/Public/Src/Assets/otimizadas/galeria/doce-159-g.webp"
+  },
+  {
+   "id": "doce-160",
+   "origem": "IMG-20251016-WA0071.jpg",
+   "largura": 780,
+   "altura": 1040,
+   "formato": "retrato",
+   "mini": "/Client/Public/Src/Assets/otimizadas/galeria/doce-160-m.webp",
+   "miniJpg": "/Client/Public/Src/Assets/otimizadas/galeria/doce-160-m.jpg",
+   "grande": "/Client/Public/Src/Assets/otimizadas/galeria/doce-160-g.webp"
+  },
+  {
+   "id": "doce-161",
+   "origem": "WhatsApp Image 2025-06-14 at 19.51.52_90510d39.jpg",
+   "largura": 1302,
+   "altura": 1302,
+   "formato": "quadrada",
+   "mini": "/Client/Public/Src/Assets/otimizadas/galeria/doce-161-m.webp",
+   "miniJpg": "/Client/Public/Src/Assets/otimizadas/galeria/doce-161-m.jpg",
+   "grande": "/Client/Public/Src/Assets/otimizadas/galeria/doce-161-g.webp"
+  },
+  {
+   "id": "doce-162",
+   "origem": "WhatsApp Image 2025-06-14 at 19.51.58_981def47.jpg",
+   "largura": 1080,
+   "altura": 1080,
+   "formato": "quadrada",
+   "mini": "/Client/Public/Src/Assets/otimizadas/galeria/doce-162-m.webp",
+   "miniJpg": "/Client/Public/Src/Assets/otimizadas/galeria/doce-162-m.jpg",
+   "grande": "/Client/Public/Src/Assets/otimizadas/galeria/doce-162-g.webp"
+  },
+  {
+   "id": "doce-163",
+   "origem": "WhatsApp Image 2025-06-14 at 19.52.03_762ad387.jpg",
+   "largura": 901,
+   "altura": 1600,
+   "formato": "retrato",
+   "mini": "/Client/Public/Src/Assets/otimizadas/galeria/doce-163-m.webp",
+   "miniJpg": "/Client/Public/Src/Assets/otimizadas/galeria/doce-163-m.jpg",
+   "grande": "/Client/Public/Src/Assets/otimizadas/galeria/doce-163-g.webp"
+  },
+  {
+   "id": "doce-164",
+   "origem": "WhatsApp Image 2025-06-20 at 19.18.25_972eca62.jpg",
+   "largura": 1588,
+   "altura": 1191,
+   "formato": "paisagem",
+   "mini": "/Client/Public/Src/Assets/otimizadas/galeria/doce-164-m.webp",
+   "miniJpg": "/Client/Public/Src/Assets/otimizadas/galeria/doce-164-m.jpg",
+   "grande": "/Client/Public/Src/Assets/otimizadas/galeria/doce-164-g.webp"
+  },
+  {
+   "id": "doce-165",
+   "origem": "WhatsApp Image 2025-06-20 at 19.18.41_0e6e6c0f.jpg",
+   "largura": 1200,
+   "altura": 1600,
+   "formato": "retrato",
+   "mini": "/Client/Public/Src/Assets/otimizadas/galeria/doce-165-m.webp",
+   "miniJpg": "/Client/Public/Src/Assets/otimizadas/galeria/doce-165-m.jpg",
+   "grande": "/Client/Public/Src/Assets/otimizadas/galeria/doce-165-g.webp"
+  },
+  {
+   "id": "doce-166",
+   "origem": "WhatsApp Image 2025-06-24 at 00.01.48_0f661f75.jpg",
+   "largura": 867,
+   "altura": 1156,
+   "formato": "retrato",
+   "mini": "/Client/Public/Src/Assets/otimizadas/galeria/doce-166-m.webp",
+   "miniJpg": "/Client/Public/Src/Assets/otimizadas/galeria/doce-166-m.jpg",
+   "grande": "/Client/Public/Src/Assets/otimizadas/galeria/doce-166-g.webp"
+  },
+  {
+   "id": "doce-167",
+   "origem": "WhatsApp Image 2025-06-24 at 00.01.48_1fa886ee.jpg",
+   "largura": 867,
+   "altura": 1156,
+   "formato": "retrato",
+   "mini": "/Client/Public/Src/Assets/otimizadas/galeria/doce-167-m.webp",
+   "miniJpg": "/Client/Public/Src/Assets/otimizadas/galeria/doce-167-m.jpg",
+   "grande": "/Client/Public/Src/Assets/otimizadas/galeria/doce-167-g.webp"
+  },
+  {
+   "id": "doce-168",
+   "origem": "WhatsApp Image 2025-06-24 at 00.01.48_3ab75703 - Copia.jpg",
+   "largura": 867,
+   "altura": 1156,
+   "formato": "retrato",
+   "mini": "/Client/Public/Src/Assets/otimizadas/galeria/doce-168-m.webp",
+   "miniJpg": "/Client/Public/Src/Assets/otimizadas/galeria/doce-168-m.jpg",
+   "grande": "/Client/Public/Src/Assets/otimizadas/galeria/doce-168-g.webp"
+  },
+  {
+   "id": "doce-169",
+   "origem": "WhatsApp Image 2025-06-24 at 07.25.58_1a902a7d.jpg",
+   "largura": 900,
+   "altura": 1600,
+   "formato": "retrato",
+   "mini": "/Client/Public/Src/Assets/otimizadas/galeria/doce-169-m.webp",
+   "miniJpg": "/Client/Public/Src/Assets/otimizadas/galeria/doce-169-m.jpg",
+   "grande": "/Client/Public/Src/Assets/otimizadas/galeria/doce-169-g.webp"
+  },
+  {
+   "id": "doce-170",
+   "origem": "WhatsApp Image 2025-06-26 at 16.03.33_541ae599.jpg",
+   "largura": 1200,
+   "altura": 1600,
+   "formato": "retrato",
+   "mini": "/Client/Public/Src/Assets/otimizadas/galeria/doce-170-m.webp",
+   "miniJpg": "/Client/Public/Src/Assets/otimizadas/galeria/doce-170-m.jpg",
+   "grande": "/Client/Public/Src/Assets/otimizadas/galeria/doce-170-g.webp"
+  },
+  {
+   "id": "doce-171",
+   "origem": "WhatsApp Image 2025-06-26 at 18.47.02_d16b1297.jpg",
+   "largura": 867,
+   "altura": 1156,
+   "formato": "retrato",
+   "mini": "/Client/Public/Src/Assets/otimizadas/galeria/doce-171-m.webp",
+   "miniJpg": "/Client/Public/Src/Assets/otimizadas/galeria/doce-171-m.jpg",
+   "grande": "/Client/Public/Src/Assets/otimizadas/galeria/doce-171-g.webp"
+  },
+  {
+   "id": "doce-172",
+   "origem": "WhatsApp Image 2025-06-26 at 18.48.19_2ef0184f.jpg",
+   "largura": 867,
+   "altura": 1156,
+   "formato": "retrato",
+   "mini": "/Client/Public/Src/Assets/otimizadas/galeria/doce-172-m.webp",
+   "miniJpg": "/Client/Public/Src/Assets/otimizadas/galeria/doce-172-m.jpg",
+   "grande": "/Client/Public/Src/Assets/otimizadas/galeria/doce-172-g.webp"
+  },
+  {
+   "id": "doce-173",
+   "origem": "WhatsApp Image 2025-06-26 at 18.48.19_b2538eba.jpg",
+   "largura": 867,
+   "altura": 1156,
+   "formato": "retrato",
+   "mini": "/Client/Public/Src/Assets/otimizadas/galeria/doce-173-m.webp",
+   "miniJpg": "/Client/Public/Src/Assets/otimizadas/galeria/doce-173-m.jpg",
+   "grande": "/Client/Public/Src/Assets/otimizadas/galeria/doce-173-g.webp"
+  },
+  {
+   "id": "doce-174",
+   "origem": "WhatsApp Image 2025-06-30 at 16.04.08_07cb767f.jpg",
+   "largura": 1200,
+   "altura": 1600,
+   "formato": "retrato",
+   "mini": "/Client/Public/Src/Assets/otimizadas/galeria/doce-174-m.webp",
+   "miniJpg": "/Client/Public/Src/Assets/otimizadas/galeria/doce-174-m.jpg",
+   "grande": "/Client/Public/Src/Assets/otimizadas/galeria/doce-174-g.webp"
+  },
+  {
+   "id": "doce-175",
+   "origem": "WhatsApp Image 2025-07-12 at 16.25.50_dcd5a07c.jpg",
+   "largura": 3072,
+   "altura": 4096,
+   "formato": "retrato",
+   "mini": "/Client/Public/Src/Assets/otimizadas/galeria/doce-175-m.webp",
+   "miniJpg": "/Client/Public/Src/Assets/otimizadas/galeria/doce-175-m.jpg",
+   "grande": "/Client/Public/Src/Assets/otimizadas/galeria/doce-175-g.webp"
+  },
+  {
+   "id": "doce-176",
+   "origem": "WhatsApp Image 2025-07-19 at 10.20.53_781a46d3.jpg",
+   "largura": 1200,
+   "altura": 1600,
+   "formato": "retrato",
+   "mini": "/Client/Public/Src/Assets/otimizadas/galeria/doce-176-m.webp",
+   "miniJpg": "/Client/Public/Src/Assets/otimizadas/galeria/doce-176-m.jpg",
+   "grande": "/Client/Public/Src/Assets/otimizadas/galeria/doce-176-g.webp"
+  },
+  {
+   "id": "doce-177",
+   "origem": "WhatsApp Image 2025-07-19 at 10.20.53_b7ebd731.jpg",
+   "largura": 1200,
+   "altura": 1600,
+   "formato": "retrato",
+   "mini": "/Client/Public/Src/Assets/otimizadas/galeria/doce-177-m.webp",
+   "miniJpg": "/Client/Public/Src/Assets/otimizadas/galeria/doce-177-m.jpg",
+   "grande": "/Client/Public/Src/Assets/otimizadas/galeria/doce-177-g.webp"
+  },
+  {
+   "id": "doce-178",
+   "origem": "WhatsApp Image 2025-07-22 at 08.31.51_66993cec.jpg",
+   "largura": 1200,
+   "altura": 1600,
+   "formato": "retrato",
+   "mini": "/Client/Public/Src/Assets/otimizadas/galeria/doce-178-m.webp",
+   "miniJpg": "/Client/Public/Src/Assets/otimizadas/galeria/doce-178-m.jpg",
+   "grande": "/Client/Public/Src/Assets/otimizadas/galeria/doce-178-g.webp"
+  },
+  {
+   "id": "doce-179",
+   "origem": "WhatsApp Image 2025-07-22 at 08.52.00_8d8c9a88.jpg",
+   "largura": 1200,
+   "altura": 1600,
+   "formato": "retrato",
+   "mini": "/Client/Public/Src/Assets/otimizadas/galeria/doce-179-m.webp",
+   "miniJpg": "/Client/Public/Src/Assets/otimizadas/galeria/doce-179-m.jpg",
+   "grande": "/Client/Public/Src/Assets/otimizadas/galeria/doce-179-g.webp"
+  },
+  {
+   "id": "doce-180",
+   "origem": "WhatsApp Image 2025-07-25 at 10.34.27_99c102b0.jpg",
+   "largura": 1200,
+   "altura": 1600,
+   "formato": "retrato",
+   "mini": "/Client/Public/Src/Assets/otimizadas/galeria/doce-180-m.webp",
+   "miniJpg": "/Client/Public/Src/Assets/otimizadas/galeria/doce-180-m.jpg",
+   "grande": "/Client/Public/Src/Assets/otimizadas/galeria/doce-180-g.webp"
+  },
+  {
+   "id": "doce-181",
+   "origem": "WhatsApp Image 2025-07-25 at 11.18.52_7ea7b41c.jpg",
+   "largura": 1200,
+   "altura": 1600,
+   "formato": "retrato",
+   "mini": "/Client/Public/Src/Assets/otimizadas/galeria/doce-181-m.webp",
+   "miniJpg": "/Client/Public/Src/Assets/otimizadas/galeria/doce-181-m.jpg",
+   "grande": "/Client/Public/Src/Assets/otimizadas/galeria/doce-181-g.webp"
+  },
+  {
+   "id": "doce-182",
+   "origem": "WhatsApp Image 2025-07-25 at 11.18.53_5949de6c.jpg",
+   "largura": 1200,
+   "altura": 1600,
+   "formato": "retrato",
+   "mini": "/Client/Public/Src/Assets/otimizadas/galeria/doce-182-m.webp",
+   "miniJpg": "/Client/Public/Src/Assets/otimizadas/galeria/doce-182-m.jpg",
+   "grande": "/Client/Public/Src/Assets/otimizadas/galeria/doce-182-g.webp"
+  },
+  {
+   "id": "doce-183",
+   "origem": "WhatsApp Image 2025-07-25 at 11.18.53_ae562b7a.jpg",
+   "largura": 1200,
+   "altura": 1600,
+   "formato": "retrato",
+   "mini": "/Client/Public/Src/Assets/otimizadas/galeria/doce-183-m.webp",
+   "miniJpg": "/Client/Public/Src/Assets/otimizadas/galeria/doce-183-m.jpg",
+   "grande": "/Client/Public/Src/Assets/otimizadas/galeria/doce-183-g.webp"
+  },
+  {
+   "id": "doce-184",
+   "origem": "WhatsApp Image 2025-07-27 at 13.36.59_d44c1cb1.jpg",
+   "largura": 3072,
+   "altura": 4096,
+   "formato": "retrato",
+   "mini": "/Client/Public/Src/Assets/otimizadas/galeria/doce-184-m.webp",
+   "miniJpg": "/Client/Public/Src/Assets/otimizadas/galeria/doce-184-m.jpg",
+   "grande": "/Client/Public/Src/Assets/otimizadas/galeria/doce-184-g.webp"
+  },
+  {
+   "id": "doce-185",
+   "origem": "WhatsApp Image 2025-07-27 at 13.37.00_ea801fdb.jpg",
+   "largura": 3072,
+   "altura": 4096,
+   "formato": "retrato",
+   "mini": "/Client/Public/Src/Assets/otimizadas/galeria/doce-185-m.webp",
+   "miniJpg": "/Client/Public/Src/Assets/otimizadas/galeria/doce-185-m.jpg",
+   "grande": "/Client/Public/Src/Assets/otimizadas/galeria/doce-185-g.webp"
+  },
+  {
+   "id": "doce-186",
+   "origem": "WhatsApp Image 2025-07-27 at 19.11.19_3feb72d0.jpg",
+   "largura": 901,
+   "altura": 1600,
+   "formato": "retrato",
+   "mini": "/Client/Public/Src/Assets/otimizadas/galeria/doce-186-m.webp",
+   "miniJpg": "/Client/Public/Src/Assets/otimizadas/galeria/doce-186-m.jpg",
+   "grande": "/Client/Public/Src/Assets/otimizadas/galeria/doce-186-g.webp"
+  },
+  {
+   "id": "doce-187",
+   "origem": "WhatsApp Image 2025-08-15 at 13.25.25_c7cf029a.jpg",
+   "largura": 1200,
+   "altura": 1600,
+   "formato": "retrato",
+   "mini": "/Client/Public/Src/Assets/otimizadas/galeria/doce-187-m.webp",
+   "miniJpg": "/Client/Public/Src/Assets/otimizadas/galeria/doce-187-m.jpg",
+   "grande": "/Client/Public/Src/Assets/otimizadas/galeria/doce-187-g.webp"
+  },
+  {
+   "id": "doce-188",
+   "origem": "WhatsApp Image 2025-08-15 at 13.25.26_af262bb6.jpg",
+   "largura": 1200,
+   "altura": 1600,
+   "formato": "retrato",
+   "mini": "/Client/Public/Src/Assets/otimizadas/galeria/doce-188-m.webp",
+   "miniJpg": "/Client/Public/Src/Assets/otimizadas/galeria/doce-188-m.jpg",
+   "grande": "/Client/Public/Src/Assets/otimizadas/galeria/doce-188-g.webp"
+  },
+  {
+   "id": "doce-189",
+   "origem": "WhatsApp Image 2025-08-15 at 13.25.27_91fa2efa.jpg",
+   "largura": 1200,
+   "altura": 1600,
+   "formato": "retrato",
+   "mini": "/Client/Public/Src/Assets/otimizadas/galeria/doce-189-m.webp",
+   "miniJpg": "/Client/Public/Src/Assets/otimizadas/galeria/doce-189-m.jpg",
+   "grande": "/Client/Public/Src/Assets/otimizadas/galeria/doce-189-g.webp"
+  },
+  {
+   "id": "doce-190",
+   "origem": "WhatsApp Image 2025-08-15 at 13.25.28_6374ec4a.jpg",
+   "largura": 1200,
+   "altura": 1600,
+   "formato": "retrato",
+   "mini": "/Client/Public/Src/Assets/otimizadas/galeria/doce-190-m.webp",
+   "miniJpg": "/Client/Public/Src/Assets/otimizadas/galeria/doce-190-m.jpg",
+   "grande": "/Client/Public/Src/Assets/otimizadas/galeria/doce-190-g.webp"
+  },
+  {
+   "id": "doce-191",
+   "origem": "WhatsApp Image 2025-08-15 at 13.25.50_c59b96a3.jpg",
+   "largura": 1200,
+   "altura": 1600,
+   "formato": "retrato",
+   "mini": "/Client/Public/Src/Assets/otimizadas/galeria/doce-191-m.webp",
+   "miniJpg": "/Client/Public/Src/Assets/otimizadas/galeria/doce-191-m.jpg",
+   "grande": "/Client/Public/Src/Assets/otimizadas/galeria/doce-191-g.webp"
+  },
+  {
+   "id": "doce-192",
+   "origem": "WhatsApp Image 2025-08-15 at 13.26.07_2d6f609d.jpg",
+   "largura": 1600,
+   "altura": 1200,
+   "formato": "paisagem",
+   "mini": "/Client/Public/Src/Assets/otimizadas/galeria/doce-192-m.webp",
+   "miniJpg": "/Client/Public/Src/Assets/otimizadas/galeria/doce-192-m.jpg",
+   "grande": "/Client/Public/Src/Assets/otimizadas/galeria/doce-192-g.webp"
+  },
+  {
+   "id": "doce-193",
+   "origem": "WhatsApp Image 2025-08-15 at 13.26.26_8518bec0.jpg",
+   "largura": 1200,
+   "altura": 1600,
+   "formato": "retrato",
+   "mini": "/Client/Public/Src/Assets/otimizadas/galeria/doce-193-m.webp",
+   "miniJpg": "/Client/Public/Src/Assets/otimizadas/galeria/doce-193-m.jpg",
+   "grande": "/Client/Public/Src/Assets/otimizadas/galeria/doce-193-g.webp"
+  },
+  {
+   "id": "doce-194",
+   "origem": "WhatsApp Image 2025-09-14 at 09.56.51_6a2e1de1.jpg",
+   "largura": 867,
+   "altura": 1156,
+   "formato": "retrato",
+   "mini": "/Client/Public/Src/Assets/otimizadas/galeria/doce-194-m.webp",
+   "miniJpg": "/Client/Public/Src/Assets/otimizadas/galeria/doce-194-m.jpg",
+   "grande": "/Client/Public/Src/Assets/otimizadas/galeria/doce-194-g.webp"
+  }
+ ]
+}

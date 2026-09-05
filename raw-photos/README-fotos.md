@@ -1,18 +1,59 @@
-# 📸 Como trocar as fotos do site — passo a passo
+# 📸 Como trocar e adicionar fotos do site — passo a passo
 
 Este é o único arquivo que você precisa ler para atualizar qualquer foto do
 site. Não é preciso mexer em código.
 
 ---
 
-## Resumo em 4 passos
+## ⚡ Resposta rápida: "baixo tudo num zip e jogo no projeto?"
 
-1. Exporte as fotos do Google Fotos (instruções abaixo).
-2. Renomeie seguindo a convenção de nomes.
-3. Jogue os arquivos dentro da pasta certa em `/raw-photos`.
-4. Rode um comando. Pronto — o site já usa as fotos novas.
+**Sim, é exatamente isso.** O fluxo é:
+
+1. No Google Fotos, seleciona tudo → **Baixar** → vem um `.zip`.
+2. Descompacta e joga **todos os arquivos** dentro de `raw-photos/galeria/`.
+   Não precisa renomear, não precisa escolher, não precisa separar.
+3. Roda dois comandos:
+
+   ```bash
+   python tools/processar-galeria.py
+   python tools/gerar-galeria-html.py
+   ```
+
+4. Pronto. O site já está com as fotos novas.
+
+O programa cuida sozinho de:
+
+- **corrigir a rotação** (aquela foto que fica deitada);
+- **descartar as tremidas** e desfocadas;
+- **juntar as rajadas** — se você tirou 4 fotos seguidas do mesmo bolo, ele
+  mantém só a mais nítida;
+- **reduzir e comprimir** (uma foto de 4 MB do celular vira ~22 KB);
+- **sortear 10** para a vitrine da página inicial;
+- **montar a página** `galeria.html` com todas.
+
+> Foi assim que as 282 fotos que você colocou viraram **194 fotos boas**,
+> ocupando 23 MB em vez de 911 MB.
+
+**Não commite a pasta `raw-photos`.** Ela está no `.gitignore` de propósito:
+são centenas de MB que o site não usa. Guarde num HD externo ou no Drive — o
+que vai para o repositório é só o resultado otimizado.
+
+### Quero outro sorteio na página inicial
+
+```bash
+python tools/gerar-galeria-html.py --semente 42     # troca as 10 fotos
+python tools/gerar-galeria-html.py --destaques 14   # mostra 14 em vez de 10
+```
+
+### Quero manter tudo, sem descarte automático
+
+```bash
+python tools/processar-galeria.py --sem-dedupe
+```
 
 ---
+
+## Fotos de produto do Menu (essas precisam de nome certo)
 
 ## Passo 1 — Exportar do Google Fotos
 
@@ -77,10 +118,15 @@ menu-cafe-1.jpg           ← número precisa de dois dígitos: 01
 
 ```
 raw-photos/
-├── menu/       → fotos dos produtos que aparecem nos cards do "Nosso Menu"
-├── galeria/    → fotos bonitas para a seção "Galeria"
+├── menu/       → fotos dos produtos dos cards do "Nosso Menu"
+│                 (precisam do nome na convenção: menu-cafe-01.jpg)
+├── galeria/    → fotos dos doces (pode jogar tudo aqui, sem renomear)
 └── equipe/     → retratos da Sanderly / da família
 ```
+
+> **A pasta `galeria/` é a exceção boa:** ali o nome do arquivo não importa.
+> Pode despejar o zip inteiro do Google Fotos. Nas outras duas, siga a
+> convenção do Passo 2, porque o site precisa saber qual foto é qual produto.
 
 Se você colocar a foto dentro da pasta certa, pode até esquecer o prefixo da
 seção no nome — o programa completa sozinho. Mas com o prefixo fica mais
@@ -143,3 +189,14 @@ convenção do Passo 2.
 ```bash
 python tools/otimizar-fotos.py --incluir-atuais
 ```
+
+---
+
+## Os dois programas, lado a lado
+
+| Programa | Para que serve | Quando rodar |
+| --- | --- | --- |
+| `tools/processar-galeria.py` | Lê `raw-photos/galeria/`, limpa, comprime e escreve o `galeria.json` | Sempre que adicionar ou remover fotos da galeria |
+| `tools/gerar-galeria-html.py` | Monta a vitrine da home e a página `galeria.html` a partir do `galeria.json` | Depois do de cima, ou sozinho para re-sortear as 10 da home |
+| `tools/otimizar-fotos.py` | Fotos de produto do Menu, do herói e retratos (usa a convenção de nomes) | Ao trocar foto de produto |
+| `tools/recortar-heroi.py` | Recorta o morango do fundo branco para a cena do herói | Só se trocar a imagem do herói |

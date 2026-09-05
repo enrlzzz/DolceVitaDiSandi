@@ -141,48 +141,12 @@
        5. Cena 3D do herói — inclinação por mouse/giroscópio + saída no scroll
        Custo: zero biblioteca. Só atualiza duas variáveis CSS por quadro.
        --------------------------------------------------------------------- */
-    var palco = document.querySelector('#hero-palco');
-    var cena = document.querySelector('#hero-cena');
-
-    if (palco && cena && podeAnimar() && window.matchMedia('(hover: hover)').matches) {
-        var alvoX = 0, alvoY = 0, atualX = 0, atualY = 0, rodando = false;
-
-        function suavizar() {
-            atualX += (alvoX - atualX) * 0.08;
-            atualY += (alvoY - atualY) * 0.08;
-            cena.style.setProperty('--rx', atualX.toFixed(2) + 'deg');
-            cena.style.setProperty('--ry', atualY.toFixed(2) + 'deg');
-            if (Math.abs(alvoX - atualX) > 0.01 || Math.abs(alvoY - atualY) > 0.01) {
-                window.requestAnimationFrame(suavizar);
-            } else {
-                rodando = false;
-            }
-        }
-
-        function acordar() {
-            if (rodando) return;
-            rodando = true;
-            window.requestAnimationFrame(suavizar);
-        }
-
-        window.addEventListener('mousemove', function (e) {
-            var r = palco.getBoundingClientRect();
-            if (r.bottom < 0 || r.top > window.innerHeight) return;
-            var cx = r.left + r.width / 2;
-            var cy = r.top + r.height / 2;
-            // Inclinação máxima discreta: 10 graus. Mais que isso enjoa.
-            alvoY = Math.max(-10, Math.min(10, ((e.clientX - cx) / r.width) * 20));
-            alvoX = Math.max(-10, Math.min(10, ((cy - e.clientY) / r.height) * 20));
-            acordar();
-        }, { passive: true });
-
-        palco.addEventListener('mouseleave', function () {
-            alvoX = 0; alvoY = 0; acordar();
-        });
-    }
-
+    // A cena do herói é deliberadamente estática: nada de inclinação pelo
+    // mouse nem de balanço. O que dá profundidade é a luz e a sombra, não o
+    // movimento. Mantemos apenas a saída suave no scroll.
     // Transição de saída: o herói se afasta e entrega a cena para "Sobre"
     var heroSection = document.querySelector('.hero-section');
+    var cena = document.querySelector('#hero-cena');
     if (heroSection && cena && podeAnimar()) {
         var travadoHero = false;
         window.addEventListener('scroll', function () {
@@ -206,15 +170,21 @@
     var lightbox = document.querySelector('#lightbox');
     var lbImg = document.querySelector('#lightbox-img');
     var lbLegenda = document.querySelector('#lightbox-legenda');
-    var botoesGaleria = Array.prototype.slice.call(document.querySelectorAll('.gallery-botao'));
+    var botoesGaleria = Array.prototype.slice.call(
+        document.querySelectorAll('.gallery-item:not(.oculto) .gallery-botao'));
     var indiceAtual = 0;
     var origemFoco = null;
 
     function fonteDe(botao) {
         var img = botao.querySelector('img');
-        if (!img) return { src: '', alt: '' };
-        // currentSrc já é a melhor versão que o navegador escolheu
-        return { src: img.currentSrc || img.src, alt: img.alt || '' };
+        // data-grande aponta para a versão de visualização (1100px).
+        // Sem ela, cai para a miniatura que o navegador já baixou.
+        var grande = botao.getAttribute('data-grande');
+        if (!img) return { src: grande || '', alt: '' };
+        return {
+            src: grande || img.currentSrc || img.src,
+            alt: img.alt || ''
+        };
     }
 
     function mostrar(indice) {
@@ -224,7 +194,12 @@
         var dados = fonteDe(botao);
         lbImg.src = dados.src;
         lbImg.alt = dados.alt;
-        lbLegenda.textContent = botao.getAttribute('data-legenda') || dados.alt;
+        var legenda = botao.getAttribute('data-legenda');
+        if (!legenda) {
+            legenda = 'Foto ' + (indiceAtual + 1) + ' de ' + botoesGaleria.length
+                + ' — ' + dados.alt;
+        }
+        lbLegenda.textContent = legenda;
     }
 
     function abrirLightbox(indice) {
@@ -275,9 +250,50 @@
         });
     }
 
-    botoesGaleria.forEach(function (botao, i) {
-        botao.addEventListener('click', function () { abrirLightbox(i); });
-    });
+    function ligarBotoesGaleria() {
+        botoesGaleria.forEach(function (botao, i) {
+            if (botao.dataset.ligado) return;
+            botao.dataset.ligado = '1';
+            botao.addEventListener('click', function () {
+                indiceAtual = Array.prototype.indexOf.call(botoesGaleria, botao);
+                abrirLightbox(indiceAtual < 0 ? i : indiceAtual);
+            });
+        });
+    }
+
+    ligarBotoesGaleria();
+
+    /* ---------------------------------------------------------------------
+       6b. "Carregar mais" da página com todas as fotos
+       Os itens já vêm no HTML (bom para busca); só ficam ocultos até o
+       visitante pedir, para a primeira pintura ser leve.
+       --------------------------------------------------------------------- */
+    var botaoMais = document.querySelector('#carregar-mais');
+
+    if (botaoMais) {
+        var LOTE = 48;
+        var contador = document.querySelector('#galeria-mostrando');
+        var area = document.querySelector('#carregar-mais-area');
+
+        botaoMais.addEventListener('click', function () {
+            var ocultos = document.querySelectorAll('.gallery-item.oculto');
+            var quantos = Math.min(LOTE, ocultos.length);
+            for (var i = 0; i < quantos; i++) {
+                ocultos[i].classList.remove('oculto');
+            }
+            var visiveis = document.querySelectorAll('.gallery-item:not(.oculto)').length;
+            if (contador) contador.textContent = String(visiveis);
+
+            // A lista do lightbox precisa acompanhar o que está na tela
+            botoesGaleria = Array.prototype.slice.call(
+                document.querySelectorAll('.gallery-item:not(.oculto) .gallery-botao'));
+            ligarBotoesGaleria();
+
+            if (!document.querySelector('.gallery-item.oculto') && area) {
+                area.hidden = true;
+            }
+        });
+    }
 
     /* ---------------------------------------------------------------------
        7. Formulário de pedido -> mensagem pronta no WhatsApp

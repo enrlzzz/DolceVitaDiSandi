@@ -1,7 +1,7 @@
 /* =========================================================================
    Dolce Vita Di Sandi — folha de estilo principal
    Identidade preservada: marrom-chocolate, creme, rosa da marca,
-   Poppins no corpo e Miniver nos títulos decorativos.
+   Poppins no corpo e uma script leve nos títulos decorativos.
    Mobile-first. Sem dependências de CSS externo.
    ========================================================================= */
 
@@ -42,6 +42,14 @@
     --sombra-1: 0 2px 8px rgba(44, 24, 16, 0.06);
     --sombra-2: 0 10px 30px rgba(44, 24, 16, 0.10);
     --sombra-3: 0 24px 60px rgba(44, 24, 16, 0.18);
+
+    /* Tipografia dos títulos decorativos.
+       Sacramento é monolinear e leve. Alternativas que funcionam sem mexer em
+       mais nada (troque também o link do Google Fonts nas páginas):
+       'Parisienne' — um pouco mais inclinada e romântica
+       'Allura'     — traços mais finos e alongados
+       'Yellowtail' — mais encorpada, com pegada retrô de confeitaria */
+    --fonte-titulo: 'Sacramento', 'Segoe Script', cursive;
 
     /* Ritmo */
     --raio: 18px;
@@ -245,9 +253,9 @@ section {
 }
 
 .section-title {
-    font-family: 'Miniver', 'Poppins', cursive;
+    font-family: var(--fonte-titulo);
     font-weight: 400;
-    font-size: clamp(2.1rem, 5.5vw, 3.2rem);
+    font-size: clamp(2.6rem, 6.5vw, 4rem);
     color: var(--chocolate);
     line-height: 1.25;
     margin-bottom: 16px;
@@ -410,10 +418,11 @@ header.solido {
 }
 
 .nav-logo .logo {
-    font-family: 'Miniver', cursive;
+    font-family: var(--fonte-titulo);
     font-weight: 400;
-    font-size: clamp(1.25rem, 3.6vw, 1.6rem);
+    font-size: clamp(1.55rem, 4.2vw, 2rem);
     letter-spacing: .5px;
+    line-height: 1.1;
     white-space: nowrap;
 }
 
@@ -468,7 +477,7 @@ header.solido {
 }
 
 /* -------------------------------------------------------------------------
-   6. Hero com cena 3D leve
+   6. Hero — vitrine de chocolate e porcelana
    ------------------------------------------------------------------------- */
 .hero-section {
     min-height: 100svh;
@@ -476,23 +485,70 @@ header.solido {
     align-items: center;
     padding-top: 104px;
     padding-bottom: 64px;
-    background:
-        radial-gradient(120% 90% at 78% 42%, rgba(224, 108, 253, .22), transparent 62%),
-        linear-gradient(150deg, #5A3B33 0%, var(--chocolate) 38%, var(--chocolate-escuro) 100%);
     color: var(--branco);
     overflow: hidden;
     position: relative;
+    isolation: isolate;
+
+    /* A luz fica concentrada na vitrine; o texto tem uma superfície calma. */
+    background:
+        radial-gradient(ellipse at 92% 18%, #775247 0%, transparent 52%),
+        linear-gradient(115deg, #291B18 0%, #3E2822 56%, #573B32 100%);
 }
 
-/* Textura de grão sutil — puro CSS, zero requisição */
+/* Um arco amplo liga a vitrine à página, como a curva de uma embalagem. */
+.hero-section::before {
+    content: '';
+    position: absolute;
+    width: 84%;
+    height: 150%;
+    top: -28%;
+    right: -35%;
+    z-index: -2;
+    pointer-events: none;
+    border: 1px solid rgba(245, 238, 233, .13);
+    border-radius: 50%;
+    transform: rotate(-24deg);
+    box-shadow: 0 0 0 32px rgba(245, 238, 233, .025),
+        0 0 0 96px rgba(245, 238, 233, .018);
+}
+
+/* Textura de papel discreta, sem imagens extras ou filtros de desfoque. */
 .hero-section::after {
     content: '';
     position: absolute;
     inset: 0;
+    z-index: -1;
     pointer-events: none;
-    opacity: .5;
-    background-image: radial-gradient(rgba(255, 255, 255, .05) 1px, transparent 1px);
-    background-size: 3px 3px;
+    opacity: .22;
+    background-image:
+        radial-gradient(rgba(245, 238, 233, .24) .5px, transparent .75px);
+    background-size: 5px 5px;
+}
+
+/* Luz refletida em creme e rosa, restrita à metade da fotografia. */
+.hero-ambiente {
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    pointer-events: none;
+    overflow: hidden;
+    background:
+        radial-gradient(ellipse 32% 48% at 80% 47%, rgba(242, 179, 255, .12), transparent 85%),
+        radial-gradient(ellipse 38% 25% at 72% 95%, rgba(245, 218, 194, .1), transparent 85%);
+}
+
+/* Acabamento inferior da vitrine. */
+.hero-bancada {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 15%;
+    z-index: -1;
+    pointer-events: none;
+    background:
+        linear-gradient(to top, rgba(26, 15, 12, .3), transparent);
 }
 
 .hero-section .section-content {
@@ -501,11 +557,11 @@ header.solido {
 }
 
 .hero-details .title {
-    font-family: 'Miniver', cursive;
+    font-family: var(--fonte-titulo);
     font-weight: 400;
-    font-size: clamp(2.6rem, 8vw, 4.4rem);
+    font-size: clamp(3.4rem, 10vw, 5.8rem);
     color: var(--rosa);
-    line-height: 1.1;
+    line-height: 1;
     margin-bottom: 10px;
 }
 
@@ -521,6 +577,20 @@ header.solido {
     color: var(--tinta-clara);
     max-width: 52ch;
     margin-bottom: 30px;
+}
+
+.hero-garantia {
+    margin-top: 14px;
+    font-size: .88rem;
+    color: var(--rosa-claro);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.hero-garantia .icone {
+    width: 1.05em;
+    height: 1.05em;
 }
 
 .hero-selos {
@@ -547,15 +617,46 @@ header.solido {
 /* --- Palco 3D ---------------------------------------------------------- */
 .hero-palco {
     position: relative;
-    perspective: 1100px;
-    perspective-origin: 50% 45%;
+    isolation: isolate;
+    perspective: 1200px;
+    perspective-origin: 50% 40%;
     display: grid;
     place-items: center;
     /* reserva o espaço antes da imagem carregar: zero CLS */
-    aspect-ratio: 1 / 1.05;
-    max-width: 520px;
+    aspect-ratio: 1 / 0.96;
+    max-width: 580px;
     margin-inline: auto;
     width: 100%;
+}
+
+/* Porcelana oval: a fruta ultrapassa a borda, criando profundidade real
+   entre recorte, superfície clara e fundo de chocolate. */
+.hero-palco::before,
+.hero-palco::after {
+    content: '';
+    position: absolute;
+    pointer-events: none;
+    border-radius: 48% 52% 47% 53% / 54% 43% 57% 46%;
+    transform: rotate(-22deg);
+}
+
+.hero-palco::before {
+    inset: 5% 2% 4% 6%;
+    z-index: -2;
+    background:
+        radial-gradient(ellipse at 34% 20%, #FFFDF7 0%, #F5E9D9 46%, #DFBCA5 100%);
+    box-shadow:
+        inset 0 0 0 1px rgba(255, 255, 255, .65),
+        inset 8px 12px 32px rgba(255, 255, 255, .45),
+        inset -12px -18px 38px rgba(116, 66, 43, .13),
+        18px 32px 65px rgba(16, 8, 5, .28);
+}
+
+.hero-palco::after {
+    inset: -1% -4% -2% 0;
+    z-index: -1;
+    border: 1px solid rgba(242, 179, 255, .5);
+    box-shadow: 0 0 0 10px rgba(242, 179, 255, .035);
 }
 
 .hero-cena {
@@ -565,86 +666,93 @@ header.solido {
     transform-style: preserve-3d;
     display: grid;
     place-items: center;
-    /* variáveis alimentadas pelo JS (mouse / giroscópio) */
+    /* variáveis alimentadas pelo JS (mouse) */
     --rx: 0deg;
     --ry: 0deg;
     transform: rotateX(var(--rx)) rotateY(var(--ry));
     transition: transform .45s cubic-bezier(.22, 1, .36, 1);
 }
 
-/* Halo de luz atrás do produto */
-.hero-halo {
+/* Sombra projetada no "chão" da cena. É o que ancora a fruta no espaço e
+   faz o olho entender que ela está no ar, e não colada no fundo. */
+.hero-sombra {
     position: absolute;
-    width: 78%;
-    aspect-ratio: 1;
+    bottom: 4%;
+    width: 52%;
+    aspect-ratio: 3.4 / 1;
     border-radius: 50%;
-    background: radial-gradient(circle, rgba(224, 108, 253, .45), rgba(224, 108, 253, 0) 68%);
-    filter: blur(6px);
-    transform: translateZ(-140px);
+    background: radial-gradient(ellipse at center,
+            rgba(0, 0, 0, .62) 0%,
+            rgba(0, 0, 0, .34) 42%,
+            rgba(0, 0, 0, 0) 72%);
+    filter: blur(9px);
+    transform: translateZ(-120px);
 }
 
-/* Disco/prato que dá o chão da cena */
-.hero-disco {
-    position: absolute;
-    bottom: 6%;
-    width: 62%;
-    aspect-ratio: 3 / 1;
-    border-radius: 50%;
-    background: radial-gradient(ellipse at center, rgba(0, 0, 0, .55), rgba(0, 0, 0, 0) 70%);
-    transform: translateZ(-90px) rotateX(72deg);
+/* Segunda sombra, menor e mais fechada: dá o contato mais próximo. */
+.hero-sombra.perto {
+    width: 30%;
+    aspect-ratio: 4 / 1;
+    bottom: 5.5%;
+    filter: blur(5px);
+    background: radial-gradient(ellipse at center,
+            rgba(0, 0, 0, .55), rgba(0, 0, 0, 0) 68%);
 }
+
 
 .hero-image-wrapper {
     position: relative;
     width: 100%;
-    transform: translateZ(60px);
+    transform: translateZ(70px);
 }
 
 .hero-image {
     width: 100%;
     height: auto;
-    filter: drop-shadow(0 30px 45px rgba(0, 0, 0, .45));
-    will-change: transform;
-    animation: flutuar 7s ease-in-out infinite;
+    /* Duas sombras próprias: uma curta e fechada logo abaixo da fruta, outra
+       larga e difusa mais longe. É o que integra o recorte à cena em vez de
+       deixá-lo "colado" no fundo. */
+    filter:
+        drop-shadow(2px 12px 10px rgba(66, 29, 19, .24))
+        drop-shadow(8px 28px 24px rgba(66, 29, 19, .16));
 }
 
-@keyframes flutuar {
 
-    0%,
-    100% {
-        transform: translate3d(0, 0, 0) rotate(-1.2deg);
-    }
-
-    50% {
-        transform: translate3d(0, -18px, 0) rotate(1.2deg);
-    }
-}
-
-/* Ingredientes flutuando em profundidades diferentes */
+/* Gotas e migalhas caindo de verdade: entram em cima e saem embaixo. */
 .hero-particula {
     position: absolute;
+    top: -8%;
     border-radius: 50%;
     pointer-events: none;
-    background: radial-gradient(circle at 30% 30%, rgba(255, 255, 255, .85), rgba(224, 108, 253, .35) 45%, rgba(224, 108, 253, 0) 70%);
-    animation: orbitar var(--dur, 9s) ease-in-out var(--atraso, 0s) infinite;
-    opacity: .85;
+    background: linear-gradient(180deg, rgba(255, 255, 255, .9), rgba(255, 170, 210, .35));
+    box-shadow: 0 0 6px rgba(255, 255, 255, .35);
+    opacity: 0;
+    animation: queda var(--dur, 7s) linear var(--atraso, 0s) infinite;
 }
 
 .hero-particula.cacau {
-    background: radial-gradient(circle at 32% 28%, rgba(215, 176, 140, .9), rgba(120, 72, 44, .5) 55%, rgba(120, 72, 44, 0) 72%);
+    background: linear-gradient(180deg, rgba(215, 176, 140, .95), rgba(120, 72, 44, .5));
+    box-shadow: none;
+    border-radius: 40%;
 }
 
-@keyframes orbitar {
-
-    0%,
-    100% {
-        transform: translate3d(0, 0, var(--z, 0px)) scale(1);
-        opacity: .35;
+@keyframes queda {
+    0% {
+        transform: translate3d(0, 0, var(--z, 0px)) scale(.7);
+        opacity: 0;
     }
 
-    50% {
-        transform: translate3d(var(--dx, 12px), var(--dy, -26px), var(--z, 0px)) scale(1.18);
-        opacity: .9;
+    12% {
+        opacity: .85;
+    }
+
+    80% {
+        opacity: .6;
+    }
+
+    100% {
+        transform: translate3d(var(--dx, 6px), 118%, var(--z, 0px)) scale(1);
+        opacity: 0;
     }
 }
 
@@ -715,8 +823,8 @@ header.solido {
 }
 
 .assinatura {
-    font-family: 'Miniver', cursive;
-    font-size: 1.5rem;
+    font-family: var(--fonte-titulo);
+    font-size: 2rem;
     color: var(--chocolate);
     margin-top: 8px;
 }
@@ -775,13 +883,11 @@ header.solido {
     background: var(--branco);
     border: 1px solid var(--borda-suave);
     border-radius: var(--raio-g);
-    padding: 28px 24px 24px;
-    text-align: center;
+    overflow: hidden;
     box-shadow: var(--sombra-1);
     transition: transform .3s ease, box-shadow .3s ease;
     display: flex;
     flex-direction: column;
-    align-items: center;
 }
 
 .menu-item:hover,
@@ -790,40 +896,37 @@ header.solido {
     box-shadow: var(--sombra-3);
 }
 
-.menu-image-wrapper {
-    width: 190px;
-    max-width: 100%;
-    aspect-ratio: 1;
-    display: grid;
-    place-items: center;
-    margin-bottom: 18px;
+/* A foto agora é o cartão inteiro no topo: é ela que vende */
+.menu-foto {
     position: relative;
-}
-
-.menu-image-wrapper::before {
-    content: '';
-    position: absolute;
-    inset: auto 12% 6% 12%;
-    height: 14px;
-    border-radius: 50%;
-    background: rgba(44, 24, 16, .14);
-    filter: blur(7px);
+    width: 100%;
+    aspect-ratio: 1;
+    overflow: hidden;
+    background: rgba(78, 52, 46, .08);
 }
 
 .menu-image {
     width: 100%;
     height: 100%;
-    /* contain preserva a proporção original do produto */
-    object-fit: contain;
-    transition: transform .45s cubic-bezier(.22, 1, .36, 1);
+    object-fit: cover;
+    display: block;
+    transition: transform .6s cubic-bezier(.22, 1, .36, 1);
 }
 
 .menu-item:hover .menu-image {
-    transform: translateY(-8px) scale(1.06) rotate(3deg);
+    transform: scale(1.06);
+}
+
+.menu-corpo {
+    padding: 22px 22px 24px;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    text-align: left;
 }
 
 .menu-item .name {
-    font-size: 1.35rem;
+    font-size: 1.25rem;
     color: var(--chocolate);
     margin-bottom: 6px;
 }
@@ -891,8 +994,8 @@ header.solido {
 
 .historia-ano strong {
     display: block;
-    font-family: 'Miniver', cursive;
-    font-size: 1.9rem;
+    font-family: var(--fonte-titulo);
+    font-size: 2.4rem;
     font-weight: 400;
     color: var(--rosa-claro);
 }
@@ -981,9 +1084,9 @@ header.solido {
 
 .numero strong {
     display: block;
-    font-family: 'Miniver', cursive;
+    font-family: var(--fonte-titulo);
     font-weight: 400;
-    font-size: 2.1rem;
+    font-size: 2.7rem;
     color: var(--chocolate);
 }
 
@@ -1014,7 +1117,7 @@ header.solido {
 
 .depoimento::before {
     content: '\201C';
-    font-family: 'Miniver', cursive;
+    font-family: var(--fonte-titulo);
     font-size: 4rem;
     line-height: 1;
     color: var(--rosa);
@@ -1068,61 +1171,52 @@ header.solido {
 /* -------------------------------------------------------------------------
    10. Galeria — bento grid, sem distorção, com lightbox
    ------------------------------------------------------------------------- */
+/* Masonry em colunas: encaixa sem buracos e, principalmente, mostra cada
+   foto inteira — nada de recorte nem de distorção, que era o bug original. */
 .gallery-list {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-auto-rows: 150px;
-    /* dense evita buracos quando um card ocupa duas colunas ou duas linhas */
-    grid-auto-flow: dense;
-    gap: 12px;
+    column-count: 2;
+    column-gap: 12px;
 }
 
 .gallery-item {
     position: relative;
+    display: block;
+    break-inside: avoid;
+    -webkit-column-break-inside: avoid;
+    margin-bottom: 12px;
     border-radius: var(--raio);
     overflow: hidden;
     background: rgba(78, 52, 46, .08);
-    grid-row: span 1;
 }
 
-/* Composição bento: alguns cards ocupam mais espaço */
-.gallery-item.alto {
-    grid-row: span 2;
-}
-
-.gallery-item.largo {
-    grid-column: span 2;
+/* Fotos que ainda não foram pedidas pelo visitante */
+.gallery-item.oculto {
+    display: none;
 }
 
 .gallery-botao {
     display: block;
     width: 100%;
-    height: 100%;
     padding: 0;
     border-radius: inherit;
     overflow: hidden;
 }
 
-/* Sem isto o <picture> fica com altura automática e a imagem não preenche
-   a célula do bento — o object-fit: cover só funciona se houver caixa. */
 .gallery-botao picture {
     display: block;
     width: 100%;
-    height: 100%;
 }
 
 .gallery-image {
     width: 100%;
-    height: 100%;
-    /* CORREÇÃO: era object-fit: fill, que esmagava fotos paisagem
-       dentro de um frame retrato. cover recorta sem deformar. */
-    object-fit: cover;
+    height: auto;
+    display: block;
     transition: transform .6s cubic-bezier(.25, .46, .45, .94);
 }
 
 .gallery-botao:hover .gallery-image,
 .gallery-botao:focus-visible .gallery-image {
-    transform: scale(1.08);
+    transform: scale(1.06);
 }
 
 .gallery-item::after {
@@ -1237,6 +1331,109 @@ header.solido {
     top: 16px;
     right: 16px;
     transform: none;
+}
+
+/* -------------------------------------------------------------------------
+   10b. Faixa de chamada para ação (entre seções)
+   ------------------------------------------------------------------------- */
+.faixa-cta {
+    background:
+        radial-gradient(120% 140% at 15% 20%, rgba(224, 108, 253, .28), transparent 60%),
+        linear-gradient(135deg, var(--chocolate) 0%, var(--chocolate-escuro) 100%);
+    color: var(--branco);
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.faixa-cta::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    opacity: .4;
+    background-image: radial-gradient(rgba(255, 255, 255, .06) 1px, transparent 1px);
+    background-size: 3px 3px;
+}
+
+.faixa-cta .section-content {
+    position: relative;
+    z-index: 1;
+    max-width: 760px;
+}
+
+.faixa-cta h2 {
+    font-family: var(--fonte-titulo);
+    font-weight: 400;
+    font-size: clamp(2.4rem, 6vw, 3.6rem);
+    color: var(--branco);
+    line-height: 1.1;
+    margin-bottom: 12px;
+}
+
+.faixa-cta p {
+    color: var(--tinta-clara);
+    font-size: 1.05rem;
+    max-width: 52ch;
+    margin: 0 auto 28px;
+}
+
+.faixa-cta .buttons {
+    justify-content: center;
+}
+
+.faixa-cta .reforco {
+    margin-top: 18px;
+    margin-bottom: 0;
+    font-size: .86rem;
+    color: rgba(255, 255, 255, .6);
+}
+
+/* -------------------------------------------------------------------------
+   10c. Galeria: rodapé com contagem e "ver todas"
+   ------------------------------------------------------------------------- */
+.galeria-rodape {
+    margin-top: clamp(28px, 4vw, 40px);
+    text-align: center;
+}
+
+.galeria-rodape p {
+    color: var(--tinta-suave);
+    margin-bottom: 16px;
+}
+
+.galeria-rodape .buttons {
+    justify-content: center;
+}
+
+/* Página com todas as fotos: mesma mecânica, mais colunas */
+.galeria-completa {
+    column-gap: 10px;
+}
+
+.galeria-contador {
+    text-align: center;
+    color: var(--tinta-suave);
+    font-size: .9rem;
+    margin-bottom: 24px;
+}
+
+.carregar-mais {
+    text-align: center;
+    margin-top: 32px;
+}
+
+@media (min-width: 700px) {
+    .galeria-completa {
+        column-count: 3;
+        column-gap: 14px;
+    }
+}
+
+@media (min-width: 1000px) {
+    .galeria-completa {
+        column-count: 4;
+    }
 }
 
 /* -------------------------------------------------------------------------
@@ -1446,8 +1643,8 @@ textarea.form-input {
 }
 
 .footer-marca .logo {
-    font-family: 'Miniver', cursive;
-    font-size: 1.5rem;
+    font-family: var(--fonte-titulo);
+    font-size: 2rem;
     color: var(--branco);
     margin-bottom: 8px;
 }
@@ -1535,9 +1732,9 @@ textarea.form-input {
 }
 
 .conteudo-legal h1 {
-    font-family: 'Miniver', cursive;
+    font-family: var(--fonte-titulo);
     font-weight: 400;
-    font-size: clamp(2rem, 5vw, 2.8rem);
+    font-size: clamp(2.5rem, 6vw, 3.4rem);
     color: var(--chocolate);
     margin-bottom: 8px;
 }
@@ -1626,9 +1823,9 @@ textarea.form-input {
 }
 
 .cardapio-grupo h2 {
-    font-family: 'Miniver', cursive;
+    font-family: var(--fonte-titulo);
     font-weight: 400;
-    font-size: 1.9rem;
+    font-size: 2.4rem;
     color: var(--chocolate);
     border-bottom: 2px solid var(--borda-suave);
     padding-bottom: 8px;
@@ -1685,9 +1882,12 @@ textarea.form-input {
 /* Tablet */
 @media (min-width: 700px) {
     .gallery-list {
-        grid-template-columns: repeat(3, 1fr);
-        grid-auto-rows: 180px;
-        gap: 16px;
+        column-count: 3;
+        column-gap: 16px;
+    }
+
+    .gallery-item {
+        margin-bottom: 16px;
     }
 
     .whatsapp-flutuante .rotulo {
@@ -1718,8 +1918,7 @@ textarea.form-input {
     }
 
     .gallery-list {
-        grid-template-columns: repeat(4, 1fr);
-        grid-auto-rows: 200px;
+        column-count: 4;
     }
 
     .contact-section .duas-colunas {
@@ -1786,6 +1985,17 @@ textarea.form-input {
 
     .hero-section {
         text-align: center;
+        background:
+            radial-gradient(ellipse at 50% 10%, #715044 0%, transparent 48%),
+            linear-gradient(160deg, #3E2822, #291B18 75%);
+    }
+
+    .hero-section::before {
+        width: 150%;
+        height: 65%;
+        top: -20%;
+        right: -25%;
+        transform: rotate(-18deg);
     }
 
     .hero-details {
@@ -1848,6 +2058,7 @@ textarea.form-input {
 
     .hero-image,
     .hero-particula,
+    .hero-sombra,
     .hero-rolar .icone {
         animation: none !important;
     }
@@ -1864,7 +2075,7 @@ textarea.form-input {
 
 /* Aparelho fraco ou rede ruim: o JS marca o body e a cena vira estática */
 body.economia .hero-particula,
-body.economia .hero-halo {
+body.economia .hero-sombra.perto {
     display: none;
 }
 

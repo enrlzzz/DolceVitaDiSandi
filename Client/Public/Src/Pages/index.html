@@ -40,17 +40,17 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="preload" as="style"
-        href="https://fonts.googleapis.com/css2?family=Miniver&family=Poppins:wght@400;500;600;700&display=swap">
+        href="https://fonts.googleapis.com/css2?family=Sacramento&family=Poppins:wght@400;500;600;700&display=swap">
     <link rel="stylesheet"
-        href="https://fonts.googleapis.com/css2?family=Miniver&family=Poppins:wght@400;500;600;700&display=swap">
+        href="https://fonts.googleapis.com/css2?family=Sacramento&family=Poppins:wght@400;500;600;700&display=swap">
 
     <link rel="stylesheet" href="/Client/Public/Src/Styles/styles.css">
 
     <!-- A imagem do herói é o LCP: carrega cedo e na versão certa -->
     <link rel="preload" as="image" fetchpriority="high"
-        href="/Client/Public/Src/Assets/otimizadas/hero/hero-morango-01-800w.webp"
-        imagesrcset="/Client/Public/Src/Assets/otimizadas/hero/hero-morango-01-480w.webp 480w, /Client/Public/Src/Assets/otimizadas/hero/hero-morango-01-800w.webp 800w, /Client/Public/Src/Assets/otimizadas/hero/hero-morango-01-1200w.webp 1200w"
-        imagesizes="(max-width: 900px) 330px, 520px" type="image/webp">
+        href="/Client/Public/Src/Assets/otimizadas/hero/morango-1-800w.webp"
+        imagesrcset="/Client/Public/Src/Assets/otimizadas/hero/morango-1-480w.webp 480w, /Client/Public/Src/Assets/otimizadas/hero/morango-1-800w.webp 800w, /Client/Public/Src/Assets/otimizadas/hero/morango-1-1200w.webp 1200w"
+        imagesizes="(max-width: 900px) 330px, 560px" type="image/webp">
 
     <!-- SEO local: ficha do negócio para o Google -->
     <script type="application/ld+json">
@@ -157,9 +157,9 @@
     <a class="pular-para-conteudo" href="#conteudo">Pular para o conteúdo</a>
 
     <!-- ================= Cabeçalho ================= -->
-    <header id="topo">
+    <header>
         <nav class="navbar" aria-label="Navegação principal">
-            <a href="#topo" class="nav-logo">
+            <a href="#inicio" class="nav-logo">
                 <h2 class="logo"><span class="coracao" aria-hidden="true">♥</span> Dolce Vita Di Sandi</h2>
             </a>
 
@@ -171,7 +171,7 @@
                         </svg>
                     </button>
                 </li>
-                <li class="nav-item"><a href="#topo" class="nav-link">Início</a></li>
+                <li class="nav-item"><a href="#inicio" class="nav-link">Início</a></li>
                 <li class="nav-item"><a href="#Sobre" class="nav-link">Sobre</a></li>
                 <li class="nav-item"><a href="#Menu" class="nav-link">Menu</a></li>
                 <li class="nav-item"><a href="#Historia" class="nav-link">Nossa História</a></li>
@@ -200,8 +200,11 @@
     </header>
 
     <main id="conteudo">
-        <!-- ================= Herói com cena 3D ================= -->
-        <section class="hero-section" aria-labelledby="hero-titulo">
+        <!-- ================= Vitrine de chocolate e porcelana ================= -->
+        <section class="hero-section" id="inicio" aria-labelledby="hero-titulo">
+            <div class="hero-ambiente" aria-hidden="true"></div>
+            <div class="hero-bancada" aria-hidden="true"></div>
+
             <div class="section-content duas-colunas">
                 <div class="hero-details">
                     <h1 class="title" id="hero-titulo">A melhor doceria.</h1>
@@ -223,6 +226,13 @@
                         <a class="button contact-us" href="#Contato">Entre em contato</a>
                     </div>
 
+                    <p class="hero-garantia">
+                        <svg class="icone" aria-hidden="true">
+                            <use href="#i-relogio" />
+                        </svg>
+                        A Sanderly responde pessoalmente, normalmente no mesmo dia.
+                    </p>
+
                     <ul class="hero-selos">
                         <li class="hero-selo">
                             <svg class="icone" aria-hidden="true">
@@ -242,33 +252,23 @@
                     </ul>
                 </div>
 
-                <!-- Cena 3D: camadas em profundidade com CSS puro (0 KB de JS 3D) -->
+                <!-- Vitrine: porcelana em CSS e fotografia em primeiro plano -->
                 <div class="hero-palco" id="hero-palco">
                     <div class="hero-cena" id="hero-cena">
-                        <div class="hero-halo" aria-hidden="true"></div>
-                        <div class="hero-disco" aria-hidden="true"></div>
-                        <span class="hero-particula" aria-hidden="true"
-                            style="width:26px;height:26px;top:14%;left:12%;--z:120px;--dx:14px;--dy:-30px;--dur:8s;--atraso:0s"></span>
-                        <span class="hero-particula cacau" aria-hidden="true"
-                            style="width:18px;height:18px;top:26%;right:8%;--z:90px;--dx:-16px;--dy:-24px;--dur:10s;--atraso:.8s"></span>
-                        <span class="hero-particula" aria-hidden="true"
-                            style="width:12px;height:12px;bottom:22%;left:6%;--z:150px;--dx:10px;--dy:-18px;--dur:7s;--atraso:1.6s"></span>
-                        <span class="hero-particula cacau" aria-hidden="true"
-                            style="width:30px;height:30px;bottom:12%;right:14%;--z:-40px;--dx:-12px;--dy:-22px;--dur:11s;--atraso:.4s"></span>
-                        <span class="hero-particula" aria-hidden="true"
-                            style="width:16px;height:16px;top:48%;right:2%;--z:60px;--dx:12px;--dy:-28px;--dur:9s;--atraso:2.2s"></span>
+                        <div class="hero-sombra" aria-hidden="true"></div>
+                        <div class="hero-sombra perto" aria-hidden="true"></div>
 
                         <div class="hero-image-wrapper">
                             <picture>
                                 <source type="image/webp"
-                                    srcset="/Client/Public/Src/Assets/otimizadas/hero/hero-morango-01-480w.webp 480w, /Client/Public/Src/Assets/otimizadas/hero/hero-morango-01-800w.webp 800w, /Client/Public/Src/Assets/otimizadas/hero/hero-morango-01-1200w.webp 1200w"
-                                    sizes="(max-width: 900px) 330px, 520px">
+                                    srcset="/Client/Public/Src/Assets/otimizadas/hero/morango-1-480w.webp 480w, /Client/Public/Src/Assets/otimizadas/hero/morango-1-800w.webp 800w, /Client/Public/Src/Assets/otimizadas/hero/morango-1-1200w.webp 1200w"
+                                    sizes="(max-width: 900px) 330px, 560px">
                                 <img class="hero-image"
-                                    src="/Client/Public/Src/Assets/otimizadas/hero/hero-morango-01-800w.png"
-                                    srcset="/Client/Public/Src/Assets/otimizadas/hero/hero-morango-01-480w.png 480w, /Client/Public/Src/Assets/otimizadas/hero/hero-morango-01-800w.png 800w"
-                                    sizes="(max-width: 900px) 330px, 520px" width="1692" height="2000"
+                                    src="/Client/Public/Src/Assets/otimizadas/hero/morango-1-800w.png"
+                                    srcset="/Client/Public/Src/Assets/otimizadas/hero/morango-1-480w.png 480w, /Client/Public/Src/Assets/otimizadas/hero/morango-1-800w.png 800w"
+                                    sizes="(max-width: 900px) 330px, 560px" width="1552" height="1432"
                                     fetchpriority="high" decoding="async"
-                                    alt="Morango fresco mergulhado em chocolate, símbolo da Dolce Vita Di Sandi">
+                                    alt="Morangos frescos, inteiros e fatiados, caindo">
                             </picture>
                         </div>
                     </div>
@@ -363,121 +363,202 @@
 
                 <ul class="menu-list">
                     <li class="menu-item revelar">
-                        <div class="menu-image-wrapper">
+                        <div class="menu-foto">
                             <picture>
                                 <source type="image/webp"
-                                    srcset="/Client/Public/Src/Assets/otimizadas/menu/menu-cafe-01-366w.webp 366w">
+                                    srcset="/Client/Public/Src/Assets/otimizadas/menu/produto-torta-holandesa-400w.webp 400w, /Client/Public/Src/Assets/otimizadas/menu/produto-torta-holandesa-800w.webp 800w"
+                                    sizes="(max-width: 700px) 100vw, 33vw">
                                 <img class="menu-image"
-                                    src="/Client/Public/Src/Assets/otimizadas/menu/menu-cafe-01-366w.png" width="366"
-                                    height="366" loading="lazy" decoding="async"
-                                    alt="Xícara de café expresso da Dolce Vita Di Sandi">
+                                    src="/Client/Public/Src/Assets/otimizadas/menu/produto-torta-holandesa-400w.jpg"
+                                    srcset="/Client/Public/Src/Assets/otimizadas/menu/produto-torta-holandesa-400w.jpg 400w, /Client/Public/Src/Assets/otimizadas/menu/produto-torta-holandesa-800w.jpg 800w"
+                                    sizes="(max-width: 700px) 100vw, 33vw" width="800" height="800"
+                                    loading="lazy" decoding="async" alt="Fatia de Torta Holandesa com cobertura de chocolate e bombons">
                             </picture>
                         </div>
-                        <h3 class="name">Café</h3>
-                        <p class="text">Expresso, mocaccino, cappuccino, frappê e o clássico pingado —
-                            para acompanhar qualquer doce da casa.</p>
-                        <a class="button button-linha-clara button-pequeno"
-                            href="https://wa.me/5515991291842?text=Ol%C3%A1!%20Queria%20pedir%20um%20caf%C3%A9%20%E2%98%95"
-                            target="_blank" rel="noopener">Pedir café</a>
+                        <div class="menu-corpo">
+                            <h3 class="name">Torta Holandesa</h3>
+                            <p class="text">A mais pedida da casa desde 2015. Camadas de creme, biscoito e chocolate, com bombom por cima.</p>
+                            <a class="button button-linha-clara button-pequeno"
+                                href="https://wa.me/5515991291842?text=Ol%C3%A1%21%20Queria%20pedir%20uma%20Torta%20Holandesa%20%F0%9F%98%8B"
+                                target="_blank" rel="noopener">Pedir</a>
+                        </div>
                     </li>
-
                     <li class="menu-item revelar">
-                        <div class="menu-image-wrapper">
+                        <div class="menu-foto">
                             <picture>
                                 <source type="image/webp"
-                                    srcset="/Client/Public/Src/Assets/otimizadas/menu/menu-beliscao-01-480w.webp 480w">
+                                    srcset="/Client/Public/Src/Assets/otimizadas/menu/produto-beliscao-400w.webp 400w, /Client/Public/Src/Assets/otimizadas/menu/produto-beliscao-800w.webp 800w"
+                                    sizes="(max-width: 700px) 100vw, 33vw">
                                 <img class="menu-image"
-                                    src="/Client/Public/Src/Assets/otimizadas/menu/menu-beliscao-01-480w.png"
-                                    width="500" height="500" loading="lazy" decoding="async"
-                                    alt="Beliscão artesanal recheado com goiabada">
+                                    src="/Client/Public/Src/Assets/otimizadas/menu/produto-beliscao-400w.jpg"
+                                    srcset="/Client/Public/Src/Assets/otimizadas/menu/produto-beliscao-400w.jpg 400w, /Client/Public/Src/Assets/otimizadas/menu/produto-beliscao-800w.jpg 800w"
+                                    sizes="(max-width: 700px) 100vw, 33vw" width="800" height="800"
+                                    loading="lazy" decoding="async" alt="Beliscões trançados recheados de goiabada">
                             </picture>
                         </div>
-                        <h3 class="name">Beliscão</h3>
-                        <p class="text">Massa macia com recheio generoso de goiabada. Um clássico da
-                            casa, do jeito que a vovó fazia.</p>
-                        <a class="button button-linha-clara button-pequeno"
-                            href="https://wa.me/5515991291842?text=Ol%C3%A1!%20Queria%20pedir%20belisc%C3%A3o%20%F0%9F%98%8B"
-                            target="_blank" rel="noopener">Pedir beliscão</a>
+                        <div class="menu-corpo">
+                            <h3 class="name">Beliscão de goiabada</h3>
+                            <p class="text">Massa macia trançada à mão, com goiabada no meio. O clássico do café da tarde.</p>
+                            <a class="button button-linha-clara button-pequeno"
+                                href="https://wa.me/5515991291842?text=Ol%C3%A1%21%20Queria%20pedir%20belisc%C3%A3o%20de%20goiabada%20%F0%9F%98%8B"
+                                target="_blank" rel="noopener">Pedir</a>
+                        </div>
                     </li>
-
                     <li class="menu-item revelar">
-                        <div class="menu-image-wrapper">
+                        <div class="menu-foto">
                             <picture>
                                 <source type="image/webp"
-                                    srcset="/Client/Public/Src/Assets/otimizadas/menu/menu-torta-01-480w.webp 480w">
+                                    srcset="/Client/Public/Src/Assets/otimizadas/menu/produto-cookies-400w.webp 400w, /Client/Public/Src/Assets/otimizadas/menu/produto-cookies-800w.webp 800w"
+                                    sizes="(max-width: 700px) 100vw, 33vw">
                                 <img class="menu-image"
-                                    src="/Client/Public/Src/Assets/otimizadas/menu/menu-torta-01-480w.png" width="500"
-                                    height="500" loading="lazy" decoding="async"
-                                    alt="Fatia de Torta Holandesa da Dolce Vita Di Sandi">
+                                    src="/Client/Public/Src/Assets/otimizadas/menu/produto-cookies-400w.jpg"
+                                    srcset="/Client/Public/Src/Assets/otimizadas/menu/produto-cookies-400w.jpg 400w, /Client/Public/Src/Assets/otimizadas/menu/produto-cookies-800w.jpg 800w"
+                                    sizes="(max-width: 700px) 100vw, 33vw" width="800" height="800"
+                                    loading="lazy" decoding="async" alt="Cookies caseiros com gotas de chocolate">
                             </picture>
                         </div>
-                        <h3 class="name">Torta Holandesa</h3>
-                        <p class="text">A nossa mais pedida. Camadas de creme, biscoito e chocolate —
-                            a tradição da casa desde o primeiro dia.</p>
-                        <a class="button button-linha-clara button-pequeno"
-                            href="https://wa.me/5515991291842?text=Ol%C3%A1!%20Queria%20encomendar%20uma%20Torta%20Holandesa%20%F0%9F%8D%B0"
-                            target="_blank" rel="noopener">Encomendar torta</a>
+                        <div class="menu-corpo">
+                            <h3 class="name">Cookies</h3>
+                            <p class="text">Chocolate dark, chocolate branco e tradicional. Bem recheados e macios por dentro.</p>
+                            <a class="button button-linha-clara button-pequeno"
+                                href="https://wa.me/5515991291842?text=Ol%C3%A1%21%20Queria%20pedir%20cookies%20%F0%9F%98%8B"
+                                target="_blank" rel="noopener">Pedir</a>
+                        </div>
                     </li>
-
                     <li class="menu-item revelar">
-                        <div class="menu-image-wrapper">
+                        <div class="menu-foto">
                             <picture>
                                 <source type="image/webp"
-                                    srcset="/Client/Public/Src/Assets/otimizadas/menu/menu-cookies-01-480w.webp 480w">
+                                    srcset="/Client/Public/Src/Assets/otimizadas/menu/produto-bombom-morango-400w.webp 400w, /Client/Public/Src/Assets/otimizadas/menu/produto-bombom-morango-800w.webp 800w"
+                                    sizes="(max-width: 700px) 100vw, 33vw">
                                 <img class="menu-image"
-                                    src="/Client/Public/Src/Assets/otimizadas/menu/menu-cookies-01-480w.png"
-                                    width="500" height="500" loading="lazy" decoding="async"
-                                    alt="Cookies recheados de chocolate">
+                                    src="/Client/Public/Src/Assets/otimizadas/menu/produto-bombom-morango-400w.jpg"
+                                    srcset="/Client/Public/Src/Assets/otimizadas/menu/produto-bombom-morango-400w.jpg 400w, /Client/Public/Src/Assets/otimizadas/menu/produto-bombom-morango-800w.jpg 800w"
+                                    sizes="(max-width: 700px) 100vw, 33vw" width="800" height="800"
+                                    loading="lazy" decoding="async" alt="Bombom de chocolate cortado, com morango e creme dentro">
                             </picture>
                         </div>
-                        <h3 class="name">Cookies</h3>
-                        <p class="text">Chocolate dark, chocolate branco e tradicional. Super
-                            recheados — cada mordida é uma explosão de sabor.</p>
-                        <a class="button button-linha-clara button-pequeno"
-                            href="https://wa.me/5515991291842?text=Ol%C3%A1!%20Queria%20pedir%20cookies%20%F0%9F%8D%AA"
-                            target="_blank" rel="noopener">Pedir cookies</a>
+                        <div class="menu-corpo">
+                            <h3 class="name">Bombom de morango</h3>
+                            <p class="text">Morango fresco e creme dentro de uma casca generosa de chocolate.</p>
+                            <a class="button button-linha-clara button-pequeno"
+                                href="https://wa.me/5515991291842?text=Ol%C3%A1%21%20Queria%20pedir%20bombom%20de%20morango%20%F0%9F%98%8B"
+                                target="_blank" rel="noopener">Pedir</a>
+                        </div>
                     </li>
-
                     <li class="menu-item revelar">
-                        <div class="menu-image-wrapper">
+                        <div class="menu-foto">
                             <picture>
                                 <source type="image/webp"
-                                    srcset="/Client/Public/Src/Assets/otimizadas/menu/menu-soda-01-394w.webp 394w">
+                                    srcset="/Client/Public/Src/Assets/otimizadas/menu/produto-bombom-chocolate-400w.webp 400w, /Client/Public/Src/Assets/otimizadas/menu/produto-bombom-chocolate-800w.webp 800w"
+                                    sizes="(max-width: 700px) 100vw, 33vw">
                                 <img class="menu-image"
-                                    src="/Client/Public/Src/Assets/otimizadas/menu/menu-soda-01-394w.png" width="394"
-                                    height="394" loading="lazy" decoding="async"
-                                    alt="Copo de soda italiana colorida">
+                                    src="/Client/Public/Src/Assets/otimizadas/menu/produto-bombom-chocolate-400w.jpg"
+                                    srcset="/Client/Public/Src/Assets/otimizadas/menu/produto-bombom-chocolate-400w.jpg 400w, /Client/Public/Src/Assets/otimizadas/menu/produto-bombom-chocolate-800w.jpg 800w"
+                                    sizes="(max-width: 700px) 100vw, 33vw" width="800" height="800"
+                                    loading="lazy" decoding="async" alt="Bombons de chocolate com fio de chocolate branco">
                             </picture>
                         </div>
-                        <h3 class="name">Soda Italiana</h3>
-                        <p class="text">Refrescante e colorida, em vários sabores e acompanhamentos.
-                            Perfeita para os dias quentes de Sorocaba.</p>
-                        <a class="button button-linha-clara button-pequeno"
-                            href="https://wa.me/5515991291842?text=Ol%C3%A1!%20Queria%20pedir%20uma%20soda%20italiana%20%F0%9F%A5%A4"
-                            target="_blank" rel="noopener">Pedir soda</a>
+                        <div class="menu-corpo">
+                            <h3 class="name">Bombons recheados</h3>
+                            <p class="text">Chocolate por fora, recheio cremoso por dentro. Ótimos para presentear.</p>
+                            <a class="button button-linha-clara button-pequeno"
+                                href="https://wa.me/5515991291842?text=Ol%C3%A1%21%20Queria%20pedir%20bombons%20recheados%20%F0%9F%98%8B"
+                                target="_blank" rel="noopener">Pedir</a>
+                        </div>
                     </li>
-
                     <li class="menu-item revelar">
-                        <div class="menu-image-wrapper">
+                        <div class="menu-foto">
                             <picture>
                                 <source type="image/webp"
-                                    srcset="/Client/Public/Src/Assets/otimizadas/menu/menu-pacoca-01-480w.webp 480w">
+                                    srcset="/Client/Public/Src/Assets/otimizadas/menu/produto-sonho-400w.webp 400w, /Client/Public/Src/Assets/otimizadas/menu/produto-sonho-800w.webp 800w"
+                                    sizes="(max-width: 700px) 100vw, 33vw">
                                 <img class="menu-image"
-                                    src="/Client/Public/Src/Assets/otimizadas/menu/menu-pacoca-01-480w.png"
-                                    width="500" height="500" loading="lazy" decoding="async"
-                                    alt="Doce de paçoca artesanal">
+                                    src="/Client/Public/Src/Assets/otimizadas/menu/produto-sonho-400w.jpg"
+                                    srcset="/Client/Public/Src/Assets/otimizadas/menu/produto-sonho-400w.jpg 400w, /Client/Public/Src/Assets/otimizadas/menu/produto-sonho-800w.jpg 800w"
+                                    sizes="(max-width: 700px) 100vw, 33vw" width="800" height="800"
+                                    loading="lazy" decoding="async" alt="Sonho aberto ao meio mostrando o recheio de creme">
                             </picture>
                         </div>
-                        <h3 class="name">Doce de Paçoca</h3>
-                        <p class="text">Uma tradição que não fica só na Festa Junina. Cremoso,
-                            na medida certa de amendoim.</p>
-                        <a class="button button-linha-clara button-pequeno"
-                            href="https://wa.me/5515991291842?text=Ol%C3%A1!%20Queria%20pedir%20doce%20de%20pa%C3%A7oca%20%F0%9F%A5%9C"
-                            target="_blank" rel="noopener">Pedir paçoca</a>
+                        <div class="menu-corpo">
+                            <h3 class="name">Sonho recheado</h3>
+                            <p class="text">Massa fofinha frita na hora, recheada de creme. Sai quentinho.</p>
+                            <a class="button button-linha-clara button-pequeno"
+                                href="https://wa.me/5515991291842?text=Ol%C3%A1%21%20Queria%20pedir%20sonho%20recheado%20%F0%9F%98%8B"
+                                target="_blank" rel="noopener">Pedir</a>
+                        </div>
+                    </li>
+                    <li class="menu-item revelar">
+                        <div class="menu-foto">
+                            <picture>
+                                <source type="image/webp"
+                                    srcset="/Client/Public/Src/Assets/otimizadas/menu/produto-bolo-cenoura-400w.webp 400w, /Client/Public/Src/Assets/otimizadas/menu/produto-bolo-cenoura-800w.webp 800w"
+                                    sizes="(max-width: 700px) 100vw, 33vw">
+                                <img class="menu-image"
+                                    src="/Client/Public/Src/Assets/otimizadas/menu/produto-bolo-cenoura-400w.jpg"
+                                    srcset="/Client/Public/Src/Assets/otimizadas/menu/produto-bolo-cenoura-400w.jpg 400w, /Client/Public/Src/Assets/otimizadas/menu/produto-bolo-cenoura-800w.jpg 800w"
+                                    sizes="(max-width: 700px) 100vw, 33vw" width="800" height="800"
+                                    loading="lazy" decoding="async" alt="Bolo de cenoura com cobertura de chocolate e granulado">
+                            </picture>
+                        </div>
+                        <div class="menu-corpo">
+                            <h3 class="name">Bolo de cenoura</h3>
+                            <p class="text">Bolo caseiro fofinho com calda de chocolate e granulado por cima.</p>
+                            <a class="button button-linha-clara button-pequeno"
+                                href="https://wa.me/5515991291842?text=Ol%C3%A1%21%20Queria%20pedir%20um%20bolo%20de%20cenoura%20%F0%9F%98%8B"
+                                target="_blank" rel="noopener">Pedir</a>
+                        </div>
+                    </li>
+                    <li class="menu-item revelar">
+                        <div class="menu-foto">
+                            <picture>
+                                <source type="image/webp"
+                                    srcset="/Client/Public/Src/Assets/otimizadas/menu/produto-brigadeiro-400w.webp 400w, /Client/Public/Src/Assets/otimizadas/menu/produto-brigadeiro-800w.webp 800w"
+                                    sizes="(max-width: 700px) 100vw, 33vw">
+                                <img class="menu-image"
+                                    src="/Client/Public/Src/Assets/otimizadas/menu/produto-brigadeiro-400w.jpg"
+                                    srcset="/Client/Public/Src/Assets/otimizadas/menu/produto-brigadeiro-400w.jpg 400w, /Client/Public/Src/Assets/otimizadas/menu/produto-brigadeiro-800w.jpg 800w"
+                                    sizes="(max-width: 700px) 100vw, 33vw" width="800" height="800"
+                                    loading="lazy" decoding="async" alt="Brigadeiros enrolados em forminhas azuis">
+                            </picture>
+                        </div>
+                        <div class="menu-corpo">
+                            <h3 class="name">Brigadeiros e docinhos</h3>
+                            <p class="text">Para festa ou para o fim de semana. Brigadeiro, beijinho e o que você pedir.</p>
+                            <a class="button button-linha-clara button-pequeno"
+                                href="https://wa.me/5515991291842?text=Ol%C3%A1%21%20Queria%20pedir%20brigadeiros%20%F0%9F%98%8B"
+                                target="_blank" rel="noopener">Pedir</a>
+                        </div>
+                    </li>
+                    <li class="menu-item revelar">
+                        <div class="menu-foto">
+                            <picture>
+                                <source type="image/webp"
+                                    srcset="/Client/Public/Src/Assets/otimizadas/menu/produto-pote-400w.webp 400w, /Client/Public/Src/Assets/otimizadas/menu/produto-pote-800w.webp 800w"
+                                    sizes="(max-width: 700px) 100vw, 33vw">
+                                <img class="menu-image"
+                                    src="/Client/Public/Src/Assets/otimizadas/menu/produto-pote-400w.jpg"
+                                    srcset="/Client/Public/Src/Assets/otimizadas/menu/produto-pote-400w.jpg 400w, /Client/Public/Src/Assets/otimizadas/menu/produto-pote-800w.jpg 800w"
+                                    sizes="(max-width: 700px) 100vw, 33vw" width="800" height="800"
+                                    loading="lazy" decoding="async" alt="Copos individuais de sobremesa com creme e morango">
+                            </picture>
+                        </div>
+                        <div class="menu-corpo">
+                            <h3 class="name">Sobremesa no pote</h3>
+                            <p class="text">Camadas de creme, biscoito e fruta em copo individual. Prático de servir.</p>
+                            <a class="button button-linha-clara button-pequeno"
+                                href="https://wa.me/5515991291842?text=Ol%C3%A1%21%20Queria%20pedir%20sobremesa%20no%20pote%20%F0%9F%98%8B"
+                                target="_blank" rel="noopener">Pedir</a>
+                        </div>
                     </li>
                 </ul>
 
                 <div class="menu-rodape revelar">
+                    <p>
+                        Também fazemos <strong>café</strong> (expresso, cappuccino, mocaccino,
+                        frappê e pingado), <strong>soda italiana</strong> e o
+                        <strong>doce de paçoca</strong> — é só pedir junto.
+                    </p>
                     <p>Quer ver tudo com calma, com sabores e combinações?</p>
                     <div class="buttons" style="justify-content:center">
                         <a class="button button-linha-clara" href="/Client/Public/Src/Pages/cardapio.html">
@@ -607,6 +688,17 @@
                         </li>
                     </ul>
                 </div>
+
+                <div class="centralizado revelar" style="margin-top:clamp(36px,5vw,52px)">
+                    <a class="button order-now"
+                        href="https://wa.me/5515991291842?text=Ol%C3%A1%2C%20Sanderly!%20Quero%20conhecer%20os%20doces%20%F0%9F%92%97"
+                        target="_blank" rel="noopener">
+                        <svg class="icone" aria-hidden="true">
+                            <use href="#i-whatsapp" />
+                        </svg>
+                        Falar com a Sanderly
+                    </a>
+                </div>
             </div>
         </section>
 
@@ -622,109 +714,172 @@
                     </p>
                 </div>
 
+                <!-- GALERIA:INICIO -->
                 <ul class="gallery-list revelar" id="galeria">
-                    <li class="gallery-item largo">
-                        <button type="button" class="gallery-botao" data-legenda="Doces em pote, prontos para entrega">
+                    <li class="gallery-item paisagem">
+                        <button type="button" class="gallery-botao"
+                            data-grande="/Client/Public/Src/Assets/otimizadas/galeria/doce-016-g.webp" data-indice="0">
                             <picture>
-                                <source type="image/webp"
-                                    srcset="/Client/Public/Src/Assets/otimizadas/galeria/galeria-doce-01-480w.webp 480w, /Client/Public/Src/Assets/otimizadas/galeria/galeria-doce-01-800w.webp 800w"
-                                    sizes="(max-width: 700px) 100vw, 50vw">
-                                <img class="gallery-image"
-                                    src="/Client/Public/Src/Assets/otimizadas/galeria/galeria-doce-01-800w.jpg"
-                                    srcset="/Client/Public/Src/Assets/otimizadas/galeria/galeria-doce-01-480w.jpg 480w, /Client/Public/Src/Assets/otimizadas/galeria/galeria-doce-01-800w.jpg 800w"
-                                    sizes="(max-width: 700px) 100vw, 50vw" width="1080" height="648" loading="lazy"
-                                    decoding="async" alt="Potes de doce com creme e granulado, prontos para entrega">
+                                <source type="image/webp" srcset="/Client/Public/Src/Assets/otimizadas/galeria/doce-016-m.webp">
+                                <img class="gallery-image" src="/Client/Public/Src/Assets/otimizadas/galeria/doce-016-m.jpg"
+                                    width="4624" height="3468" loading="lazy" decoding="async"
+                                    alt="Doce artesanal feito à mão pela Dolce Vita Di Sandi em Sorocaba">
                             </picture>
-                            <span class="gallery-legenda">Doces em pote, prontos para entrega</span>
                             <span class="sr-only">Abrir foto em tamanho grande</span>
                         </button>
                     </li>
-
-                    <li class="gallery-item alto">
-                        <button type="button" class="gallery-botao" data-legenda="Beliscão recheado de goiabada">
+                    <li class="gallery-item retrato">
+                        <button type="button" class="gallery-botao"
+                            data-grande="/Client/Public/Src/Assets/otimizadas/galeria/doce-143-g.webp" data-indice="1">
                             <picture>
-                                <source type="image/webp"
-                                    srcset="/Client/Public/Src/Assets/otimizadas/galeria/galeria-doce-03-480w.webp 480w, /Client/Public/Src/Assets/otimizadas/galeria/galeria-doce-03-800w.webp 800w"
-                                    sizes="(max-width: 700px) 50vw, 25vw">
-                                <img class="gallery-image"
-                                    src="/Client/Public/Src/Assets/otimizadas/galeria/galeria-doce-03-800w.jpg"
-                                    srcset="/Client/Public/Src/Assets/otimizadas/galeria/galeria-doce-03-480w.jpg 480w, /Client/Public/Src/Assets/otimizadas/galeria/galeria-doce-03-800w.jpg 800w"
-                                    sizes="(max-width: 700px) 50vw, 25vw" width="901" height="1600" loading="lazy"
-                                    decoding="async" alt="Beliscões recheados de goiabada arrumados no prato">
+                                <source type="image/webp" srcset="/Client/Public/Src/Assets/otimizadas/galeria/doce-143-m.webp">
+                                <img class="gallery-image" src="/Client/Public/Src/Assets/otimizadas/galeria/doce-143-m.jpg"
+                                    width="3468" height="4624" loading="lazy" decoding="async"
+                                    alt="Doce artesanal feito à mão pela Dolce Vita Di Sandi em Sorocaba">
                             </picture>
-                            <span class="gallery-legenda">Beliscão recheado de goiabada</span>
                             <span class="sr-only">Abrir foto em tamanho grande</span>
                         </button>
                     </li>
-
-                    <li class="gallery-item">
-                        <button type="button" class="gallery-botao" data-legenda="Doce de paçoca na travessa">
+                    <li class="gallery-item retrato">
+                        <button type="button" class="gallery-botao"
+                            data-grande="/Client/Public/Src/Assets/otimizadas/galeria/doce-183-g.webp" data-indice="2">
                             <picture>
-                                <source type="image/webp"
-                                    srcset="/Client/Public/Src/Assets/otimizadas/galeria/galeria-doce-02-480w.webp 480w, /Client/Public/Src/Assets/otimizadas/galeria/galeria-doce-02-800w.webp 800w, /Client/Public/Src/Assets/otimizadas/galeria/galeria-doce-02-1200w.webp 1200w"
-                                    sizes="(max-width: 700px) 50vw, 25vw">
-                                <img class="gallery-image"
-                                    src="/Client/Public/Src/Assets/otimizadas/galeria/galeria-doce-02-800w.jpg"
-                                    srcset="/Client/Public/Src/Assets/otimizadas/galeria/galeria-doce-02-480w.jpg 480w, /Client/Public/Src/Assets/otimizadas/galeria/galeria-doce-02-800w.jpg 800w, /Client/Public/Src/Assets/otimizadas/galeria/galeria-doce-02-1200w.jpg 1200w"
-                                    sizes="(max-width: 700px) 50vw, 25vw" width="1600" height="1200" loading="lazy"
-                                    decoding="async" alt="Travessa com doce de paçoca cremoso">
+                                <source type="image/webp" srcset="/Client/Public/Src/Assets/otimizadas/galeria/doce-183-m.webp">
+                                <img class="gallery-image" src="/Client/Public/Src/Assets/otimizadas/galeria/doce-183-m.jpg"
+                                    width="1200" height="1600" loading="lazy" decoding="async"
+                                    alt="Doce artesanal feito à mão pela Dolce Vita Di Sandi em Sorocaba">
                             </picture>
-                            <span class="gallery-legenda">Doce de paçoca na travessa</span>
                             <span class="sr-only">Abrir foto em tamanho grande</span>
                         </button>
                     </li>
-
-                    <li class="gallery-item alto">
-                        <button type="button" class="gallery-botao" data-legenda="Encomenda embalada com capricho">
+                    <li class="gallery-item retrato">
+                        <button type="button" class="gallery-botao"
+                            data-grande="/Client/Public/Src/Assets/otimizadas/galeria/doce-056-g.webp" data-indice="3">
                             <picture>
-                                <source type="image/webp"
-                                    srcset="/Client/Public/Src/Assets/otimizadas/galeria/galeria-doce-04-480w.webp 480w, /Client/Public/Src/Assets/otimizadas/galeria/galeria-doce-04-800w.webp 800w, /Client/Public/Src/Assets/otimizadas/galeria/galeria-doce-04-1200w.webp 1200w"
-                                    sizes="(max-width: 700px) 50vw, 25vw">
-                                <img class="gallery-image"
-                                    src="/Client/Public/Src/Assets/otimizadas/galeria/galeria-doce-04-800w.jpg"
-                                    srcset="/Client/Public/Src/Assets/otimizadas/galeria/galeria-doce-04-480w.jpg 480w, /Client/Public/Src/Assets/otimizadas/galeria/galeria-doce-04-800w.jpg 800w, /Client/Public/Src/Assets/otimizadas/galeria/galeria-doce-04-1200w.jpg 1200w"
-                                    sizes="(max-width: 700px) 50vw, 25vw" width="1200" height="1600" loading="lazy"
-                                    decoding="async" alt="Doces embalados um a um, com etiqueta da Dolce Vita Di Sandi">
+                                <source type="image/webp" srcset="/Client/Public/Src/Assets/otimizadas/galeria/doce-056-m.webp">
+                                <img class="gallery-image" src="/Client/Public/Src/Assets/otimizadas/galeria/doce-056-m.jpg"
+                                    width="3468" height="4624" loading="lazy" decoding="async"
+                                    alt="Doce artesanal feito à mão pela Dolce Vita Di Sandi em Sorocaba">
                             </picture>
-                            <span class="gallery-legenda">Encomenda embalada com capricho</span>
                             <span class="sr-only">Abrir foto em tamanho grande</span>
                         </button>
                     </li>
-
-                    <li class="gallery-item">
-                        <button type="button" class="gallery-botao" data-legenda="Torta de morango, pesada na medida certa">
+                    <li class="gallery-item retrato">
+                        <button type="button" class="gallery-botao"
+                            data-grande="/Client/Public/Src/Assets/otimizadas/galeria/doce-025-g.webp" data-indice="4">
                             <picture>
-                                <source type="image/webp"
-                                    srcset="/Client/Public/Src/Assets/otimizadas/galeria/galeria-doce-05-480w.webp 480w, /Client/Public/Src/Assets/otimizadas/galeria/galeria-doce-05-800w.webp 800w"
-                                    sizes="(max-width: 700px) 50vw, 25vw">
-                                <img class="gallery-image"
-                                    src="/Client/Public/Src/Assets/otimizadas/galeria/galeria-doce-05-800w.jpg"
-                                    srcset="/Client/Public/Src/Assets/otimizadas/galeria/galeria-doce-05-480w.jpg 480w, /Client/Public/Src/Assets/otimizadas/galeria/galeria-doce-05-800w.jpg 800w"
-                                    sizes="(max-width: 700px) 50vw, 25vw" width="901" height="1600" loading="lazy"
-                                    decoding="async" alt="Torta de morango sobre a balança, na medida certa">
+                                <source type="image/webp" srcset="/Client/Public/Src/Assets/otimizadas/galeria/doce-025-m.webp">
+                                <img class="gallery-image" src="/Client/Public/Src/Assets/otimizadas/galeria/doce-025-m.jpg"
+                                    width="3468" height="4624" loading="lazy" decoding="async"
+                                    alt="Doce artesanal feito à mão pela Dolce Vita Di Sandi em Sorocaba">
                             </picture>
-                            <span class="gallery-legenda">Torta de morango, pesada na medida certa</span>
                             <span class="sr-only">Abrir foto em tamanho grande</span>
                         </button>
                     </li>
-
-                    <li class="gallery-item largo">
-                        <button type="button" class="gallery-botao" data-legenda="Bolo de chocolate com coco">
+                    <li class="gallery-item retrato">
+                        <button type="button" class="gallery-botao"
+                            data-grande="/Client/Public/Src/Assets/otimizadas/galeria/doce-163-g.webp" data-indice="5">
                             <picture>
-                                <source type="image/webp"
-                                    srcset="/Client/Public/Src/Assets/otimizadas/galeria/galeria-doce-06-480w.webp 480w, /Client/Public/Src/Assets/otimizadas/galeria/galeria-doce-06-800w.webp 800w, /Client/Public/Src/Assets/otimizadas/galeria/galeria-doce-06-1200w.webp 1200w"
-                                    sizes="(max-width: 700px) 100vw, 50vw">
-                                <img class="gallery-image"
-                                    src="/Client/Public/Src/Assets/otimizadas/galeria/galeria-doce-06-800w.jpg"
-                                    srcset="/Client/Public/Src/Assets/otimizadas/galeria/galeria-doce-06-480w.jpg 480w, /Client/Public/Src/Assets/otimizadas/galeria/galeria-doce-06-800w.jpg 800w, /Client/Public/Src/Assets/otimizadas/galeria/galeria-doce-06-1200w.jpg 1200w"
-                                    sizes="(max-width: 700px) 100vw, 50vw" width="1600" height="939" loading="lazy"
-                                    decoding="async" alt="Bolo de chocolate coberto com coco e raspas">
+                                <source type="image/webp" srcset="/Client/Public/Src/Assets/otimizadas/galeria/doce-163-m.webp">
+                                <img class="gallery-image" src="/Client/Public/Src/Assets/otimizadas/galeria/doce-163-m.jpg"
+                                    width="901" height="1600" loading="lazy" decoding="async"
+                                    alt="Doce artesanal feito à mão pela Dolce Vita Di Sandi em Sorocaba">
                             </picture>
-                            <span class="gallery-legenda">Bolo de chocolate com coco</span>
+                            <span class="sr-only">Abrir foto em tamanho grande</span>
+                        </button>
+                    </li>
+                    <li class="gallery-item retrato">
+                        <button type="button" class="gallery-botao"
+                            data-grande="/Client/Public/Src/Assets/otimizadas/galeria/doce-102-g.webp" data-indice="6">
+                            <picture>
+                                <source type="image/webp" srcset="/Client/Public/Src/Assets/otimizadas/galeria/doce-102-m.webp">
+                                <img class="gallery-image" src="/Client/Public/Src/Assets/otimizadas/galeria/doce-102-m.jpg"
+                                    width="3468" height="4624" loading="lazy" decoding="async"
+                                    alt="Doce artesanal feito à mão pela Dolce Vita Di Sandi em Sorocaba">
+                            </picture>
+                            <span class="sr-only">Abrir foto em tamanho grande</span>
+                        </button>
+                    </li>
+                    <li class="gallery-item paisagem">
+                        <button type="button" class="gallery-botao"
+                            data-grande="/Client/Public/Src/Assets/otimizadas/galeria/doce-072-g.webp" data-indice="7">
+                            <picture>
+                                <source type="image/webp" srcset="/Client/Public/Src/Assets/otimizadas/galeria/doce-072-m.webp">
+                                <img class="gallery-image" src="/Client/Public/Src/Assets/otimizadas/galeria/doce-072-m.jpg"
+                                    width="4624" height="3468" loading="lazy" decoding="async"
+                                    alt="Doce artesanal feito à mão pela Dolce Vita Di Sandi em Sorocaba">
+                            </picture>
+                            <span class="sr-only">Abrir foto em tamanho grande</span>
+                        </button>
+                    </li>
+                    <li class="gallery-item retrato">
+                        <button type="button" class="gallery-botao"
+                            data-grande="/Client/Public/Src/Assets/otimizadas/galeria/doce-028-g.webp" data-indice="8">
+                            <picture>
+                                <source type="image/webp" srcset="/Client/Public/Src/Assets/otimizadas/galeria/doce-028-m.webp">
+                                <img class="gallery-image" src="/Client/Public/Src/Assets/otimizadas/galeria/doce-028-m.jpg"
+                                    width="3468" height="4624" loading="lazy" decoding="async"
+                                    alt="Doce artesanal feito à mão pela Dolce Vita Di Sandi em Sorocaba">
+                            </picture>
+                            <span class="sr-only">Abrir foto em tamanho grande</span>
+                        </button>
+                    </li>
+                    <li class="gallery-item retrato">
+                        <button type="button" class="gallery-botao"
+                            data-grande="/Client/Public/Src/Assets/otimizadas/galeria/doce-098-g.webp" data-indice="9">
+                            <picture>
+                                <source type="image/webp" srcset="/Client/Public/Src/Assets/otimizadas/galeria/doce-098-m.webp">
+                                <img class="gallery-image" src="/Client/Public/Src/Assets/otimizadas/galeria/doce-098-m.jpg"
+                                    width="3468" height="4624" loading="lazy" decoding="async"
+                                    alt="Doce artesanal feito à mão pela Dolce Vita Di Sandi em Sorocaba">
+                            </picture>
                             <span class="sr-only">Abrir foto em tamanho grande</span>
                         </button>
                     </li>
                 </ul>
+
+                <div class="galeria-rodape revelar">
+                    <p>Estas são só 10 de <strong>194 fotos</strong> de doces que
+                        já saíram da nossa cozinha.</p>
+                    <div class="buttons">
+                        <a class="button button-linha-clara" href="/Client/Public/Src/Pages/galeria.html">
+                            Ver todas as 194 fotos
+                        </a>
+                        <a class="button order-now"
+                            href="https://wa.me/5515991291842?text=Ol%C3%A1!%20Vi%20as%20fotos%20no%20site%20e%20fiquei%20com%20vontade%20%F0%9F%98%8B"
+                            target="_blank" rel="noopener">
+                            <svg class="icone" aria-hidden="true">
+                                <use href="#i-whatsapp" />
+                            </svg>
+                            Quero um desses
+                        </a>
+                    </div>
+                </div>
+                <!-- GALERIA:FIM -->
+            </div>
+        </section>
+
+        <!-- ================= Faixa de chamada ================= -->
+        <section class="faixa-cta" aria-labelledby="faixa-titulo">
+            <div class="section-content">
+                <p class="olho" style="justify-content:center">Vamos adoçar seu dia</p>
+                <h2 id="faixa-titulo">Escolhe o seu que a gente faz</h2>
+                <p>
+                    Cada doce sai da cozinha depois que você pede — por isso chega fresco,
+                    e por isso a gente combina tudo junto: sabor, quantidade e o dia certo.
+                </p>
+                <div class="buttons">
+                    <a class="button order-now"
+                        href="https://wa.me/5515991291842?text=Ol%C3%A1%2C%20Sanderly!%20Queria%20fazer%20um%20pedido%20%F0%9F%8D%B0"
+                        target="_blank" rel="noopener">
+                        <svg class="icone" aria-hidden="true">
+                            <use href="#i-whatsapp" />
+                        </svg>
+                        Fazer meu pedido agora
+                    </a>
+                    <a class="button contact-us" href="/Client/Public/Src/Pages/cardapio.html">Ver o cardápio</a>
+                </div>
+                <p class="reforco">Resposta no mesmo dia · Torta com 48 h de antecedência · Entrega em Sorocaba</p>
             </div>
         </section>
 

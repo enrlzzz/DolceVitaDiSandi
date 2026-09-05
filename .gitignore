@@ -1,0 +1,16 @@
+# Fotos originais em alta resolucao.
+# Ficam so no seu computador: sao centenas de MB e o site nunca usa elas
+# diretamente — quem vai para o repositorio e o resultado do otimizador,
+# em Client/Public/Src/Assets/otimizadas/.
+# Guarde a pasta raw-photos num backup (HD externo, Google Drive).
+raw-photos/**/*.jpg
+raw-photos/**/*.jpeg
+raw-photos/**/*.png
+raw-photos/**/*.webp
+raw-photos/**/*.heic
+raw-photos/**/*.HEIC
+
+# Arquivos temporarios do sistema
+Thumbs.db
+.DS_Store
+desktop.ini
