@@ -1,0 +1,9 @@
+User-agent: *
+Allow: /
+
+# Pastas de trabalho, nao precisam ser indexadas
+Disallow: /raw-photos/
+Disallow: /tools/
+Disallow: /docs/
+
+Sitemap: https://dolcevitadisandi.com.br/sitemap.xml

@@ -1,64 +1,85 @@
-# 🍰 Dolce Vita Di Sandi – Landing Page Project
+# 🍰 Dolce Vita Di Sandi
 
-🔗 **Live Website:** [https://dolcevitadisandi.com.br/](https://dolcevitadisandi.com.br/)
+🔗 **Site:** <https://dolcevitadisandi.com.br/>
 
-Welcome to the official repository of **Dolce Vita Di Sandi**, a handcrafted sweets business.  
-This project is a **fully responsive Landing Page** developed to promote and showcase the homemade products made by my mother. It was built with love, code, and design thinking to help bring a small dream into the digital world.
-
----
-
-## 📌 Project Overview
-
-This website was created to:
-
-- Build an online presence for the brand
-- Increase audience engagement
-- Provide a visually appealing way to display her products
-- Facilitate access to contact and social media
+Site da **Dolce Vita Di Sandi**, doceria artesanal de Sorocaba/SP fundada em
+2015 pela Sanderly. Feito pelo filho dela, o Enrico.
 
 ---
 
-## 🛠️ Technologies Used
+## 🛠️ Stack
 
-- **HTML5** – semantic structure
-- **CSS3** – responsive design with Flexbox and media queries
-- **JavaScript** – simple interactivity (CTA buttons, minor effects)
-- **Hostinger** – hosting solution with public/src folder structure
+HTML5, CSS3 e JavaScript puro. **Sem build, sem framework, sem dependência de
+runtime** — os arquivos são servidos como estão.
+
+Zero JavaScript de terceiros. As únicas requisições externas são as fontes
+Poppins e Miniver do Google Fonts.
 
 ---
 
-🚀 Getting Started
-To run this project locally, follow these steps:
+## 📁 Estrutura
 
-1. Clone the repository
+```
+.
+├── .htaccess                  # rotas, HTTPS, cabeçalhos de segurança, cache
+├── robots.txt  sitemap.xml    # SEO
+├── Client/Public/Src/
+│   ├── Pages/
+│   │   ├── index.html                      # página principal
+│   │   ├── cardapio.html                   # cardápio em página web
+│   │   ├── politica-de-privacidade.html
+│   │   └── politica-de-reembolso.html
+│   ├── Styles/styles.css
+│   ├── Js/script.js
+│   └── Assets/
+│       ├── otimizadas/        # gerado pelo script — WebP + fallback, 4 tamanhos
+│       └── *.png *.jpg        # originais
+├── raw-photos/                # fotos novas entram aqui (veja README-fotos.md)
+├── tools/otimizar-fotos.py    # otimizador de imagens
+└── docs/
+    ├── DEPLOY-HOSTINGER.md    # deploy automático GitHub → Hostinger
+    └── RELATORIO-ELEVACAO.md  # o que foi feito, medições e backlog
+```
 
-git clone https://github.com/yourusername/dolce-vita-landing-page.git
-cd dolce-vita-landing-page
+---
 
-2. Open the project
-You can use any local server or simply open the index.html file in your browser.
+## 🚀 Rodar localmente
 
-3. (Optional) Live Server with VS Code
-If you're using VS Code, install the Live Server extension, then right-click index.html and select "Open with Live Server".
+```bash
+python -m http.server 8000
+```
 
-📱 Responsiveness
-The layout is fully responsive and tested on:
+Depois abra <http://localhost:8000/Client/Public/Src/Pages/index.html>.
 
-Desktop
+> Use um servidor, não abra o `index.html` direto pelo navegador: os caminhos
+> dos arquivos são absolutos (`/Client/...`) e não funcionam via `file://`.
 
-Tablets
+---
 
-Smartphones
+## 📸 Trocar as fotos
 
-📂 Features
-Elegant and minimalist design
+Sem mexer em código. O passo a passo completo está em
+[`raw-photos/README-fotos.md`](raw-photos/README-fotos.md).
 
-Brand colors and custom typography
+```bash
+pip install Pillow                  # só na primeira vez
+python tools/otimizar-fotos.py      # processa o que estiver em /raw-photos
+```
 
-Embedded social links
+---
 
-Simple and clear structure for easy maintenance
+## 🌐 Publicar
 
-Footer with contact and legal links
+Deploy automático a cada `git push` na `main`, via o recurso **GIT** do hPanel
+da Hostinger. Guia completo: [`docs/DEPLOY-HOSTINGER.md`](docs/DEPLOY-HOSTINGER.md).
 
+---
 
+## ✅ O que o site entrega
+
+- Mobile-first, testado em viewport de 390px
+- Acessibilidade WCAG 2.1 AA: contraste validado, navegação por teclado, foco
+  visível, `alt` em todas as imagens, landmarks e ARIA
+- `prefers-reduced-motion` respeitado e detecção de aparelho fraco
+- SEO: Open Graph, Twitter Card, schema.org `Bakery` e `Menu`, sitemap
+- Carga inicial de ~44 KB no celular (com gzip)

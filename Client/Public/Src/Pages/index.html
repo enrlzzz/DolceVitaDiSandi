@@ -1,242 +1,979 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR" class="sem-js">
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Doceria | Dolce Vita Di Sandi</title>
-    <!-- Link para os ícones do Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
-    <!-- Link para o CSS do Swiper -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#4E342E">
+
+    <title>Dolce Vita Di Sandi | Doceria Artesanal em Sorocaba desde 2015</title>
+    <meta name="description"
+        content="Doces artesanais feitos à mão em Sorocaba/SP desde 2015: Torta Holandesa, beliscão de goiabada, cookies, cafés especiais e soda italiana. Encomende pelo WhatsApp.">
+    <meta name="author" content="Dolce Vita Di Sandi">
+    <link rel="canonical" href="https://dolcevitadisandi.com.br/">
+
+    <!-- Open Graph — como o link aparece no WhatsApp, Facebook e Instagram -->
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="pt_BR">
+    <meta property="og:site_name" content="Dolce Vita Di Sandi">
+    <meta property="og:title" content="Dolce Vita Di Sandi | Doceria Artesanal em Sorocaba">
+    <meta property="og:description"
+        content="Cada doce conta uma história. Torta Holandesa, beliscão de goiabada, cookies e cafés artesanais feitos à mão em Sorocaba desde 2015.">
+    <meta property="og:url" content="https://dolcevitadisandi.com.br/">
+    <meta property="og:image"
+        content="https://dolcevitadisandi.com.br/Client/Public/Src/Assets/otimizadas/galeria/galeria-doce-02-1200w.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="900">
+    <meta property="og:image:alt" content="Doces artesanais da Dolce Vita Di Sandi">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Dolce Vita Di Sandi | Doceria Artesanal em Sorocaba">
+    <meta name="twitter:description"
+        content="Doces artesanais feitos à mão em Sorocaba desde 2015. Encomende pelo WhatsApp.">
+    <meta name="twitter:image"
+        content="https://dolcevitadisandi.com.br/Client/Public/Src/Assets/otimizadas/galeria/galeria-doce-02-1200w.jpg">
+
+    <link rel="icon" href="/Client/Public/Src/Assets/otimizadas/menu/menu-torta-01-480w.png" sizes="any">
+    <link rel="apple-touch-icon" href="/Client/Public/Src/Assets/otimizadas/menu/menu-torta-01-480w.png">
+
+    <!-- Fontes da marca: Poppins (UI) e Miniver (tagline decorativo) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload" as="style"
+        href="https://fonts.googleapis.com/css2?family=Miniver&family=Poppins:wght@400;500;600;700&display=swap">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Miniver&family=Poppins:wght@400;500;600;700&display=swap">
+
     <link rel="stylesheet" href="/Client/Public/Src/Styles/styles.css">
-    <link rel="icon" type="image" href="/Client/Public/Src/Assets/strawberry.png" loading="lazy">
 
-    <!-- GSAP for High-Performance Animations -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <!-- A imagem do herói é o LCP: carrega cedo e na versão certa -->
+    <link rel="preload" as="image" fetchpriority="high"
+        href="/Client/Public/Src/Assets/otimizadas/hero/hero-morango-01-800w.webp"
+        imagesrcset="/Client/Public/Src/Assets/otimizadas/hero/hero-morango-01-480w.webp 480w, /Client/Public/Src/Assets/otimizadas/hero/hero-morango-01-800w.webp 800w, /Client/Public/Src/Assets/otimizadas/hero/hero-morango-01-1200w.webp 1200w"
+        imagesizes="(max-width: 900px) 330px, 520px" type="image/webp">
+
+    <script>
+        // Remove a classe "sem-js" antes da primeira pintura, para que as
+        // animações de entrada não causem um flash de conteúdo.
+        document.documentElement.classList.remove('sem-js');
+    </script>
+
+    <!-- SEO local: ficha do negócio para o Google -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Bakery",
+      "@id": "https://dolcevitadisandi.com.br/#doceria",
+      "name": "Dolce Vita Di Sandi",
+      "alternateName": "Doceria Dolce Vita Di Sandi",
+      "description": "Doceria artesanal em Sorocaba/SP, fundada em 2015. Torta Holandesa, beliscão de goiabada, cookies, doce de paçoca, cafés especiais e soda italiana feitos à mão.",
+      "url": "https://dolcevitadisandi.com.br/",
+      "telephone": "+55-15-99129-1842",
+      "email": "dolcevitadisandi@gmail.com",
+      "foundingDate": "2015",
+      "founder": { "@type": "Person", "name": "Sanderly Lizier Godinho" },
+      "priceRange": "$$",
+      "servesCuisine": ["Doces artesanais", "Cafeteria"],
+      "areaServed": { "@type": "City", "name": "Sorocaba", "addressRegion": "SP" },
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Sorocaba",
+        "addressRegion": "SP",
+        "addressCountry": "BR"
+      },
+      "image": "https://dolcevitadisandi.com.br/Client/Public/Src/Assets/otimizadas/galeria/galeria-doce-02-1200w.jpg",
+      "sameAs": [
+        "https://www.instagram.com/dolcevitadisandi/",
+        "https://www.facebook.com/sanderlyliziergodinho/",
+        "https://www.youtube.com/@DolceVitaDiSandi"
+      ],
+      "hasMenu": "https://dolcevitadisandi.com.br/Client/Public/Src/Pages/cardapio.html",
+      "potentialAction": {
+        "@type": "OrderAction",
+        "target": "https://wa.me/5515991291842"
+      }
+    }
+    </script>
 </head>
-<body>
-    <!-- Header / Navbar -->
-    <header>
-        <nav class="navbar section-content">
-            <a href="#" class="nav-logo">
-                <h2 class="logo text"><img src="#" alt="">💗 DolceVitaDiSandi</h2>
-            </a>  
-            <ul class="nav-menu">
-                <button id="menu-close-button" class="fas fa-times"></button>
 
-                <li class="nav-item">
-                    <a href="#" class="nav-link">Início</a>
+<body>
+    <!-- Ícones em SVG inline: substituem o Font Awesome (100 KB) por ~2 KB -->
+    <svg class="sprite" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg">
+        <symbol id="i-menu" viewBox="0 0 24 24">
+            <path d="M3 6h18v2H3zM3 11h18v2H3zM3 16h18v2H3z" />
+        </symbol>
+        <symbol id="i-fechar" viewBox="0 0 24 24">
+            <path
+                d="M18.3 5.7 12 12l6.3 6.3-1.4 1.4L10.6 13.4 4.3 19.7 2.9 18.3 9.2 12 2.9 5.7l1.4-1.4L10.6 10.6l6.3-6.3z" />
+        </symbol>
+        <symbol id="i-whatsapp" viewBox="0 0 24 24">
+            <path
+                d="M12 2a10 10 0 0 0-8.6 15L2 22l5.2-1.4A10 10 0 1 0 12 2zm0 18a8 8 0 0 1-4.1-1.1l-.3-.2-3 .8.8-2.9-.2-.3A8 8 0 1 1 12 20zm4.5-5.9c-.2-.1-1.4-.7-1.6-.8s-.4-.1-.6.1-.6.8-.8 1-.3.2-.6.1a6.5 6.5 0 0 1-3.2-2.8c-.2-.4.2-.4.6-1.2a.6.6 0 0 0 0-.6c0-.1-.6-1.4-.8-1.9s-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 2.9 2.9 0 0 0-.9 2.2 5 5 0 0 0 1.1 2.7 11.5 11.5 0 0 0 4.4 3.9c1.6.6 2.2.7 3 .6a2.6 2.6 0 0 0 1.7-1.2 2.1 2.1 0 0 0 .1-1.2c0-.1-.2-.2-.5-.3z" />
+        </symbol>
+        <symbol id="i-instagram" viewBox="0 0 24 24">
+            <path
+                d="M12 2.2c3.2 0 3.6 0 4.9.1a6.7 6.7 0 0 1 2.2.4 4.5 4.5 0 0 1 2.2 2.2 6.7 6.7 0 0 1 .4 2.2c.1 1.3.1 1.7.1 4.9s0 3.6-.1 4.9a6.7 6.7 0 0 1-.4 2.2 4.5 4.5 0 0 1-2.2 2.2 6.7 6.7 0 0 1-2.2.4c-1.3.1-1.7.1-4.9.1s-3.6 0-4.9-.1a6.7 6.7 0 0 1-2.2-.4 4.5 4.5 0 0 1-2.2-2.2 6.7 6.7 0 0 1-.4-2.2C2.2 15.6 2.2 15.2 2.2 12s0-3.6.1-4.9a6.7 6.7 0 0 1 .4-2.2 4.5 4.5 0 0 1 2.2-2.2 6.7 6.7 0 0 1 2.2-.4c1.3-.1 1.7-.1 4.9-.1zm0 1.8c-3.1 0-3.5 0-4.7.1a4.9 4.9 0 0 0-1.6.3 2.7 2.7 0 0 0-1.3 1.3 4.9 4.9 0 0 0-.3 1.6c-.1 1.2-.1 1.6-.1 4.7s0 3.5.1 4.7a4.9 4.9 0 0 0 .3 1.6 2.7 2.7 0 0 0 1.3 1.3 4.9 4.9 0 0 0 1.6.3c1.2.1 1.6.1 4.7.1s3.5 0 4.7-.1a4.9 4.9 0 0 0 1.6-.3 2.7 2.7 0 0 0 1.3-1.3 4.9 4.9 0 0 0 .3-1.6c.1-1.2.1-1.6.1-4.7s0-3.5-.1-4.7a4.9 4.9 0 0 0-.3-1.6 2.7 2.7 0 0 0-1.3-1.3 4.9 4.9 0 0 0-1.6-.3c-1.2-.1-1.6-.1-4.7-.1zm0 3.1a4.9 4.9 0 1 1 0 9.8 4.9 4.9 0 0 1 0-9.8zm0 8a3.1 3.1 0 1 0 0-6.2 3.1 3.1 0 0 0 0 6.2zm6.3-8.2a1.1 1.1 0 1 1-2.3 0 1.1 1.1 0 0 1 2.3 0z" />
+        </symbol>
+        <symbol id="i-facebook" viewBox="0 0 24 24">
+            <path
+                d="M22 12a10 10 0 1 0-11.6 9.9v-7H7.9V12h2.5V9.8c0-2.5 1.5-3.9 3.7-3.9 1.1 0 2.2.2 2.2.2v2.4h-1.2c-1.2 0-1.6.8-1.6 1.6V12h2.7l-.4 2.9h-2.3v7A10 10 0 0 0 22 12z" />
+        </symbol>
+        <symbol id="i-youtube" viewBox="0 0 24 24">
+            <path
+                d="M21.6 7.2a2.5 2.5 0 0 0-1.8-1.8C18.2 5 12 5 12 5s-6.2 0-7.8.4A2.5 2.5 0 0 0 2.4 7.2 26 26 0 0 0 2 12a26 26 0 0 0 .4 4.8 2.5 2.5 0 0 0 1.8 1.8C5.8 19 12 19 12 19s6.2 0 7.8-.4a2.5 2.5 0 0 0 1.8-1.8A26 26 0 0 0 22 12a26 26 0 0 0-.4-4.8zM10 15.2V8.8L15.5 12z" />
+        </symbol>
+        <symbol id="i-local" viewBox="0 0 24 24">
+            <path d="M12 2a7 7 0 0 0-7 7c0 5.3 7 13 7 13s7-7.7 7-13a7 7 0 0 0-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z" />
+        </symbol>
+        <symbol id="i-email" viewBox="0 0 24 24">
+            <path d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2zm0 4-8 5-8-5V6l8 5 8-5z" />
+        </symbol>
+        <symbol id="i-telefone" viewBox="0 0 24 24">
+            <path
+                d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.2 11.4 11.4 0 0 0 3.6.6 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1 11.4 11.4 0 0 0 .6 3.6 1 1 0 0 1-.3 1z" />
+        </symbol>
+        <symbol id="i-cardapio" viewBox="0 0 24 24">
+            <path d="M6 2h12a2 2 0 0 1 2 2v18l-8-4-8 4V4a2 2 0 0 1 2-2zm2 5v2h8V7zm0 4v2h8v-2z" />
+        </symbol>
+        <symbol id="i-seta-baixo" viewBox="0 0 24 24">
+            <path d="M12 16.5 5.5 10l1.4-1.4L12 13.7l5.1-5.1L18.5 10z" />
+        </symbol>
+        <symbol id="i-seta-esq" viewBox="0 0 24 24">
+            <path d="M15.4 4.6 8 12l7.4 7.4 1.4-1.4L10.8 12l6-6z" />
+        </symbol>
+        <symbol id="i-seta-dir" viewBox="0 0 24 24">
+            <path d="M8.6 19.4 16 12 8.6 4.6 7.2 6l6 6-6 6z" />
+        </symbol>
+        <symbol id="i-coracao" viewBox="0 0 24 24">
+            <path
+                d="M12 21s-8-4.9-8-10.2A4.8 4.8 0 0 1 12 7.3a4.8 4.8 0 0 1 8 3.5C20 16.1 12 21 12 21z" />
+        </symbol>
+        <symbol id="i-relogio" viewBox="0 0 24 24">
+            <path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm1 10.6 4 2.3-1 1.7-5-2.9V6h2z" />
+        </symbol>
+        <symbol id="i-mao" viewBox="0 0 24 24">
+            <path
+                d="M12 2a2 2 0 0 1 2 2v6h1V5a2 2 0 0 1 4 0v9a8 8 0 0 1-8 8 8 8 0 0 1-8-8v-3a2 2 0 0 1 4 0v1h1V4a2 2 0 0 1 2-2z" />
+        </symbol>
+        <symbol id="i-aviso" viewBox="0 0 24 24">
+            <path d="M12 2 1 21h22zm1 14h-2v2h2zm0-6h-2v5h2z" />
+        </symbol>
+    </svg>
+
+    <a class="pular-para-conteudo" href="#conteudo">Pular para o conteúdo</a>
+
+    <!-- ================= Cabeçalho ================= -->
+    <header id="topo">
+        <nav class="navbar" aria-label="Navegação principal">
+            <a href="#topo" class="nav-logo">
+                <h2 class="logo"><span class="coracao" aria-hidden="true">♥</span> Dolce Vita Di Sandi</h2>
+            </a>
+
+            <ul class="nav-menu" id="nav-menu">
+                <li>
+                    <button id="menu-close-button" type="button" aria-label="Fechar menu">
+                        <svg class="icone" aria-hidden="true">
+                            <use href="#i-fechar" />
+                        </svg>
+                    </button>
                 </li>
-                <li class="nav-item">
-                    <a href="#Sobre" class="nav-link">Sobre</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#Menu" class="nav-link">Menu</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#Membros" class="nav-link">Membros</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#Galeria" class="nav-link">Galeria</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#Contato" class="nav-link">Contato</a>
+                <li class="nav-item"><a href="#topo" class="nav-link">Início</a></li>
+                <li class="nav-item"><a href="#Sobre" class="nav-link">Sobre</a></li>
+                <li class="nav-item"><a href="#Menu" class="nav-link">Menu</a></li>
+                <li class="nav-item"><a href="#Historia" class="nav-link">Nossa História</a></li>
+                <li class="nav-item"><a href="#Galeria" class="nav-link">Galeria</a></li>
+                <li class="nav-item"><a href="/Client/Public/Src/Pages/cardapio.html" class="nav-link">Cardápio</a></li>
+                <li class="nav-item"><a href="#Contato" class="nav-link">Contato</a></li>
+                <li class="nav-item nav-cta">
+                    <a class="button order-now button-pequeno"
+                        href="https://wa.me/5515991291842?text=Ol%C3%A1%2C%20Sanderly!%20Vim%20pelo%20site%20e%20queria%20fazer%20um%20pedido%20%F0%9F%8D%B0"
+                        target="_blank" rel="noopener">
+                        <svg class="icone" aria-hidden="true">
+                            <use href="#i-whatsapp" />
+                        </svg>
+                        Peça agora
+                    </a>
                 </li>
             </ul>
 
-            <button id="menu-open-button" class="fas fa-bars"></button>
+            <button id="menu-open-button" type="button" aria-label="Abrir menu" aria-expanded="false"
+                aria-controls="nav-menu">
+                <svg class="icone" aria-hidden="true">
+                    <use href="#i-menu" />
+                </svg>
+            </button>
         </nav>
     </header>
 
-    <main>
-        <!-- Hero Section -->
-        <section class="hero-section">
-            <div class="section-content">
+    <main id="conteudo">
+        <!-- ================= Herói com cena 3D ================= -->
+        <section class="hero-section" aria-labelledby="hero-titulo">
+            <div class="section-content duas-colunas">
                 <div class="hero-details">
-                    <h2 class="title">A melhor Doceria.</h2>
-                    <h3 class="subtitle">Bem-vindo ao sabor que abraça o coração ❤️</h3>
-                    <p class="description">Porque cada doce conta uma história. Aqui, cada mordida é um abraço, cada aroma é uma memória... e cada visita é um convite para voltar.</p>
+                    <h1 class="title" id="hero-titulo">A melhor doceria.</h1>
+                    <p class="subtitle">Bem-vindo ao sabor que abraça o coração.</p>
+                    <p class="description">
+                        Porque cada doce conta uma história. Aqui, cada mordida é um abraço,
+                        cada aroma é uma memória… e cada visita é um convite para voltar.
+                    </p>
 
                     <div class="buttons">
-                        <a href="#" class="button order-now">Compre Agora</a>
-                        <a href="#" class="button contact-us">Entre em contato</a>
+                        <a class="button order-now"
+                            href="https://wa.me/5515991291842?text=Ol%C3%A1%2C%20Sanderly!%20Vim%20pelo%20site%20e%20queria%20fazer%20um%20pedido%20%F0%9F%8D%B0"
+                            target="_blank" rel="noopener">
+                            <svg class="icone" aria-hidden="true">
+                                <use href="#i-whatsapp" />
+                            </svg>
+                            Compre agora
+                        </a>
+                        <a class="button contact-us" href="#Contato">Entre em contato</a>
+                    </div>
+
+                    <ul class="hero-selos">
+                        <li class="hero-selo">
+                            <svg class="icone" aria-hidden="true">
+                                <use href="#i-mao" />
+                            </svg> Feito à mão, sob encomenda
+                        </li>
+                        <li class="hero-selo">
+                            <svg class="icone" aria-hidden="true">
+                                <use href="#i-local" />
+                            </svg> Entrega em Sorocaba/SP
+                        </li>
+                        <li class="hero-selo">
+                            <svg class="icone" aria-hidden="true">
+                                <use href="#i-coracao" />
+                            </svg> Receitas de família desde 2015
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Cena 3D: camadas em profundidade com CSS puro (0 KB de JS 3D) -->
+                <div class="hero-palco" id="hero-palco">
+                    <div class="hero-cena" id="hero-cena">
+                        <div class="hero-halo" aria-hidden="true"></div>
+                        <div class="hero-disco" aria-hidden="true"></div>
+                        <span class="hero-particula" aria-hidden="true"
+                            style="width:26px;height:26px;top:14%;left:12%;--z:120px;--dx:14px;--dy:-30px;--dur:8s;--atraso:0s"></span>
+                        <span class="hero-particula cacau" aria-hidden="true"
+                            style="width:18px;height:18px;top:26%;right:8%;--z:90px;--dx:-16px;--dy:-24px;--dur:10s;--atraso:.8s"></span>
+                        <span class="hero-particula" aria-hidden="true"
+                            style="width:12px;height:12px;bottom:22%;left:6%;--z:150px;--dx:10px;--dy:-18px;--dur:7s;--atraso:1.6s"></span>
+                        <span class="hero-particula cacau" aria-hidden="true"
+                            style="width:30px;height:30px;bottom:12%;right:14%;--z:-40px;--dx:-12px;--dy:-22px;--dur:11s;--atraso:.4s"></span>
+                        <span class="hero-particula" aria-hidden="true"
+                            style="width:16px;height:16px;top:48%;right:2%;--z:60px;--dx:12px;--dy:-28px;--dur:9s;--atraso:2.2s"></span>
+
+                        <div class="hero-image-wrapper">
+                            <picture>
+                                <source type="image/webp"
+                                    srcset="/Client/Public/Src/Assets/otimizadas/hero/hero-morango-01-480w.webp 480w, /Client/Public/Src/Assets/otimizadas/hero/hero-morango-01-800w.webp 800w, /Client/Public/Src/Assets/otimizadas/hero/hero-morango-01-1200w.webp 1200w"
+                                    sizes="(max-width: 900px) 330px, 520px">
+                                <img class="hero-image"
+                                    src="/Client/Public/Src/Assets/otimizadas/hero/hero-morango-01-800w.png"
+                                    srcset="/Client/Public/Src/Assets/otimizadas/hero/hero-morango-01-480w.png 480w, /Client/Public/Src/Assets/otimizadas/hero/hero-morango-01-800w.png 800w"
+                                    sizes="(max-width: 900px) 330px, 520px" width="1692" height="2000"
+                                    fetchpriority="high" decoding="async"
+                                    alt="Morango fresco mergulhado em chocolate, símbolo da Dolce Vita Di Sandi">
+                            </picture>
+                        </div>
                     </div>
                 </div>
-                <div class="hero-image-wrapper">
-                    <img src="/Client/Public/Src/Assets/morango.png" alt="Hero" class="hero-image">
+            </div>
 
+            <a class="hero-rolar" href="#Sobre">
+                Role
+                <svg class="icone" aria-hidden="true">
+                    <use href="#i-seta-baixo" />
+                </svg>
+            </a>
+        </section>
+
+        <!-- ================= Sobre ================= -->
+        <section class="about-section secao-branca" id="Sobre" aria-labelledby="sobre-titulo">
+            <div class="section-content duas-colunas">
+                <div class="about-image-wrapper revelar">
+                    <picture>
+                        <source type="image/webp"
+                            srcset="/Client/Public/Src/Assets/otimizadas/galeria/galeria-vitrine-01-480w.webp 480w, /Client/Public/Src/Assets/otimizadas/galeria/galeria-vitrine-01-800w.webp 800w"
+                            sizes="(max-width: 900px) 100vw, 45vw">
+                        <img class="about-image"
+                            src="/Client/Public/Src/Assets/otimizadas/galeria/galeria-vitrine-01-800w.jpg"
+                            srcset="/Client/Public/Src/Assets/otimizadas/galeria/galeria-vitrine-01-480w.jpg 480w, /Client/Public/Src/Assets/otimizadas/galeria/galeria-vitrine-01-800w.jpg 800w"
+                            sizes="(max-width: 900px) 100vw, 45vw" width="800" height="534" loading="lazy"
+                            decoding="async" alt="Mesa com doces artesanais da Dolce Vita Di Sandi">
+                    </picture>
+                </div>
+
+                <div class="about-details revelar">
+                    <p class="olho">Sobre nós</p>
+                    <h2 class="section-title" id="sobre-titulo">Um sonho doce que começou em 2015</h2>
+                    <p class="text">
+                        A Dolce Vita Di Sandi nasceu na cozinha de casa, quando a <strong>Sanderly</strong>
+                        começou a criar suas primeiras receitas com todo carinho e cuidado, vendendo
+                        para amigos e vizinhos do bairro. Cada doce carregava não apenas sabor, mas
+                        também histórias, sorrisos e um pedacinho de afeto.
+                    </p>
+                    <p class="text">
+                        Depois de uma pausa, esse sonho ganhou ainda mais força — e agora estamos de
+                        volta. Seguimos trilhando um caminho feito de dedicação, criatividade e amor
+                        por cada detalhe, para tornar seus momentos ainda mais especiais.
+                    </p>
+                    <p class="assinatura">
+                        Sanderly
+                        <small>Fundadora e confeiteira</small>
+                    </p>
+
+                    <ul class="social-link-list">
+                        <li>
+                            <a class="social-link" href="https://www.instagram.com/dolcevitadisandi/" target="_blank"
+                                rel="noopener" aria-label="Instagram da Dolce Vita Di Sandi">
+                                <svg class="icone" aria-hidden="true">
+                                    <use href="#i-instagram" />
+                                </svg>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="social-link" href="https://www.facebook.com/sanderlyliziergodinho/"
+                                target="_blank" rel="noopener" aria-label="Facebook da Dolce Vita Di Sandi">
+                                <svg class="icone" aria-hidden="true">
+                                    <use href="#i-facebook" />
+                                </svg>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="social-link" href="https://www.youtube.com/@DolceVitaDiSandi/videos"
+                                target="_blank" rel="noopener" aria-label="YouTube da Dolce Vita Di Sandi">
+                                <svg class="icone" aria-hidden="true">
+                                    <use href="#i-youtube" />
+                                </svg>
+                            </a>
+                        </li>
+                    </ul>
                 </div>
             </div>
         </section>
 
-        <!-- About Section -->
-        <section class="about-section" id="Sobre">
+        <!-- ================= Menu ================= -->
+        <section class="menu-section secao-clara" id="Menu" aria-labelledby="menu-titulo">
             <div class="section-content">
-                <div class="about-image-wrapper">
-                    <img src="/Client/Public/Src/Assets/about-image.jpg" alt="About" class="about-image">
+                <div class="centralizado revelar">
+                    <p class="olho">Nosso menu</p>
+                    <h2 class="section-title" id="menu-titulo">Feito hoje, para o seu hoje</h2>
+                    <p class="section-intro">
+                        Tudo sai da nossa cozinha sob encomenda, em pequenas quantidades.
+                        Escolha o seu favorito e chame a gente no WhatsApp — a Sanderly
+                        responde pessoalmente.
+                    </p>
                 </div>
-                <div class="about-details">
-                    <h2 class="section-title">Sobre Nós</h2>
-                    <p class="text">A Dolce Vita Di Sandi nasceu de um sonho doce que começou em 2015, quando a Sanderly, nossa fundadora e alma da confeitaria, começou a criar suas primeiras receitas com todo carinho e cuidado, vendendo para amigos e vizinhos do bairro. Cada doce carregava não apenas sabor, mas também histórias, sorrisos e um pedacinho de afeto. Depois de alguns anos, esse sonho ganhou ainda mais força e, agora, estamos de volta com tudo! A Dolce Vita Di Sandi segue trilhando um caminho feito de dedicação, criatividade e amor por cada detalhe. Nosso propósito? Tornar seus momentos ainda mais especiais, com doces que aquecem o coração e encantam o paladar.</p>
-                    <div class="social-link-list">
-                        <a href="https://www.facebook.com/sanderlyliziergodinho/" class="social-link"><i class="fa-brands fa-facebook"></i></a>
-                        <a href="https://www.youtube.com/@DolceVitaDiSandi/videos" class="social-link"><i class="fa-brands fa-youtube"></i></a>
-                        <a href="https://www.instagram.com/dolcevitadisandi/?__pwa=1" class="social-link"><i class="fa-brands fa-instagram"></i></a>
-                    </div>
-                </div>
-            </div>
-        </section>
 
-         <!-- Menu Section -->
-        <section class="menu-section" id="Menu">
-            <h2 class="section-title">Nosso Menu</h2>
-            <div class="section-content">
                 <ul class="menu-list">
-                    <li class="menu-item">
-                      <img src="/Client/Public/Src/Assets/cafe.png" alt="Cafe" class="menu-image">
-                      <h3 class="name">Café</h3>  
-                      <p class="text">Deliciosos cafés para deixar sua companhia ainda melhor, Expressos, Mocaccino, Cappuccino, Frapês e também Pingado!. </p>
+                    <li class="menu-item revelar">
+                        <div class="menu-image-wrapper">
+                            <picture>
+                                <source type="image/webp"
+                                    srcset="/Client/Public/Src/Assets/otimizadas/menu/menu-cafe-01-366w.webp 366w">
+                                <img class="menu-image"
+                                    src="/Client/Public/Src/Assets/otimizadas/menu/menu-cafe-01-366w.png" width="366"
+                                    height="366" loading="lazy" decoding="async"
+                                    alt="Xícara de café expresso da Dolce Vita Di Sandi">
+                            </picture>
+                        </div>
+                        <h3 class="name">Café</h3>
+                        <p class="text">Expresso, mocaccino, cappuccino, frappê e o clássico pingado —
+                            para acompanhar qualquer doce da casa.</p>
+                        <a class="button button-linha-clara button-pequeno"
+                            href="https://wa.me/5515991291842?text=Ol%C3%A1!%20Queria%20pedir%20um%20caf%C3%A9%20%E2%98%95"
+                            target="_blank" rel="noopener">Pedir café</a>
                     </li>
-                    <li class="menu-item">
-                      <img src="/Client/Public/Src/Assets/beliscao.png" alt="Beslicão" class="menu-image">
-                      <h3 class="name">Beslicão</h3>  
-                      <p class="text">Um beslicão maravilhoso com um toque de amor, saboroso e com o toque da goiabada. </p>
+
+                    <li class="menu-item revelar">
+                        <div class="menu-image-wrapper">
+                            <picture>
+                                <source type="image/webp"
+                                    srcset="/Client/Public/Src/Assets/otimizadas/menu/menu-beliscao-01-480w.webp 480w">
+                                <img class="menu-image"
+                                    src="/Client/Public/Src/Assets/otimizadas/menu/menu-beliscao-01-480w.png"
+                                    width="500" height="500" loading="lazy" decoding="async"
+                                    alt="Beliscão artesanal recheado com goiabada">
+                            </picture>
+                        </div>
+                        <h3 class="name">Beliscão</h3>
+                        <p class="text">Massa macia com recheio generoso de goiabada. Um clássico da
+                            casa, do jeito que a vovó fazia.</p>
+                        <a class="button button-linha-clara button-pequeno"
+                            href="https://wa.me/5515991291842?text=Ol%C3%A1!%20Queria%20pedir%20belisc%C3%A3o%20%F0%9F%98%8B"
+                            target="_blank" rel="noopener">Pedir beliscão</a>
                     </li>
-                    <li class="menu-item">
-                      <img src="/Client/Public/Src/Assets/cake.png" alt="Tortas" class="menu-image">
-                      <h3 class="name">Tortas</h3>  
-                      <p class="text">Uma espetacular Torta Holandesa, mais conhecida como "Dutch cake", uma tradição da casa. </p>
+
+                    <li class="menu-item revelar">
+                        <div class="menu-image-wrapper">
+                            <picture>
+                                <source type="image/webp"
+                                    srcset="/Client/Public/Src/Assets/otimizadas/menu/menu-torta-01-480w.webp 480w">
+                                <img class="menu-image"
+                                    src="/Client/Public/Src/Assets/otimizadas/menu/menu-torta-01-480w.png" width="500"
+                                    height="500" loading="lazy" decoding="async"
+                                    alt="Fatia de Torta Holandesa da Dolce Vita Di Sandi">
+                            </picture>
+                        </div>
+                        <h3 class="name">Torta Holandesa</h3>
+                        <p class="text">A nossa mais pedida. Camadas de creme, biscoito e chocolate —
+                            a tradição da casa desde o primeiro dia.</p>
+                        <a class="button button-linha-clara button-pequeno"
+                            href="https://wa.me/5515991291842?text=Ol%C3%A1!%20Queria%20encomendar%20uma%20Torta%20Holandesa%20%F0%9F%8D%B0"
+                            target="_blank" rel="noopener">Encomendar torta</a>
                     </li>
-                    <li class="menu-item">
-                      <img src="/Client/Public/Src/Assets/cookies.png" alt="Cafe" class="menu-image">
-                      <h3 class="name">Cookies</h3>  
-                      <p class="text">Cookies de chocolate Dark, chocolate branco e Tradicional, super recheados e saborosos, a cada mordida é uma explosão de sabores. </p>
+
+                    <li class="menu-item revelar">
+                        <div class="menu-image-wrapper">
+                            <picture>
+                                <source type="image/webp"
+                                    srcset="/Client/Public/Src/Assets/otimizadas/menu/menu-cookies-01-480w.webp 480w">
+                                <img class="menu-image"
+                                    src="/Client/Public/Src/Assets/otimizadas/menu/menu-cookies-01-480w.png"
+                                    width="500" height="500" loading="lazy" decoding="async"
+                                    alt="Cookies recheados de chocolate">
+                            </picture>
+                        </div>
+                        <h3 class="name">Cookies</h3>
+                        <p class="text">Chocolate dark, chocolate branco e tradicional. Super
+                            recheados — cada mordida é uma explosão de sabor.</p>
+                        <a class="button button-linha-clara button-pequeno"
+                            href="https://wa.me/5515991291842?text=Ol%C3%A1!%20Queria%20pedir%20cookies%20%F0%9F%8D%AA"
+                            target="_blank" rel="noopener">Pedir cookies</a>
                     </li>
-                    <li class="menu-item">
-                      <img src="/Client/Public/Src/Assets/soda.png" alt="Cafe" class="menu-image">
-                      <h3 class="name">Soda Italiana</h3>  
-                      <p class="text">Soda é sinônimo de refresco, e com isso, apresentamos também nossa deliciosa Soda Italiana, com diversos sabores e acompanhamentos. </p>
+
+                    <li class="menu-item revelar">
+                        <div class="menu-image-wrapper">
+                            <picture>
+                                <source type="image/webp"
+                                    srcset="/Client/Public/Src/Assets/otimizadas/menu/menu-soda-01-394w.webp 394w">
+                                <img class="menu-image"
+                                    src="/Client/Public/Src/Assets/otimizadas/menu/menu-soda-01-394w.png" width="394"
+                                    height="394" loading="lazy" decoding="async"
+                                    alt="Copo de soda italiana colorida">
+                            </picture>
+                        </div>
+                        <h3 class="name">Soda Italiana</h3>
+                        <p class="text">Refrescante e colorida, em vários sabores e acompanhamentos.
+                            Perfeita para os dias quentes de Sorocaba.</p>
+                        <a class="button button-linha-clara button-pequeno"
+                            href="https://wa.me/5515991291842?text=Ol%C3%A1!%20Queria%20pedir%20uma%20soda%20italiana%20%F0%9F%A5%A4"
+                            target="_blank" rel="noopener">Pedir soda</a>
                     </li>
-                    <li class="menu-item">
-                      <img src="/Client/Public/Src/Assets/pacoca.png" alt="Cafe" class="menu-image">
-                      <h3 class="name">Doce de Paçoca</h3>  
-                      <p class="text">Uma tradição não só da Festa Junina, mas também da Dolce Vita. </p>
+
+                    <li class="menu-item revelar">
+                        <div class="menu-image-wrapper">
+                            <picture>
+                                <source type="image/webp"
+                                    srcset="/Client/Public/Src/Assets/otimizadas/menu/menu-pacoca-01-480w.webp 480w">
+                                <img class="menu-image"
+                                    src="/Client/Public/Src/Assets/otimizadas/menu/menu-pacoca-01-480w.png"
+                                    width="500" height="500" loading="lazy" decoding="async"
+                                    alt="Doce de paçoca artesanal">
+                            </picture>
+                        </div>
+                        <h3 class="name">Doce de Paçoca</h3>
+                        <p class="text">Uma tradição que não fica só na Festa Junina. Cremoso,
+                            na medida certa de amendoim.</p>
+                        <a class="button button-linha-clara button-pequeno"
+                            href="https://wa.me/5515991291842?text=Ol%C3%A1!%20Queria%20pedir%20doce%20de%20pa%C3%A7oca%20%F0%9F%A5%9C"
+                            target="_blank" rel="noopener">Pedir paçoca</a>
                     </li>
                 </ul>
+
+                <div class="menu-rodape revelar">
+                    <p>Quer ver tudo com calma, com sabores e combinações?</p>
+                    <div class="buttons" style="justify-content:center">
+                        <a class="button button-linha-clara" href="/Client/Public/Src/Pages/cardapio.html">
+                            <svg class="icone" aria-hidden="true">
+                                <use href="#i-cardapio" />
+                            </svg>
+                            Ver cardápio completo
+                        </a>
+                        <a class="button button-linha-clara" href="/Cardápio Oficial DolceVitaDiSandi.pdf"
+                            target="_blank" rel="noopener">Baixar cardápio em PDF</a>
+                    </div>
+                </div>
             </div>
         </section>
 
-        <!-- Testimonials Section -->
-        <section class="testimonials-section" id="Membros">
-            <h2 class="section-title">Membros</h2>
+        <!-- ================= Nossa História (antiga seção "Membros") ================= -->
+        <section class="historia-section" id="Historia" aria-labelledby="historia-titulo">
             <div class="section-content">
-                <div class="slider-container swiper">
-                    <div class="slider-wrapper">
-                        <ul class="testimonials-list swiper-wrapper">
-                            <li class="testimonial swiper-slide">
-                                <img src="/Client/Public/Src/Assets/user-2.png" alt="User" class="user-image">
-                                <h3 class="name">Sanderly Lizier</h3>
-                                <i class="feedback">Criadora e Dona da marca Dolce Vita Di Sandi, amante de doces!</i>
+                <div class="centralizado revelar">
+                    <p class="olho">Quem faz o seu doce</p>
+                    <h2 class="section-title" id="historia-titulo">Dez anos de cozinha, uma receita só: carinho</h2>
+                    <p class="section-intro">
+                        Não somos uma fábrica. Somos uma família em Sorocaba que faz doce
+                        de verdade, em pequenas fornadas, para quem quer comemorar — ou
+                        só adoçar a semana.
+                    </p>
+                </div>
+
+                <div class="historia-grid">
+                    <div class="historia-retrato revelar">
+                        <picture>
+                            <source type="image/webp"
+                                srcset="/Client/Public/Src/Assets/otimizadas/equipe/equipe-sanderly-01-480w.webp 480w, /Client/Public/Src/Assets/otimizadas/equipe/equipe-sanderly-01-800w.webp 800w"
+                                sizes="(max-width: 900px) 100vw, 32vw">
+                            <img src="/Client/Public/Src/Assets/otimizadas/equipe/equipe-sanderly-01-800w.png"
+                                srcset="/Client/Public/Src/Assets/otimizadas/equipe/equipe-sanderly-01-480w.png 480w, /Client/Public/Src/Assets/otimizadas/equipe/equipe-sanderly-01-800w.png 800w"
+                                sizes="(max-width: 900px) 100vw, 32vw" width="856" height="1070" loading="lazy"
+                                decoding="async" alt="Sanderly, fundadora e confeiteira da Dolce Vita Di Sandi">
+                        </picture>
+                        <p class="historia-ano">
+                            <strong>2015</strong>
+                            <span>Desde</span>
+                        </p>
+                    </div>
+
+                    <div class="revelar">
+                        <ul class="linha-tempo">
+                            <li>
+                                <span class="quando">2015 — o começo</span>
+                                <h3>A primeira Torta Holandesa</h3>
+                                <p>A Sanderly fez uma torta para a família. No dia seguinte, uma
+                                    vizinha pediu outra. Depois outra. Foi assim que a Dolce Vita
+                                    Di Sandi nasceu — sem plano de negócio, só com receita boa.</p>
                             </li>
-                            <li class="testimonial swiper-slide">
-                                <img src="/Client/Public/Src/Assets/foto4.jpg" alt="User" class="user-image">
-                                <h3 class="name">Enrico Lizier Godinho</h3>
-                                <i class="feedback">Sócio e criador do Web Site da marca, e filho da Sanderly, apaixonado por Tecnologia!</i>
+                            <li>
+                                <span class="quando">2016 a 2023 — o boca a boca</span>
+                                <h3>De vizinha para vizinha, o bairro inteiro</h3>
+                                <p>Aniversários, formaturas, café da tarde de domingo. O caderninho
+                                    de encomendas foi enchendo, e o cardápio cresceu: beliscão,
+                                    cookies, doce de paçoca, soda italiana e os cafés.</p>
+                            </li>
+                            <li>
+                                <span class="quando">2024 — a pausa</span>
+                                <h3>Um tempo para respirar</h3>
+                                <p>A vida pediu uma pausa e a cozinha ficou quieta por alguns meses.
+                                    Mas as mensagens perguntando "quando volta a torta?" nunca pararam
+                                    de chegar.</p>
+                            </li>
+                            <li>
+                                <span class="quando">Agora — a volta</span>
+                                <h3>De volta, com a mesma receita</h3>
+                                <p>Estamos aceitando encomendas de novo, em pequenas quantidades para
+                                    manter a qualidade de sempre. Se você é cliente antigo, mande um
+                                    oi — a gente lembra do seu pedido.</p>
                             </li>
                         </ul>
 
-                        <div class="swiper-pagination"></div>
-                        <div class="swiper-slide-button-swiper-button-prev"></div>
-                        <div class="swiper-slide-button-swiper-button-next"></div>
+                        <ul class="numeros">
+                            <li class="numero">
+                                <strong>2015</strong>
+                                <span>Ano de fundação</span>
+                            </li>
+                            <li class="numero">
+                                <strong>100%</strong>
+                                <span>Feito à mão, em casa</span>
+                            </li>
+                            <li class="numero">
+                                <strong>Sorocaba</strong>
+                                <span>Entrega e retirada</span>
+                            </li>
+                        </ul>
                     </div>
+                </div>
+
+                <div class="depoimentos revelar">
+                    <h3 class="section-title" style="font-size:clamp(1.6rem,4vw,2.2rem);text-align:center">
+                        O que dizem por aí
+                    </h3>
+                    <ul class="depoimentos-lista">
+                        <li>
+                            <figure class="depoimento vazio">
+                                <div>
+                                    <span class="selo-em-breve">Em breve</span>
+                                    <p>Espaço reservado para o depoimento de um cliente real.</p>
+                                </div>
+                            </figure>
+                        </li>
+                        <li>
+                            <figure class="depoimento vazio">
+                                <div>
+                                    <span class="selo-em-breve">Em breve</span>
+                                    <p>Espaço reservado para o depoimento de um cliente real.</p>
+                                </div>
+                            </figure>
+                        </li>
+                        <li>
+                            <figure class="depoimento vazio">
+                                <div>
+                                    <span class="selo-em-breve">Em breve</span>
+                                    <p>Já comprou com a gente?
+                                        <a href="https://wa.me/5515991291842?text=Oi!%20Quero%20deixar%20meu%20depoimento%20sobre%20os%20doces%20%F0%9F%92%97"
+                                            target="_blank" rel="noopener">Conte pra gente</a> — a
+                                        gente adoraria publicar aqui.
+                                    </p>
+                                </div>
+                            </figure>
+                        </li>
+                    </ul>
                 </div>
             </div>
         </section>
 
-        <!-- Gallery Section -->
-        <section class="gallery-section" id="Galeria">
-            <h2 class="section-title">Galeria</h2>
+        <!-- ================= Galeria ================= -->
+        <section class="gallery-section secao-branca" id="Galeria" aria-labelledby="galeria-titulo">
             <div class="section-content">
-                <ul class="gallery-list">
-                    <li class="gallery-item">
-                        <img src="/Client/Public/Src/Assets/img1.jpg" alt="Gallery" class="gallery-image">
+                <div class="centralizado revelar">
+                    <p class="olho">Galeria</p>
+                    <h2 class="section-title" id="galeria-titulo">De perto, dá vontade</h2>
+                    <p class="section-intro">
+                        Fotos reais dos nossos doces, sem filtro e sem banco de imagens.
+                        Clique para ver em tamanho grande.
+                    </p>
+                </div>
+
+                <ul class="gallery-list revelar" id="galeria">
+                    <li class="gallery-item largo">
+                        <button type="button" class="gallery-botao" data-legenda="Doces em pote, prontos para entrega">
+                            <picture>
+                                <source type="image/webp"
+                                    srcset="/Client/Public/Src/Assets/otimizadas/galeria/galeria-doce-01-480w.webp 480w, /Client/Public/Src/Assets/otimizadas/galeria/galeria-doce-01-800w.webp 800w"
+                                    sizes="(max-width: 700px) 100vw, 50vw">
+                                <img class="gallery-image"
+                                    src="/Client/Public/Src/Assets/otimizadas/galeria/galeria-doce-01-800w.jpg"
+                                    srcset="/Client/Public/Src/Assets/otimizadas/galeria/galeria-doce-01-480w.jpg 480w, /Client/Public/Src/Assets/otimizadas/galeria/galeria-doce-01-800w.jpg 800w"
+                                    sizes="(max-width: 700px) 100vw, 50vw" width="1080" height="648" loading="lazy"
+                                    decoding="async" alt="Potes de doce com creme e granulado, prontos para entrega">
+                            </picture>
+                            <span class="gallery-legenda">Doces em pote, prontos para entrega</span>
+                            <span class="sr-only">Abrir foto em tamanho grande</span>
+                        </button>
                     </li>
-                    <li class="gallery-item">
-                        <img src="/Client/Public/Src/Assets/img2.jpg" alt="Gallery" class="gallery-image">
+
+                    <li class="gallery-item alto">
+                        <button type="button" class="gallery-botao" data-legenda="Beliscão recheado de goiabada">
+                            <picture>
+                                <source type="image/webp"
+                                    srcset="/Client/Public/Src/Assets/otimizadas/galeria/galeria-doce-03-480w.webp 480w, /Client/Public/Src/Assets/otimizadas/galeria/galeria-doce-03-800w.webp 800w"
+                                    sizes="(max-width: 700px) 50vw, 25vw">
+                                <img class="gallery-image"
+                                    src="/Client/Public/Src/Assets/otimizadas/galeria/galeria-doce-03-800w.jpg"
+                                    srcset="/Client/Public/Src/Assets/otimizadas/galeria/galeria-doce-03-480w.jpg 480w, /Client/Public/Src/Assets/otimizadas/galeria/galeria-doce-03-800w.jpg 800w"
+                                    sizes="(max-width: 700px) 50vw, 25vw" width="901" height="1600" loading="lazy"
+                                    decoding="async" alt="Beliscões recheados de goiabada arrumados no prato">
+                            </picture>
+                            <span class="gallery-legenda">Beliscão recheado de goiabada</span>
+                            <span class="sr-only">Abrir foto em tamanho grande</span>
+                        </button>
                     </li>
+
                     <li class="gallery-item">
-                        <img src="/Client/Public/Src/Assets/img3.jpg" alt="Gallery" class="gallery-image">
+                        <button type="button" class="gallery-botao" data-legenda="Doce de paçoca na travessa">
+                            <picture>
+                                <source type="image/webp"
+                                    srcset="/Client/Public/Src/Assets/otimizadas/galeria/galeria-doce-02-480w.webp 480w, /Client/Public/Src/Assets/otimizadas/galeria/galeria-doce-02-800w.webp 800w, /Client/Public/Src/Assets/otimizadas/galeria/galeria-doce-02-1200w.webp 1200w"
+                                    sizes="(max-width: 700px) 50vw, 25vw">
+                                <img class="gallery-image"
+                                    src="/Client/Public/Src/Assets/otimizadas/galeria/galeria-doce-02-800w.jpg"
+                                    srcset="/Client/Public/Src/Assets/otimizadas/galeria/galeria-doce-02-480w.jpg 480w, /Client/Public/Src/Assets/otimizadas/galeria/galeria-doce-02-800w.jpg 800w, /Client/Public/Src/Assets/otimizadas/galeria/galeria-doce-02-1200w.jpg 1200w"
+                                    sizes="(max-width: 700px) 50vw, 25vw" width="1600" height="1200" loading="lazy"
+                                    decoding="async" alt="Travessa com doce de paçoca cremoso">
+                            </picture>
+                            <span class="gallery-legenda">Doce de paçoca na travessa</span>
+                            <span class="sr-only">Abrir foto em tamanho grande</span>
+                        </button>
                     </li>
-                    <li class="gallery-item">
-                        <img src="/Client/Public/Src/Assets/img4.jpg" alt="Gallery" class="gallery-image">
+
+                    <li class="gallery-item alto">
+                        <button type="button" class="gallery-botao" data-legenda="Encomenda embalada com capricho">
+                            <picture>
+                                <source type="image/webp"
+                                    srcset="/Client/Public/Src/Assets/otimizadas/galeria/galeria-doce-04-480w.webp 480w, /Client/Public/Src/Assets/otimizadas/galeria/galeria-doce-04-800w.webp 800w, /Client/Public/Src/Assets/otimizadas/galeria/galeria-doce-04-1200w.webp 1200w"
+                                    sizes="(max-width: 700px) 50vw, 25vw">
+                                <img class="gallery-image"
+                                    src="/Client/Public/Src/Assets/otimizadas/galeria/galeria-doce-04-800w.jpg"
+                                    srcset="/Client/Public/Src/Assets/otimizadas/galeria/galeria-doce-04-480w.jpg 480w, /Client/Public/Src/Assets/otimizadas/galeria/galeria-doce-04-800w.jpg 800w, /Client/Public/Src/Assets/otimizadas/galeria/galeria-doce-04-1200w.jpg 1200w"
+                                    sizes="(max-width: 700px) 50vw, 25vw" width="1200" height="1600" loading="lazy"
+                                    decoding="async" alt="Doces embalados um a um, com etiqueta da Dolce Vita Di Sandi">
+                            </picture>
+                            <span class="gallery-legenda">Encomenda embalada com capricho</span>
+                            <span class="sr-only">Abrir foto em tamanho grande</span>
+                        </button>
                     </li>
+
                     <li class="gallery-item">
-                        <img src="/Client/Public/Src/Assets/img5.jpg" alt="Gallery" class="gallery-image">
+                        <button type="button" class="gallery-botao" data-legenda="Torta de morango, pesada na medida certa">
+                            <picture>
+                                <source type="image/webp"
+                                    srcset="/Client/Public/Src/Assets/otimizadas/galeria/galeria-doce-05-480w.webp 480w, /Client/Public/Src/Assets/otimizadas/galeria/galeria-doce-05-800w.webp 800w"
+                                    sizes="(max-width: 700px) 50vw, 25vw">
+                                <img class="gallery-image"
+                                    src="/Client/Public/Src/Assets/otimizadas/galeria/galeria-doce-05-800w.jpg"
+                                    srcset="/Client/Public/Src/Assets/otimizadas/galeria/galeria-doce-05-480w.jpg 480w, /Client/Public/Src/Assets/otimizadas/galeria/galeria-doce-05-800w.jpg 800w"
+                                    sizes="(max-width: 700px) 50vw, 25vw" width="901" height="1600" loading="lazy"
+                                    decoding="async" alt="Torta de morango sobre a balança, na medida certa">
+                            </picture>
+                            <span class="gallery-legenda">Torta de morango, pesada na medida certa</span>
+                            <span class="sr-only">Abrir foto em tamanho grande</span>
+                        </button>
                     </li>
-                    <li class="gallery-item">
-                        <img src="/Client/Public/Src/Assets/img6.jpg" alt="Gallery" class="gallery-image">
+
+                    <li class="gallery-item largo">
+                        <button type="button" class="gallery-botao" data-legenda="Bolo de chocolate com coco">
+                            <picture>
+                                <source type="image/webp"
+                                    srcset="/Client/Public/Src/Assets/otimizadas/galeria/galeria-doce-06-480w.webp 480w, /Client/Public/Src/Assets/otimizadas/galeria/galeria-doce-06-800w.webp 800w, /Client/Public/Src/Assets/otimizadas/galeria/galeria-doce-06-1200w.webp 1200w"
+                                    sizes="(max-width: 700px) 100vw, 50vw">
+                                <img class="gallery-image"
+                                    src="/Client/Public/Src/Assets/otimizadas/galeria/galeria-doce-06-800w.jpg"
+                                    srcset="/Client/Public/Src/Assets/otimizadas/galeria/galeria-doce-06-480w.jpg 480w, /Client/Public/Src/Assets/otimizadas/galeria/galeria-doce-06-800w.jpg 800w, /Client/Public/Src/Assets/otimizadas/galeria/galeria-doce-06-1200w.jpg 1200w"
+                                    sizes="(max-width: 700px) 100vw, 50vw" width="1600" height="939" loading="lazy"
+                                    decoding="async" alt="Bolo de chocolate coberto com coco e raspas">
+                            </picture>
+                            <span class="gallery-legenda">Bolo de chocolate com coco</span>
+                            <span class="sr-only">Abrir foto em tamanho grande</span>
+                        </button>
                     </li>
                 </ul>
             </div>
         </section>
 
-        <!-- Contact section -->
-         <section class="contact-section" id="Contato">
-            <h2 class="section-title">Entre em contato</h2>
-            <div class="section-content">
-                <ul class="contact-info-list">
-                    <li class="contact-info">
-                        <i class="fa-solid fa-location-crosshairs"></i>
-                        <p>Sorocaba, São Paulo, Brasil</p>
-                    </li>
-                    <li class="contact-info">
-                        <i class="fa-solid fa-envelope"></i>
-                        <p>dolcevitadisandi@gmail.com</p>
-                    </li>
-                    <li class="contact-info">
-                        <i class="fa-solid fa-phone"></i>
-                        <p>(15) 99129-1842</p>
-                    </li>
-                    <li class="contact-info">
-                        <i class="fa-solid fa-globe"></i>
-                        <p>www.dolcevitadisandi.com.br</p>
-                    </li>
-                </ul>
+        <!-- ================= Contato ================= -->
+        <section class="contact-section" id="Contato" aria-labelledby="contato-titulo">
+            <div class="section-content duas-colunas">
+                <div class="revelar">
+                    <p class="olho">Contato</p>
+                    <h2 class="section-title" id="contato-titulo">Vamos combinar o seu pedido?</h2>
+                    <p class="section-intro">
+                        O jeito mais rápido é o WhatsApp — a Sanderly responde pessoalmente,
+                        normalmente no mesmo dia. Encomendas de torta pedem 48 h de antecedência.
+                    </p>
 
-                <form action="#" class="contact-form">
-                    <input type="text" placeholder="Seu nome" class="form-input" required>
-                    <input type="email" placeholder="Seu email" class="form-input" required>
-                    <textarea placeholder="Sua mensagem" class="form-input" required></textarea>
-                    <button class="submit-button">Enviar</button>
-                </form>
-            </div>
-         </section>
+                    <ul class="contact-info-list">
+                        <li class="contact-info">
+                            <svg class="icone" aria-hidden="true">
+                                <use href="#i-local" />
+                            </svg>
+                            <p>Sorocaba, São Paulo — entrega e retirada combinadas</p>
+                        </li>
+                        <li class="contact-info">
+                            <svg class="icone" aria-hidden="true">
+                                <use href="#i-telefone" />
+                            </svg>
+                            <p><a href="https://wa.me/5515991291842" target="_blank" rel="noopener">(15)
+                                    99129-1842</a></p>
+                        </li>
+                        <li class="contact-info">
+                            <svg class="icone" aria-hidden="true">
+                                <use href="#i-email" />
+                            </svg>
+                            <p><a href="mailto:dolcevitadisandi@gmail.com">dolcevitadisandi@gmail.com</a></p>
+                        </li>
+                        <li class="contact-info">
+                            <svg class="icone" aria-hidden="true">
+                                <use href="#i-relogio" />
+                            </svg>
+                            <p>Encomendas todos os dias, das 9h às 20h</p>
+                        </li>
+                    </ul>
 
-         <!-- Footer Section -->
-         <footer class="footer-section">
-            <div class="section-content">
-                <p class="copyright-text">© 2025 Dolce Vita Di Sandi</p>
+                    <ul class="social-link-list">
+                        <li>
+                            <a class="social-link" href="https://www.instagram.com/dolcevitadisandi/" target="_blank"
+                                rel="noopener" aria-label="Instagram da Dolce Vita Di Sandi">
+                                <svg class="icone" aria-hidden="true">
+                                    <use href="#i-instagram" />
+                                </svg>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="social-link" href="https://www.facebook.com/sanderlyliziergodinho/"
+                                target="_blank" rel="noopener" aria-label="Facebook da Dolce Vita Di Sandi">
+                                <svg class="icone" aria-hidden="true">
+                                    <use href="#i-facebook" />
+                                </svg>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="social-link" href="https://www.youtube.com/@DolceVitaDiSandi/videos"
+                                target="_blank" rel="noopener" aria-label="YouTube da Dolce Vita Di Sandi">
+                                <svg class="icone" aria-hidden="true">
+                                    <use href="#i-youtube" />
+                                </svg>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
 
-                <div class="social-link-list">
-                        <a href="https://www.facebook.com/sanderlyliziergodinho/" class="social-link"><i class="fa-brands fa-facebook"></i></a>
-                        <a href="https://www.youtube.com/@DolceVitaDiSandi/videos" class="social-link"><i class="fa-brands fa-youtube"></i></a>
-                        <a href="https://www.instagram.com/dolcevitadisandi/?__pwa=1" class="social-link"><i class="fa-brands fa-instagram"></i></a>
+                <form class="contact-form revelar" id="form-pedido" novalidate>
+                    <h3>Monte seu pedido</h3>
+                    <p class="ajuda">
+                        Preencha e clique em enviar: abrimos o WhatsApp com a sua mensagem
+                        pronta, é só apertar o botão de enviar lá.
+                    </p>
+
+                    <div class="campo">
+                        <label for="nome">Seu nome</label>
+                        <input class="form-input" type="text" id="nome" name="nome" autocomplete="name"
+                            placeholder="Como podemos te chamar?" required aria-describedby="erro-nome">
+                        <span class="erro-campo" id="erro-nome" aria-live="polite"></span>
                     </div>
 
-                    <p class="policy-text">
-                        <a href="#" class="policy-link">Política de Privacidade</a>
-                        <span class="separator">•</span>
-                        <a href="#" class="policy-link">Política de Reembolso</a>
-                    </p>
+                    <div class="campo">
+                        <label for="item">O que você quer pedir?</label>
+                        <select class="form-input" id="item" name="item" required aria-describedby="erro-item">
+                            <option value="">Escolha um item…</option>
+                            <option>Torta Holandesa</option>
+                            <option>Beliscão de goiabada</option>
+                            <option>Cookies</option>
+                            <option>Doce de paçoca</option>
+                            <option>Soda italiana</option>
+                            <option>Café</option>
+                            <option>Mesa de doces / festa</option>
+                            <option>Ainda não sei, quero uma sugestão</option>
+                        </select>
+                        <span class="erro-campo" id="erro-item" aria-live="polite"></span>
+                    </div>
+
+                    <div class="campo">
+                        <label for="quando">Para quando?</label>
+                        <input class="form-input" type="date" id="quando" name="quando"
+                            aria-describedby="erro-quando">
+                        <span class="erro-campo" id="erro-quando" aria-live="polite"></span>
+                    </div>
+
+                    <div class="campo">
+                        <label for="mensagem">Detalhes do pedido</label>
+                        <textarea class="form-input" id="mensagem" name="mensagem"
+                            placeholder="Quantidade, sabor, se é entrega ou retirada…"
+                            aria-describedby="erro-mensagem"></textarea>
+                        <span class="erro-campo" id="erro-mensagem" aria-live="polite"></span>
+                    </div>
+
+                    <!-- Honeypot: humano nunca vê, robô de spam preenche e é bloqueado -->
+                    <div class="campo-mel" aria-hidden="true">
+                        <label for="empresa">Não preencha este campo</label>
+                        <input type="text" id="empresa" name="empresa" tabindex="-1" autocomplete="off">
+                    </div>
+
+                    <button class="submit-button" type="submit">
+                        <svg class="icone" aria-hidden="true">
+                            <use href="#i-whatsapp" />
+                        </svg>
+                        Enviar pedido pelo WhatsApp
+                    </button>
+                    <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
+                </form>
             </div>
-         </footer>
+        </section>
     </main>
 
-    <!-- Link do Swiper script -->
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <!-- ================= Rodapé ================= -->
+    <footer class="footer-section">
+        <div class="section-content">
+            <div class="footer-grid">
+                <div class="footer-marca">
+                    <p class="logo">Dolce Vita Di Sandi</p>
+                    <p>Doceria artesanal em Sorocaba/SP desde 2015.<br>Cada doce conta uma história.</p>
+                    <ul class="social-link-list">
+                        <li>
+                            <a class="social-link" href="https://www.instagram.com/dolcevitadisandi/" target="_blank"
+                                rel="noopener" aria-label="Instagram da Dolce Vita Di Sandi">
+                                <svg class="icone" aria-hidden="true">
+                                    <use href="#i-instagram" />
+                                </svg>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="social-link" href="https://www.facebook.com/sanderlyliziergodinho/"
+                                target="_blank" rel="noopener" aria-label="Facebook da Dolce Vita Di Sandi">
+                                <svg class="icone" aria-hidden="true">
+                                    <use href="#i-facebook" />
+                                </svg>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="social-link" href="https://www.youtube.com/@DolceVitaDiSandi/videos"
+                                target="_blank" rel="noopener" aria-label="YouTube da Dolce Vita Di Sandi">
+                                <svg class="icone" aria-hidden="true">
+                                    <use href="#i-youtube" />
+                                </svg>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
 
-    <!-- Link do Script Customizado -->
-    <script src="/Client/Public/Src/Js/script.js"></script>
+                <nav aria-label="Links do site">
+                    <h4>O site</h4>
+                    <div class="footer-links">
+                        <a href="#Sobre">Sobre nós</a>
+                        <a href="#Menu">Nosso menu</a>
+                        <a href="#Historia">Nossa história</a>
+                        <a href="#Galeria">Galeria</a>
+                        <a href="/Client/Public/Src/Pages/cardapio.html">Cardápio completo</a>
+                    </div>
+                </nav>
+
+                <div>
+                    <h4>Fale com a gente</h4>
+                    <div class="footer-links">
+                        <a href="https://wa.me/5515991291842" target="_blank" rel="noopener">WhatsApp (15)
+                            99129-1842</a>
+                        <a href="mailto:dolcevitadisandi@gmail.com">dolcevitadisandi@gmail.com</a>
+                        <a href="/Cardápio Oficial DolceVitaDiSandi.pdf" target="_blank" rel="noopener">Cardápio em
+                            PDF</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-base">
+                <p class="copyright-text">© 2026 Dolce Vita Di Sandi — Sorocaba/SP</p>
+                <p class="policy-text">
+                    <a href="/Client/Public/Src/Pages/politica-de-privacidade.html" class="policy-link">Política de
+                        Privacidade</a>
+                    <span class="separator" aria-hidden="true">•</span>
+                    <a href="/Client/Public/Src/Pages/politica-de-reembolso.html" class="policy-link">Política de
+                        Reembolso</a>
+                </p>
+            </div>
+
+            <p class="feito-com-carinho">
+                Site feito com carinho pelo filho da Sanderly,
+                <a href="https://www.instagram.com/dolcevitadisandi/" target="_blank" rel="noopener">Enrico</a>.
+            </p>
+        </div>
+    </footer>
+
+    <a class="whatsapp-flutuante"
+        href="https://wa.me/5515991291842?text=Ol%C3%A1%2C%20Sanderly!%20Vim%20pelo%20site%20e%20queria%20fazer%20um%20pedido%20%F0%9F%8D%B0"
+        target="_blank" rel="noopener" aria-label="Falar no WhatsApp com a Dolce Vita Di Sandi">
+        <svg class="icone" aria-hidden="true">
+            <use href="#i-whatsapp" />
+        </svg>
+        <span class="rotulo">Pedir no WhatsApp</span>
+    </a>
+
+    <!-- Lightbox da galeria -->
+    <dialog class="lightbox" id="lightbox" aria-label="Foto ampliada">
+        <button type="button" class="lightbox-botao lightbox-fechar" id="lightbox-fechar" aria-label="Fechar">
+            <svg class="icone" aria-hidden="true">
+                <use href="#i-fechar" />
+            </svg>
+        </button>
+        <button type="button" class="lightbox-botao lightbox-anterior" id="lightbox-anterior"
+            aria-label="Foto anterior">
+            <svg class="icone" aria-hidden="true">
+                <use href="#i-seta-esq" />
+            </svg>
+        </button>
+        <button type="button" class="lightbox-botao lightbox-proximo" id="lightbox-proximo" aria-label="Próxima foto">
+            <svg class="icone" aria-hidden="true">
+                <use href="#i-seta-dir" />
+            </svg>
+        </button>
+        <div>
+            <img id="lightbox-img" alt="">
+            <p class="lightbox-legenda" id="lightbox-legenda"></p>
+        </div>
+    </dialog>
+
+    <script src="/Client/Public/Src/Js/script.js" defer></script>
 </body>
+
 </html>
