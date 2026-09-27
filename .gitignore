@@ -14,3 +14,7 @@ raw-photos/**/*.HEIC
 Thumbs.db
 .DS_Store
 desktop.ini
+
+# Capturas temporárias da verificação visual local.
+tools/*.tmp.png
+tools/kapitana-captures/

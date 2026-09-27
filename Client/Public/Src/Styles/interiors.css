@@ -1,0 +1,61 @@
+@import url('./styles.css');
+
+/* Shared editorial language for the catalogue, archive and policy pages. */
+:root {
+  --fonte-corpo: 'DM Sans', Arial, sans-serif;
+  --fonte-titulo: Georgia, 'Times New Roman', serif;
+  --creme: #F5EEE9;
+  --tinta: #2C1810;
+}
+body.interior { background: #F5EEE9; color: #2C1810; font-family: 'DM Sans', Arial, sans-serif; }
+html { scroll-behavior: smooth; scroll-padding-top: 96px; }
+.interior header { position: sticky; top: 0; background: #2C1810; border-bottom: 1px solid #76594f; }
+.interior .navbar { max-width: 1440px; min-height: 88px; padding: 18px 5.2%; }
+.interior .nav-logo .logo { font: 700 29px/.95 Georgia, serif; letter-spacing: -1.5px; }
+.interior .nav-logo { display: inline-flex; width: 58px; height: 58px; padding: 5px; border-radius: 50%; background: #F5EEE9; }
+.interior .nav-logo img { width: 100%; height: 100%; object-fit: contain; }
+.logo-second { color: #F2B3FF; font-style: italic; font-weight: 400; }
+.logo-flower { display: none; }
+.logo-tagline { display: block; margin-top: 10px; font: 9px Arial,sans-serif; letter-spacing: 3px; color: #e4cfc5; }
+.interior .nav-menu { position: static; inset: auto; transform: none; flex-direction: row; padding: 0; background: none; gap: 24px; overflow: visible; }
+.interior .nav-link { font-size: 13px; }
+.interior .nav-cta { margin: 0; }
+.interior .button { border-radius: 40px; box-shadow: none; font: 500 14px/1.4 'DM Sans',Arial,sans-serif; padding: 14px 24px; }
+.interior .order-now { background: #E06CFD; border-color: #E06CFD; color: #2C1810; }
+.interior .section-content { max-width: 1440px; padding-inline: 5.2%; }
+.interior .pagina-interna { padding-block: 64px 90px; background: #F5EEE9; }
+.interior .conteudo-legal { max-width: 960px; }
+.interior h1, .interior h1.section-title { font: 400 clamp(42px,6vw,80px)/1.05 Georgia,serif; letter-spacing: -.045em; color: #2C1810; text-align: left; }
+.interior .section-title::after { display: none; }
+.interior .olho { display: flex; font-size: 11px; letter-spacing: .17em; text-transform: uppercase; margin: 20px 0; color: #6e4c42; }
+.interior .conteudo-legal a:not(.button) { color: #82438e; }
+.interior .section-intro { text-align: left; margin: 24px 0; max-width: 640px; }
+.interior .centralizado { text-align: left; }
+.interior .centralizado .olho { justify-content: flex-start; }
+.interior .voltar { font-size: 13px; margin-bottom: 38px; }
+.interior .cardapio-photo-strip { display: grid; grid-template-columns: repeat(3,1fr); gap: 20px; margin: 36px 0 60px; }
+.interior .cardapio-photo-strip img { width: 100%; height: auto; aspect-ratio: 1; object-fit: cover; }
+.interior .cardapio-grupo { padding-top: 16px; border-top: 1px solid #b7a196; margin: 0 0 46px; }
+.interior .cardapio-grupo h2 { border: 0; font: 400 36px/1.1 Georgia,serif; margin: 12px 0 22px; }
+.interior .cardapio-item { border-bottom: 1px solid #d7c7bd; padding: 18px 0; }
+.interior .conteudo-legal a.button { color: #2C1810; }
+.interior .button-linha-clara { color: #2C1810; border: 1px solid #87695c; }
+.interior .gallery-item, .interior .gallery-botao, .interior .gallery-image { border-radius: 0; box-shadow: none; }
+.interior .galeria-contador { text-align: left; }
+.interior .footer-section { background: #2C1810; padding: 38px 0 100px; }
+.interior .cta-faixa { background: #ead8e7; color: #2C1810; }
+.interior .cta-faixa h2 { color: #2C1810; font-family: Georgia,serif; }
+.interior .whatsapp-flutuante { background: #4E342E; border: 1px solid #E06CFD; color: #F5EEE9; }
+.interior .lightbox { background: #2C1810; }
+@media(max-width:600px) {
+  .interior .navbar { min-height: 78px; gap: 12px; }
+  .interior .nav-logo .logo { font-size: 23px; }
+  .logo-tagline { font-size: 7px; letter-spacing: 2px; }
+  .interior .nav-menu { gap: 12px; }
+  .interior .nav-menu .nav-link { font-size: 11px; }
+  .interior .nav-cta { display: none; }
+  .interior .pagina-interna { padding-top: 35px; }
+  .interior .cardapio-photo-strip { gap: 8px; margin-block: 25px 40px; }
+  .interior .conteudo-legal h1 { overflow-wrap: anywhere; }
+}
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
