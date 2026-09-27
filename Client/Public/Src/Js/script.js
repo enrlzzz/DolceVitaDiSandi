@@ -1,153 +1,380 @@
-/* Shared, progressively enhanced interactions. */
-(() => {
-  'use strict';
-  const $ = (selector, root = document) => root.querySelector(selector);
-  const $$ = (selector, root = document) => [...root.querySelectorAll(selector)];
+/* =========================================================================
+   Dolce Vita Di Sandi — interações do site
+   Sem bibliotecas externas. Tudo é progressivo: se este arquivo não carregar,
+   o site continua legível, navegável e vendável.
+   ========================================================================= */
+(function () {
+    'use strict';
 
-  const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
-  document.addEventListener('click', event => {
-    const link = event.target.closest('a[href*="#"]');
-    if (!link || event.defaultPrevented || event.button !== 0 || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
-    const url = new URL(link.href, window.location.href);
-    if (url.origin !== window.location.origin || url.pathname !== window.location.pathname || !url.hash) return;
-    let target;
-    try { target = document.querySelector(url.hash); } catch { return; }
-    if (!target) return;
-    event.preventDefault();
-    target.scrollIntoView({ behavior: prefersReducedMotion.matches ? 'auto' : 'smooth', block: 'start' });
-    history.pushState(null, '', url.hash);
-  });
+    var WHATSAPP = '5515991291842';
 
-  // Internal gallery: lightbox includes newly revealed photos and never runs homepage code.
-  const lightbox = $('#lightbox');
-  if (lightbox) {
-    let current = 0, origin = null;
-    const buttons = () => $$('.gallery-item:not(.oculto) .gallery-botao');
-    const show = index => { const all = buttons(); if (!all.length) return; current = (index + all.length) % all.length; const button = all[current], image = $('img', button); $('#lightbox-img').src = button.dataset.grande || image?.currentSrc || image?.src || ''; $('#lightbox-img').alt = image?.alt || ''; $('#lightbox-legenda').textContent = button.dataset.legenda || `Foto ${current + 1} de ${all.length}`; };
-    const close = () => { if (lightbox.open) lightbox.close(); document.body.style.overflow = ''; origin?.focus(); };
-    $$('.gallery-botao').forEach(button => button.addEventListener('click', () => { origin = document.activeElement; show(buttons().indexOf(button)); lightbox.showModal(); document.body.style.overflow = 'hidden'; }));
-    $('#lightbox-fechar')?.addEventListener('click', close);
-    $('#lightbox-anterior')?.addEventListener('click', () => show(current - 1));
-    $('#lightbox-proximo')?.addEventListener('click', () => show(current + 1));
-    lightbox.addEventListener('click', event => { if (event.target === lightbox) close(); });
-    lightbox.addEventListener('close', () => { document.body.style.overflow = ''; });
-    document.addEventListener('keydown', event => { if (!lightbox.open) return; if (event.key === 'Escape') close(); if (event.key === 'ArrowLeft') show(current - 1); if (event.key === 'ArrowRight') show(current + 1); });
-  }
-  $('#carregar-mais')?.addEventListener('click', () => { const hidden = $$('.gallery-item.oculto'); hidden.slice(0, 48).forEach(item => item.classList.remove('oculto')); const count = $('#galeria-mostrando'); if (count) count.textContent = String($$('.gallery-item:not(.oculto)').length); if (hidden.length <= 48) $('#carregar-mais-area')?.setAttribute('hidden', ''); });
+    /* ---------------------------------------------------------------------
+       0. Perfil do aparelho — decide o quanto de movimento é seguro exibir
+       --------------------------------------------------------------------- */
+    var menosMovimento = window.matchMedia('(prefers-reduced-motion: reduce)');
 
-  if (!$('.kapitana-home')) return;
-  const menu = '/Client/Public/Src/Assets/otimizadas/menu/';
-  const rodada2 = '/Client/Public/Src/Assets/rodada-2/';
-  const rodada5 = '/Client/Public/Src/Assets/rodada-5/produtos-editados/';
-  const products = [
-    ['doces','Torta Holandesa','Camadas de creme, biscoito e chocolate.','torta-holandesa-editada.png', rodada5],
-    ['doces','Pão de mel','Massa macia e cobertura de chocolate.','pao-de-mel-editado.png', rodada5],
-    ['doces','Bombom Ferrero Rocher','Bombom crocante inspirado no clássico italiano, finalizado à mão.','camafeu-nozes.png', rodada5],
-    ['cookies','Cookies recheados','Cookies recheados da casa para acompanhar a sua pausa.','cookies-editada.png', rodada5],
-    ['doces','Brigadeiro','Doce artesanal da casa.','brigadeiro-editado.png', rodada5],
-    ['doces','Camafeu de morango','Chocolate, creme e morango.','camafeu-morango-editada.png', rodada5],
-    ['doces','Camafeu de uva','Camafeu artesanal com uva.','camafeu-uva-editada.png', rodada5],
-    ['doces','Bolo de fubá','Bolo caseiro com goiabada.','bolo-de-fuba-editado.png', rodada5],
-    ['doces','Bolo fit','Uma opção especial da cozinha.','bolo-fit-editado.png', rodada5],
-    ['doces','Bolo vulcão','Bolo generoso com cobertura cremosa.','bolo-vulcao-editado-2.png', rodada5],
-    ['doces','Torta de morango','Torta artesanal com morangos.','torta-de-morango-editada.png', rodada5],
-    ['doces','Paçoca','Doce de paçoca feito na cozinha.','pacoca-editada.png', rodada5]
-  ].map(([category, name, description, image, base], id) => ({ id, category, name, description, image: base + image }));
-  let filter = 'todos', selected = [];
-  try { selected = [...new Set(JSON.parse(localStorage.getItem('dolce-vita-selection') || '[]').filter(id => Number.isInteger(id) && products[id]))]; } catch { selected = []; }
-  const render = () => {
-    const visible = products.filter(p => filter === 'todos' || p.category === filter);
-    $('#products').innerHTML = visible.map(p => `<article class="product"><img src="${p.image}" alt="${p.name} da Dolce Vita Di Sandi" width="800" height="800" loading="lazy"><div><h3>${p.name}</h3><p>${p.description}</p></div><button type="button" data-product="${p.id}" aria-label="Ver ${p.name}">+</button></article>`).join('');
-    $('#filter-status').textContent = `${visible.length} doces encontrados.`;
-  };
-  render();
-  $$('.filters button').forEach(button => button.addEventListener('click', () => { filter = button.dataset.filter; $$('.filters button').forEach(item => item.setAttribute('aria-pressed', String(item === button))); render(); }));
-  const productDialog = $('#product-dialog');
-  $('#products').addEventListener('click', event => { const id = event.target.dataset.product; if (id === undefined) return; const p = products[Number(id)]; $('#dialog-body').innerHTML = `<img class="product-dialog-image" src="${p.image}" alt="${p.name}"><span class="eyebrow">SOB ENCOMENDA</span><h3 class="dialog-product-title" id="product-dialog-title">${p.name}</h3><p>${p.description}</p><button class="pill pink" data-add="${p.id}" type="button">Adicionar à seleção</button>`; productDialog.setAttribute('aria-labelledby', 'product-dialog-title'); productDialog.showModal(); });
-  const updateCount = () => { $('#selection-count').textContent = selected.length; try { localStorage.setItem('dolce-vita-selection', JSON.stringify(selected)); } catch {} };
-  const renderSelection = () => { const list = selected.map(id => products[id]); $('#selection-list').innerHTML = list.length ? list.map(p => `<div class="selection-row"><span>${p.name}</span><button data-remove="${p.id}">remover</button></div>`).join('') : '<p>Nenhum doce selecionado ainda.</p>'; $('#selection-whatsapp').href = `https://wa.me/5515991291842?text=${encodeURIComponent(list.length ? `Olá! Vi o site e queria conversar sobre: ${list.map(p => p.name).join(', ')}.` : 'Olá! Vi o site e queria conhecer os doces disponíveis.')}`; };
-  document.addEventListener('click', event => { if (event.target.matches('[data-close]')) event.target.closest('dialog')?.close(); if (event.target.matches('[data-add]')) { const id = Number(event.target.dataset.add); if (!selected.includes(id)) selected.push(id); updateCount(); productDialog.close(); } if (event.target.matches('[data-remove]')) { selected = selected.filter(id => id !== Number(event.target.dataset.remove)); updateCount(); renderSelection(); } });
-  $('#selection-button').addEventListener('click', () => { renderSelection(); $('#selection-dialog').showModal(); });
-  const scenes = [
-    { src: rodada5 + 'pao-de-mel-editado.png', caption: 'O carinho está nos detalhes.', alt: 'Pão de mel recheado com chocolate e doce de leite feito pela Sanderly.' },
-    { src: rodada5 + 'torta-holandesa-editada.png', caption: 'Uma receita para compartilhar.', alt: 'Torta Holandesa feita artesanalmente pela Sanderly.' },
-    { src: rodada5 + 'camafeu-nozes.png', caption: 'Pequenos detalhes, feitos à mão.', alt: 'Bombom Ferrero Rocher finalizado à mão pela Dolce Vita Di Sandi.' }
-  ];
-  let sceneIndex = 0;
-  let carouselTimer;
-  const carousel = $('.hero-carousel');
-  const stopCarousel = () => { window.clearInterval(carouselTimer); carouselTimer = undefined; };
-  const restartCarousel = () => { stopCarousel(); if (!prefersReducedMotion.matches) carouselTimer = window.setInterval(() => setScene(sceneIndex + 1), 5600); };
-  const setScene = (index, { pause = false } = {}) => {
-    sceneIndex = (index + scenes.length) % scenes.length;
-    const scene = scenes[sceneIndex];
-    const image = $('#hero-scene');
-    image.classList.add('is-changing');
-    window.setTimeout(() => { image.src = scene.src; image.alt = scene.alt; image.classList.remove('is-changing'); }, 170);
-    $('#scene-caption').textContent = scene.caption;
-    $$('[data-scene]').forEach((button, buttonIndex) => button.setAttribute('aria-pressed', String(buttonIndex === sceneIndex)));
-    if (pause) stopCarousel(); else restartCarousel();
-  };
-  $('#hero-scene').src = scenes[0].src;
-  $$('[data-scene]').forEach((button, index) => button.addEventListener('click', () => setScene(index, { pause: true })));
-  $('[data-carousel="prev"]')?.addEventListener('click', () => setScene(sceneIndex - 1, { pause: true }));
-  $('[data-carousel="next"]')?.addEventListener('click', () => setScene(sceneIndex + 1, { pause: true }));
-  carousel?.addEventListener('mouseenter', stopCarousel);
-  carousel?.addEventListener('mouseleave', restartCarousel);
-  carousel?.addEventListener('focusin', stopCarousel);
-  carousel?.addEventListener('focusout', event => { if (!carousel.contains(event.relatedTarget)) restartCarousel(); });
-  carousel?.addEventListener('touchstart', event => { carousel.dataset.touchStart = event.changedTouches[0].clientX; }, { passive: true });
-  carousel?.addEventListener('touchend', event => { const start = Number(carousel.dataset.touchStart); const delta = event.changedTouches[0].clientX - start; if (Math.abs(delta) > 45) setScene(sceneIndex + (delta < 0 ? 1 : -1), { pause: true }); }, { passive: true });
-  carousel?.addEventListener('keydown', event => { if (event.key === 'ArrowLeft') setScene(sceneIndex - 1, { pause: true }); if (event.key === 'ArrowRight') setScene(sceneIndex + 1, { pause: true }); });
-  restartCarousel();
-  const tutorial = $('.tutorial-video');
-  if (tutorial) {
-    const sourceUrl = (tutorial.dataset.videoSrc || '').trim();
-    const posterUrl = (tutorial.dataset.videoPoster || '').trim();
-    const isExternalEmbed = /^https?:\/\//i.test(sourceUrl);
-    if (sourceUrl && !isExternalEmbed) {
-      const video = document.createElement('video');
-      video.controls = true;
-      video.playsInline = true;
-      video.preload = 'metadata';
-      video.setAttribute('aria-label', 'Tutorial de como fazer um pedido no site');
-      if (posterUrl && !/^https?:\/\//i.test(posterUrl)) video.poster = posterUrl;
-      const source = document.createElement('source');
-      source.src = sourceUrl;
-      source.type = 'video/mp4';
-      video.appendChild(source);
-      tutorial.replaceChildren(video);
+    function aparelhoFraco() {
+        var nav = window.navigator;
+        var conexao = nav.connection || nav.mozConnection || nav.webkitConnection;
+        if (conexao) {
+            if (conexao.saveData) return true;
+            if (/(^|-)2g$/.test(conexao.effectiveType || '')) return true;
+        }
+        if (typeof nav.deviceMemory === 'number' && nav.deviceMemory <= 2) return true;
+        if (typeof nav.hardwareConcurrency === 'number' && nav.hardwareConcurrency <= 2) return true;
+        return false;
     }
-  }
-  const ingredients = [['Chocolate','A cobertura intensa que dá presença à primeira mordida.'],['Creme','A camada cremosa que deixa a Torta Holandesa macia e inesquecível.'],['Biscoito','A base crocante que equilibra o creme e completa a receita.']];
-  const showIngredient = index => { const [title, text] = ingredients[index]; $('#ingredient-copy').innerHTML = `<h3>${title}</h3><p>${text}</p>`; $$('[data-ingredient]').forEach(button => button.setAttribute('aria-pressed', String(Number(button.dataset.ingredient) === index))); };
-  $$('[data-ingredient]').forEach(button => button.addEventListener('click', () => showIngredient(Number(button.dataset.ingredient)))); showIngredient(0);
-  const pair = { chocolate: 'Uma vontade intensa pede chocolate. Que tal conversar sobre os doces da casa?', crocante: 'Para uma mordida crocante, os cookies podem acompanhar muito bem a sua pausa.', cafe: 'Café passado e um doce escolhido com calma: uma combinação para ficar mais um pouco.' };
-  const renderPair = () => $('#pair-result').textContent = pair[$('input[name="mood"]:checked').value]; $$('input[name="mood"]').forEach(input => input.addEventListener('change', renderPair)); renderPair();
-  $$('.home-gallery button').forEach(button => button.addEventListener('click', () => { $('#home-lightbox-image').src = button.dataset.gallerySrc; $('#home-lightbox').showModal(); }));
-  $$('[data-occasion]').forEach(button => button.addEventListener('click', () => {
-    const occasion = button.dataset.occasion;
-    const message = `Olá! Quero conversar sobre doces para ${occasion}. Gostaria de saber as opções, quantidades e disponibilidade.`;
-    window.open(`https://wa.me/5515991291842?text=${encodeURIComponent(message)}`, '_blank', 'noopener');
-  }));
-  $('#testimonial-form')?.addEventListener('submit', event => {
-    event.preventDefault();
-    const form = event.currentTarget;
-    const name = form.elements.name.value.trim();
-    const review = form.elements.text.value.trim();
-    const message = `Olá! Quero enviar um depoimento para a Dolce Vita Di Sandi.\n\nNome: ${name}\nDepoimento: “${review}”\n\nAutorizo a publicação deste depoimento no site.`;
-    $('#testimonial-feedback').textContent = 'Abrindo o WhatsApp para você revisar a mensagem...';
-    window.open(`https://wa.me/5515991291842?text=${encodeURIComponent(message)}`, '_blank', 'noopener');
-  });
-  $$('.lab-photo [data-ingredient]').forEach((button, index) => button.setAttribute('aria-label', ingredients[index][0]));
-  $('#selection-dialog').setAttribute('aria-labelledby', 'selection-dialog-title');
-  $('#selection-dialog h2').id = 'selection-dialog-title';
-  $('#home-lightbox').setAttribute('aria-label', 'Foto ampliada dos nossos doces');
-  $$('dialog').forEach(dialog => {
-    dialog.addEventListener('click', event => {
-      const box = dialog.getBoundingClientRect();
-      if (event.target === dialog && (event.clientX < box.left || event.clientX > box.right || event.clientY < box.top || event.clientY > box.bottom)) dialog.close();
-    });
-  });
-  updateCount();
+
+    var economia = aparelhoFraco();
+    if (economia) document.body.classList.add('economia');
+
+    function podeAnimar() {
+        return !menosMovimento.matches && !economia;
+    }
+
+    /* ---------------------------------------------------------------------
+       1. Menu mobile
+       --------------------------------------------------------------------- */
+    var abrir = document.querySelector('#menu-open-button');
+    var fechar = document.querySelector('#menu-close-button');
+    var navMenu = document.querySelector('#nav-menu');
+
+    function alternarMenu(mostrar) {
+        document.body.classList.toggle('show-mobile-menu', mostrar);
+        if (abrir) abrir.setAttribute('aria-expanded', String(mostrar));
+        if (mostrar && fechar) fechar.focus();
+        else if (!mostrar && abrir) abrir.focus();
+    }
+
+    if (abrir) abrir.addEventListener('click', function () { alternarMenu(true); });
+    if (fechar) fechar.addEventListener('click', function () { alternarMenu(false); });
+
+    if (navMenu) {
+        navMenu.addEventListener('click', function (e) {
+            if (e.target.closest('.nav-link, .nav-cta a')) alternarMenu(false);
+        });
+        // ESC fecha o menu, e o foco não escapa dele enquanto está aberto
+        document.addEventListener('keydown', function (e) {
+            if (e.key !== 'Escape') return;
+            if (document.body.classList.contains('show-mobile-menu')) alternarMenu(false);
+        });
+    }
+
+    /* ---------------------------------------------------------------------
+       2. Header que some ao descer e volta ao subir
+       --------------------------------------------------------------------- */
+    var header = document.querySelector('header');
+    var ultimoY = window.scrollY;
+    var travado = false;
+
+    function aoRolar() {
+        var y = window.scrollY;
+        if (!header) return;
+        header.classList.toggle('solido', y > 40);
+        if (y < 120 || document.body.classList.contains('show-mobile-menu')) {
+            header.classList.remove('escondido');
+        } else if (y > ultimoY + 6) {
+            header.classList.add('escondido');
+        } else if (y < ultimoY - 6) {
+            header.classList.remove('escondido');
+        }
+        ultimoY = y;
+        travado = false;
+    }
+
+    window.addEventListener('scroll', function () {
+        if (travado) return;
+        travado = true;
+        window.requestAnimationFrame(aoRolar);
+    }, { passive: true });
+
+    /* ---------------------------------------------------------------------
+       3. Link ativo na navegação conforme a seção visível
+       --------------------------------------------------------------------- */
+    var secoes = document.querySelectorAll('main section[id]');
+    var links = document.querySelectorAll('.nav-link[href^="#"]');
+
+    if ('IntersectionObserver' in window && secoes.length) {
+        var observadorNav = new IntersectionObserver(function (entradas) {
+            entradas.forEach(function (entrada) {
+                if (!entrada.isIntersecting) return;
+                var id = entrada.target.id;
+                links.forEach(function (link) {
+                    var ativo = link.getAttribute('href') === '#' + id;
+                    if (ativo) link.setAttribute('aria-current', 'true');
+                    else link.removeAttribute('aria-current');
+                });
+            });
+        }, { rootMargin: '-45% 0px -50% 0px' });
+        secoes.forEach(function (s) { observadorNav.observe(s); });
+    }
+
+    /* ---------------------------------------------------------------------
+       4. Revelar elementos ao entrar na tela (substitui GSAP/ScrollTrigger)
+       --------------------------------------------------------------------- */
+    var reveláveis = document.querySelectorAll('.revelar');
+
+    function revelarTudo() {
+        reveláveis.forEach(function (el) { el.classList.add('visivel'); });
+    }
+
+    if (!podeAnimar() || !('IntersectionObserver' in window)) {
+        revelarTudo();
+    } else {
+        // Só a partir daqui é seguro esconder: o observador existe e vai revelar.
+        document.documentElement.classList.add('com-reveal');
+        // Rede de segurança: se em 4s algo tiver ficado para trás, mostra tudo.
+        window.setTimeout(revelarTudo, 4000);
+        var observador = new IntersectionObserver(function (entradas, obs) {
+            entradas.forEach(function (entrada, i) {
+                if (!entrada.isIntersecting) return;
+                var el = entrada.target;
+                el.style.transitionDelay = Math.min(i * 70, 280) + 'ms';
+                el.classList.add('visivel');
+                obs.unobserve(el);
+            });
+        }, { rootMargin: '0px 0px -12% 0px', threshold: 0.08 });
+        reveláveis.forEach(function (el) { observador.observe(el); });
+    }
+
+    /* ---------------------------------------------------------------------
+       5. Cena 3D do herói — inclinação por mouse/giroscópio + saída no scroll
+       Custo: zero biblioteca. Só atualiza duas variáveis CSS por quadro.
+       --------------------------------------------------------------------- */
+    // A cena do herói é deliberadamente estática: nada de inclinação pelo
+    // mouse nem de balanço. O que dá profundidade é a luz e a sombra, não o
+    // movimento. Mantemos apenas a saída suave no scroll.
+    // Transição de saída: o herói se afasta e entrega a cena para "Sobre"
+    var heroSection = document.querySelector('.hero-section');
+    var cena = document.querySelector('#hero-cena');
+    if (heroSection && cena && podeAnimar()) {
+        var travadoHero = false;
+        window.addEventListener('scroll', function () {
+            if (travadoHero) return;
+            travadoHero = true;
+            window.requestAnimationFrame(function () {
+                var altura = heroSection.offsetHeight || 1;
+                var p = Math.min(1, Math.max(0, window.scrollY / altura));
+                cena.style.opacity = String(1 - p * 0.9);
+                cena.style.setProperty('--saida', p.toFixed(3));
+                cena.style.translate = '0 ' + (p * -60).toFixed(1) + 'px';
+                cena.style.scale = String(1 - p * 0.12);
+                travadoHero = false;
+            });
+        }, { passive: true });
+    }
+
+    /* ---------------------------------------------------------------------
+       6. Lightbox da galeria — teclado, ESC e setas
+       --------------------------------------------------------------------- */
+    var lightbox = document.querySelector('#lightbox');
+    var lbImg = document.querySelector('#lightbox-img');
+    var lbLegenda = document.querySelector('#lightbox-legenda');
+    var botoesGaleria = Array.prototype.slice.call(
+        document.querySelectorAll('.gallery-item:not(.oculto) .gallery-botao'));
+    var indiceAtual = 0;
+    var origemFoco = null;
+
+    function fonteDe(botao) {
+        var img = botao.querySelector('img');
+        // data-grande aponta para a versão de visualização (1100px).
+        // Sem ela, cai para a miniatura que o navegador já baixou.
+        var grande = botao.getAttribute('data-grande');
+        if (!img) return { src: grande || '', alt: '' };
+        return {
+            src: grande || img.currentSrc || img.src,
+            alt: img.alt || ''
+        };
+    }
+
+    function mostrar(indice) {
+        if (!botoesGaleria.length) return;
+        indiceAtual = (indice + botoesGaleria.length) % botoesGaleria.length;
+        var botao = botoesGaleria[indiceAtual];
+        var dados = fonteDe(botao);
+        lbImg.src = dados.src;
+        lbImg.alt = dados.alt;
+        var legenda = botao.getAttribute('data-legenda');
+        if (!legenda) {
+            legenda = 'Foto ' + (indiceAtual + 1) + ' de ' + botoesGaleria.length
+                + ' — ' + dados.alt;
+        }
+        lbLegenda.textContent = legenda;
+    }
+
+    function abrirLightbox(indice) {
+        if (!lightbox || !lightbox.showModal) return false;
+        origemFoco = document.activeElement;
+        mostrar(indice);
+        lightbox.showModal();
+        document.body.style.overflow = 'hidden';
+        return true;
+    }
+
+    // Restaura a página. Não depende do evento 'close' do <dialog>: em alguns
+    // navegadores ele não dispara, e a página ficaria travada sem rolagem.
+    function restaurarPagina() {
+        document.body.style.overflow = '';
+        if (lbImg) lbImg.src = '';
+        if (origemFoco && origemFoco.focus) origemFoco.focus();
+        origemFoco = null;
+    }
+
+    function fecharLightbox() {
+        if (!lightbox) return;
+        if (lightbox.open) lightbox.close();
+        restaurarPagina();
+    }
+
+    if (lightbox) {
+        lightbox.addEventListener('close', restaurarPagina);
+
+        // Clique fora da imagem fecha
+        lightbox.addEventListener('click', function (e) {
+            if (e.target === lightbox || e.target.tagName === 'DIV') fecharLightbox();
+        });
+
+        document.querySelector('#lightbox-fechar').addEventListener('click', fecharLightbox);
+        document.querySelector('#lightbox-anterior').addEventListener('click', function () {
+            mostrar(indiceAtual - 1);
+        });
+        document.querySelector('#lightbox-proximo').addEventListener('click', function () {
+            mostrar(indiceAtual + 1);
+        });
+
+        lightbox.addEventListener('keydown', function (e) {
+            if (e.key === 'ArrowLeft') { e.preventDefault(); mostrar(indiceAtual - 1); }
+            if (e.key === 'ArrowRight') { e.preventDefault(); mostrar(indiceAtual + 1); }
+            // Fechamos o ESC na mão para garantir que a rolagem volte
+            if (e.key === 'Escape') { e.preventDefault(); fecharLightbox(); }
+        });
+    }
+
+    function ligarBotoesGaleria() {
+        botoesGaleria.forEach(function (botao, i) {
+            if (botao.dataset.ligado) return;
+            botao.dataset.ligado = '1';
+            botao.addEventListener('click', function () {
+                indiceAtual = Array.prototype.indexOf.call(botoesGaleria, botao);
+                abrirLightbox(indiceAtual < 0 ? i : indiceAtual);
+            });
+        });
+    }
+
+    ligarBotoesGaleria();
+
+    /* ---------------------------------------------------------------------
+       6b. "Carregar mais" da página com todas as fotos
+       Os itens já vêm no HTML (bom para busca); só ficam ocultos até o
+       visitante pedir, para a primeira pintura ser leve.
+       --------------------------------------------------------------------- */
+    var botaoMais = document.querySelector('#carregar-mais');
+
+    if (botaoMais) {
+        var LOTE = 48;
+        var contador = document.querySelector('#galeria-mostrando');
+        var area = document.querySelector('#carregar-mais-area');
+
+        botaoMais.addEventListener('click', function () {
+            var ocultos = document.querySelectorAll('.gallery-item.oculto');
+            var quantos = Math.min(LOTE, ocultos.length);
+            for (var i = 0; i < quantos; i++) {
+                ocultos[i].classList.remove('oculto');
+            }
+            var visiveis = document.querySelectorAll('.gallery-item:not(.oculto)').length;
+            if (contador) contador.textContent = String(visiveis);
+
+            // A lista do lightbox precisa acompanhar o que está na tela
+            botoesGaleria = Array.prototype.slice.call(
+                document.querySelectorAll('.gallery-item:not(.oculto) .gallery-botao'));
+            ligarBotoesGaleria();
+
+            if (!document.querySelector('.gallery-item.oculto') && area) {
+                area.hidden = true;
+            }
+        });
+    }
+
+    /* ---------------------------------------------------------------------
+       7. Formulário de pedido -> mensagem pronta no WhatsApp
+       Validação no cliente + honeypot. Não há backend: nada trafega para
+       servidor nenhum, os dados vão direto para a conversa do WhatsApp.
+       --------------------------------------------------------------------- */
+    var form = document.querySelector('#form-pedido');
+
+    function erro(campo, texto) {
+        var alvo = document.querySelector('#erro-' + campo);
+        var entrada = document.querySelector('#' + campo);
+        if (alvo) alvo.textContent = texto || '';
+        if (entrada) {
+            if (texto) entrada.setAttribute('aria-invalid', 'true');
+            else entrada.removeAttribute('aria-invalid');
+        }
+        return !texto;
+    }
+
+    if (form) {
+        form.addEventListener('submit', function (e) {
+            e.preventDefault();
+            var status = document.querySelector('#form-status');
+            var mel = form.querySelector('#empresa');
+
+            // Robô preencheu o campo escondido: descarta em silêncio.
+            if (mel && mel.value.trim() !== '') {
+                status.textContent = 'Não foi possível enviar. Tente pelo WhatsApp.';
+                return;
+            }
+
+            var nome = form.querySelector('#nome').value.trim();
+            var item = form.querySelector('#item').value;
+            var quando = form.querySelector('#quando').value;
+            var mensagem = form.querySelector('#mensagem').value.trim();
+
+            var ok = true;
+            ok = erro('nome', nome.length < 2 ? 'Escreva seu nome, por favor.' : '') && ok;
+            ok = erro('item', !item ? 'Escolha o que você quer pedir.' : '') && ok;
+            ok = erro('mensagem', mensagem.length > 800
+                ? 'Mensagem muito longa — resuma em até 800 caracteres.' : '') && ok;
+
+            if (quando) {
+                var hoje = new Date();
+                hoje.setHours(0, 0, 0, 0);
+                var escolhida = new Date(quando + 'T00:00:00');
+                ok = erro('quando', escolhida < hoje
+                    ? 'Escolha uma data de hoje em diante.' : '') && ok;
+            } else {
+                erro('quando', '');
+            }
+
+            if (!ok) {
+                status.textContent = 'Confira os campos destacados acima.';
+                var primeiro = form.querySelector('[aria-invalid="true"]');
+                if (primeiro) primeiro.focus();
+                return;
+            }
+
+            var linhas = [
+                'Olá, Sanderly! Vim pelo site 💗',
+                '',
+                'Nome: ' + nome,
+                'Pedido: ' + item
+            ];
+            if (quando) {
+                var partes = quando.split('-');
+                linhas.push('Para: ' + partes[2] + '/' + partes[1] + '/' + partes[0]);
+            }
+            if (mensagem) linhas.push('Detalhes: ' + mensagem);
+
+            var url = 'https://wa.me/' + WHATSAPP + '?text=' +
+                encodeURIComponent(linhas.join('\n'));
+
+            status.textContent = 'Abrindo o WhatsApp com o seu pedido pronto…';
+            window.open(url, '_blank', 'noopener');
+        });
+
+        // Limpa o erro assim que a pessoa corrige o campo
+        form.addEventListener('input', function (e) {
+            if (e.target.id) erro(e.target.id, '');
+        });
+    }
 })();

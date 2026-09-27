@@ -13,7 +13,7 @@ HTML5, CSS3 e JavaScript puro. **Sem build, sem framework, sem dependência de
 runtime** — os arquivos são servidos como estão.
 
 Zero JavaScript de terceiros. As únicas requisições externas são as fontes
-DM Sans e Playfair Display do Google Fonts.
+Poppins e Miniver do Google Fonts.
 
 ---
 
@@ -46,23 +46,10 @@ DM Sans e Playfair Display do Google Fonts.
 ## 🚀 Rodar localmente
 
 ```bash
-python tools/serve-local.py
+python -m http.server 8000
 ```
 
-Depois abra <http://127.0.0.1:8000/>. O servidor abre a página principal na raiz
-e evita cache durante a revisão visual. Para ver uma alteração salva, atualize o navegador.
-
-A home usa `Client/Public/Src/Styles/editorial.css`. Cardápio, galeria e políticas
-usam `interiors.css`, que estende `styles.css` com a mesma paleta chocolate, creme
-e rosa. O plano visual está em `docs/PLANO-KAPITANA.md`.
-
-Para revisar as páginas e a galeria no navegador automatizado:
-
-```bash
-python tools/validate-kapitana.py --screenshots
-```
-
-Essa verificação requer Playwright, BeautifulSoup e Microsoft Edge instalados.
+Depois abra <http://localhost:8000/Client/Public/Src/Pages/index.html>.
 
 > Use um servidor, não abra o `index.html` direto pelo navegador: os caminhos
 > dos arquivos são absolutos (`/Client/...`) e não funcionam via `file://`.
